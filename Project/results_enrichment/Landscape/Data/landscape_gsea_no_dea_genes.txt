@@ -1,0 +1,565 @@
+====================================================================
+REPORTE DE RUTAS GSEA SIGNIFICATIVAS CON COMPARATIVA CRUZADA DE DEGs Y RANGOS
+====================================================================
+Este reporte agrupa y describe las rutas identificadas como significativas en GSEA pero cuyos genes de ML solapantes NO alcanzan la significancia en DEA.
+Para cada gen solapante, se detalla su comportamiento completo (Expresión, FDR, Rango y Significancia) cruzado en los tres datasets (BRAAKSC, CERADSC, COGDX), así como la última posición (punto de corte) de significancia para cada uno.
+====================================================================
+
+--------------------------------------------------------------------
+LÍMITES Y CRITERIOS DE SELECCIÓN PARA GENES SIGNIFICATIVOS (DEA):
+--------------------------------------------------------------------
+- FDR (p-adj / adj.P.Val) límite: < 0.05
+- Log2 Fold Change (Log2FC) límite: valor absoluto > 0.5
+- Límite en Posición de Ranking: No hay un límite de ranking para ser DEG;
+  todos los genes que cumplen FDR < 0.05 y abs(logFC) > 0.5 son significativos.
+--------------------------------------------------------------------
+CONTEXTO HISTÓRICO Y PUNTOS DE CORTE (ÚLTIMO DEG SIGNIFICATIVO):
+- BRAAKSC: 848 DEGs significativos de 12556 genes. Rango del útimo DEG: #1037
+- CERADSC: 2137 DEGs significativos de 12556 genes. Rango del útimo DEG: #2982
+- COGDX:   1513 DEGs significativos de 12556 genes. Rango del útimo DEG: #2109
+*(Los genes están ordenados en el DEA por p-valor original de forma ascendente)
+--------------------------------------------------------------------
+
+====================================================================
+DATASET DE ORIGEN: BRAAKSC
+====================================================================
+Total de rutas en esta condición: 2
+--------------------------------------------------------------------
+
+* RUTA: E-box binding (GO:0070888) [GO_MF]
+  Detalle de Expresión y Significancia Cruzada de los Genes:
+
+    - GEN: MITF
+      * ¿Es DEG Significativo en BRAAKSC? NO
+        - Rango por p-valor: #682 de 12556 (Último DEG: #1037)
+        - Log2 Fold Change: 0.184402
+        - FDR (adj. p-valor): 3.1168e-02
+        - p-valor original: 1.6975e-03
+        - Estadístico t de Limma: 3.1895
+      * ¿Es DEG Significativo en CERADSC? NO
+        - Rango por p-valor: #404 de 12556 (Último DEG: #2982)
+        - Log2 Fold Change: 0.199030
+        - FDR (adj. p-valor): 1.0039e-03
+        - p-valor original: 3.2300e-05
+        - Estadístico t de Limma: 4.2375
+      * ¿Es DEG Significativo en COGDX? NO
+        - Rango por p-valor: #209 de 12556 (Último DEG: #2109)
+        - Log2 Fold Change: 0.191904
+        - FDR (adj. p-valor): 1.2385e-03
+        - p-valor original: 2.0700e-05
+        - Estadístico t de Limma: 4.3324
+
+    - GEN: MAX
+      * ¿Es DEG Significativo en BRAAKSC? NO
+        - Rango por p-valor: #1349 de 12556 (Último DEG: #1037)
+        - Log2 Fold Change: 2.211591
+        - FDR (adj. p-valor): 6.8256e-02
+        - p-valor original: 7.3333e-03
+        - Estadístico t de Limma: 2.7140
+      * ¿Es DEG Significativo en CERADSC? SÍ
+        - Rango por p-valor: #1323 de 12556 (Último DEG: #2982)
+        - Log2 Fold Change: 2.166367
+        - FDR (adj. p-valor): 9.4318e-03
+        - p-valor original: 9.9432e-04
+        - Estadístico t de Limma: 3.3334
+      * ¿Es DEG Significativo en COGDX? SÍ
+        - Rango por p-valor: #1728 de 12556 (Último DEG: #2109)
+        - Log2 Fold Change: 1.781112
+        - FDR (adj. p-valor): 3.4254e-02
+        - p-valor original: 4.7142e-03
+        - Estadístico t de Limma: 2.8492
+
+    - GEN: NEUROD2
+      * ¿Es DEG Significativo en BRAAKSC? NO
+        - Rango por p-valor: #1957 de 12556 (Último DEG: #1037)
+        - Log2 Fold Change: 2.618112
+        - FDR (adj. p-valor): 1.0498e-01
+        - p-valor original: 1.6367e-02
+        - Estadístico t de Limma: 2.4247
+      * ¿Es DEG Significativo en CERADSC? SÍ
+        - Rango por p-valor: #1803 de 12556 (Último DEG: #2982)
+        - Log2 Fold Change: 2.454058
+        - FDR (adj. p-valor): 1.7898e-02
+        - p-valor original: 2.5701e-03
+        - Estadístico t de Limma: 3.0471
+      * ¿Es DEG Significativo en COGDX? NO
+        - Rango por p-valor: #3161 de 12556 (Último DEG: #2109)
+        - Log2 Fold Change: 1.949443
+        - FDR (adj. p-valor): 9.8188e-02
+        - p-valor original: 2.4720e-02
+        - Estadístico t de Limma: 2.2582
+
+    - GEN: ATOH8
+      * ¿Es DEG Significativo en BRAAKSC? NO
+        - Rango por p-valor: #2106 de 12556 (Último DEG: #1037)
+        - Log2 Fold Change: 1.675462
+        - FDR (adj. p-valor): 1.1629e-01
+        - p-valor original: 1.9506e-02
+        - Estadístico t de Limma: 2.3581
+      * ¿Es DEG Significativo en CERADSC? SÍ
+        - Rango por p-valor: #1776 de 12556 (Último DEG: #2982)
+        - Log2 Fold Change: 1.700695
+        - FDR (adj. p-valor): 1.7348e-02
+        - p-valor original: 2.4538e-03
+        - Estadístico t de Limma: 3.0616
+      * ¿Es DEG Significativo en COGDX? NO
+        - Rango por p-valor: #3822 de 12556 (Último DEG: #2109)
+        - Log2 Fold Change: 1.136067
+        - FDR (adj. p-valor): 1.3754e-01
+        - p-valor original: 4.1875e-02
+        - Estadístico t de Limma: 2.0443
+
+    - GEN: OLIG1
+      * ¿Es DEG Significativo en BRAAKSC? NO
+        - Rango por p-valor: #2382 de 12556 (Último DEG: #1037)
+        - Log2 Fold Change: 12.933384
+        - FDR (adj. p-valor): 1.3640e-01
+        - p-valor original: 2.5877e-02
+        - Estadístico t de Limma: 2.2478
+      * ¿Es DEG Significativo en CERADSC? SÍ
+        - Rango por p-valor: #2006 de 12556 (Último DEG: #2982)
+        - Log2 Fold Change: 13.916529
+        - FDR (adj. p-valor): 2.2404e-02
+        - p-valor original: 3.5815e-03
+        - Estadístico t de Limma: 2.9420
+      * ¿Es DEG Significativo en COGDX? SÍ
+        - Rango por p-valor: #1494 de 12556 (Último DEG: #2109)
+        - Log2 Fold Change: 14.204130
+        - FDR (adj. p-valor): 2.7106e-02
+        - p-valor original: 3.2263e-03
+        - Estadístico t de Limma: 2.9714
+
+    - GEN: ASCL1
+      * ¿Es DEG Significativo en BRAAKSC? NO
+        - Rango por p-valor: #2623 de 12556 (Último DEG: #1037)
+        - Log2 Fold Change: 1.407932
+        - FDR (adj. p-valor): 1.5511e-01
+        - p-valor original: 3.2403e-02
+        - Estadístico t de Limma: 2.1571
+      * ¿Es DEG Significativo en CERADSC? SÍ
+        - Rango por p-valor: #2614 de 12556 (Último DEG: #2982)
+        - Log2 Fold Change: 1.430010
+        - FDR (adj. p-valor): 3.8523e-02
+        - p-valor original: 8.0199e-03
+        - Estadístico t de Limma: 2.6737
+      * ¿Es DEG Significativo en COGDX? SÍ
+        - Rango por p-valor: #1376 de 12556 (Último DEG: #2109)
+        - Log2 Fold Change: 1.629642
+        - FDR (adj. p-valor): 2.4155e-02
+        - p-valor original: 2.6494e-03
+        - Estadístico t de Limma: 3.0334
+
+    - GEN: TCF12
+      * ¿Es DEG Significativo en BRAAKSC? NO
+        - Rango por p-valor: #2787 de 12556 (Último DEG: #1037)
+        - Log2 Fold Change: 0.583152
+        - FDR (adj. p-valor): 1.7048e-01
+        - p-valor original: 3.7841e-02
+        - Estadístico t de Limma: 2.0929
+      * ¿Es DEG Significativo en CERADSC? SÍ
+        - Rango por p-valor: #1628 de 12556 (Último DEG: #2982)
+        - Log2 Fold Change: 0.735025
+        - FDR (adj. p-valor): 1.4204e-02
+        - p-valor original: 1.8419e-03
+        - Estadístico t de Limma: 3.1499
+      * ¿Es DEG Significativo en COGDX? SÍ
+        - Rango por p-valor: #891 de 12556 (Último DEG: #2109)
+        - Log2 Fold Change: 0.759564
+        - FDR (adj. p-valor): 1.2286e-02
+        - p-valor original: 8.7187e-04
+        - Estadístico t de Limma: 3.3659
+
+    - GEN: BMAL1
+      * ¿Es DEG Significativo en BRAAKSC? NO
+        - Rango por p-valor: #3148 de 12556 (Último DEG: #1037)
+        - Log2 Fold Change: 0.698002
+        - FDR (adj. p-valor): 1.9704e-01
+        - p-valor original: 4.9401e-02
+        - Estadístico t de Limma: 1.9793
+      * ¿Es DEG Significativo en CERADSC? SÍ
+        - Rango por p-valor: #2122 de 12556 (Último DEG: #2982)
+        - Log2 Fold Change: 0.823216
+        - FDR (adj. p-valor): 2.5046e-02
+        - p-valor original: 4.2333e-03
+        - Estadístico t de Limma: 2.8880
+      * ¿Es DEG Significativo en COGDX? SÍ
+        - Rango por p-valor: #2091 de 12556 (Último DEG: #2109)
+        - Log2 Fold Change: 0.753293
+        - FDR (adj. p-valor): 4.8756e-02
+        - p-valor original: 8.1196e-03
+        - Estadístico t de Limma: 2.6665
+
+    - GEN: CRY1
+      * ¿Es DEG Significativo en BRAAKSC? NO
+        - Rango por p-valor: #4050 de 12556 (Último DEG: #1037)
+        - Log2 Fold Change: 0.198050
+        - FDR (adj. p-valor): 2.6699e-01
+        - p-valor original: 8.6119e-02
+        - Estadístico t de Limma: 1.7263
+      * ¿Es DEG Significativo en CERADSC? NO
+        - Rango por p-valor: #1374 de 12556 (Último DEG: #2982)
+        - Log2 Fold Change: 0.302569
+        - FDR (adj. p-valor): 1.0170e-02
+        - p-valor original: 1.1129e-03
+        - Estadístico t de Limma: 3.3004
+      * ¿Es DEG Significativo en COGDX? NO
+        - Rango por p-valor: #1482 de 12556 (Último DEG: #2109)
+        - Log2 Fold Change: 0.264313
+        - FDR (adj. p-valor): 2.6940e-02
+        - p-valor original: 3.1811e-03
+        - Estadístico t de Limma: 2.9759
+
+    - GEN: OLIG2
+      * ¿Es DEG Significativo en BRAAKSC? NO
+        - Rango por p-valor: #4236 de 12556 (Último DEG: #1037)
+        - Log2 Fold Change: 1.685646
+        - FDR (adj. p-valor): 2.8419e-01
+        - p-valor original: 9.5876e-02
+        - Estadístico t de Limma: 1.6745
+      * ¿Es DEG Significativo en CERADSC? NO
+        - Rango por p-valor: #4511 de 12556 (Último DEG: #2982)
+        - Log2 Fold Change: 1.653592
+        - FDR (adj. p-valor): 1.2465e-01
+        - p-valor original: 4.4784e-02
+        - Estadístico t de Limma: 2.0173
+      * ¿Es DEG Significativo en COGDX? NO
+        - Rango por p-valor: #2412 de 12556 (Último DEG: #2109)
+        - Log2 Fold Change: 2.089664
+        - FDR (adj. p-valor): 6.1617e-02
+        - p-valor original: 1.1837e-02
+        - Estadístico t de Limma: 2.5339
+
+    - GEN: TCF4
+      * ¿Es DEG Significativo en BRAAKSC? NO
+        - Rango por p-valor: #4325 de 12556 (Último DEG: #1037)
+        - Log2 Fold Change: 1.204445
+        - FDR (adj. p-valor): 2.8974e-01
+        - p-valor original: 9.9804e-02
+        - Estadístico t de Limma: 1.6548
+      * ¿Es DEG Significativo en CERADSC? NO
+        - Rango por p-valor: #3222 de 12556 (Último DEG: #2982)
+        - Log2 Fold Change: 1.466809
+        - FDR (adj. p-valor): 5.9162e-02
+        - p-valor original: 1.5182e-02
+        - Estadístico t de Limma: 2.4457
+      * ¿Es DEG Significativo en COGDX? NO
+        - Rango por p-valor: #5411 de 12556 (Último DEG: #2109)
+        - Log2 Fold Change: 0.889550
+        - FDR (adj. p-valor): 2.5879e-01
+        - p-valor original: 1.1153e-01
+        - Estadístico t de Limma: 1.5965
+
+    - GEN: TCF3
+      * ¿Es DEG Significativo en BRAAKSC? NO
+        - Rango por p-valor: #4353 de 12556 (Último DEG: #1037)
+        - Log2 Fold Change: 0.390631
+        - FDR (adj. p-valor): 2.9243e-01
+        - p-valor original: 1.0142e-01
+        - Estadístico t de Limma: 1.6469
+      * ¿Es DEG Significativo en CERADSC? NO
+        - Rango por p-valor: #3189 de 12556 (Último DEG: #2982)
+        - Log2 Fold Change: 0.459348
+        - FDR (adj. p-valor): 5.7761e-02
+        - p-valor original: 1.4670e-02
+        - Estadístico t de Limma: 2.4583
+      * ¿Es DEG Significativo en COGDX? NO
+        - Rango por p-valor: #3062 de 12556 (Último DEG: #2109)
+        - Log2 Fold Change: 0.426189
+        - FDR (adj. p-valor): 9.1885e-02
+        - p-valor original: 2.2413e-02
+        - Estadístico t de Limma: 2.2963
+
+    - GEN: CLOCK
+      * ¿Es DEG Significativo en BRAAKSC? NO
+        - Rango por p-valor: #4866 de 12556 (Último DEG: #1037)
+        - Log2 Fold Change: 0.145224
+        - FDR (adj. p-valor): 3.4014e-01
+        - p-valor original: 1.3183e-01
+        - Estadístico t de Limma: 1.5142
+      * ¿Es DEG Significativo en CERADSC? NO
+        - Rango por p-valor: #7021 de 12556 (Último DEG: #2982)
+        - Log2 Fold Change: 0.108317
+        - FDR (adj. p-valor): 3.2208e-01
+        - p-valor original: 1.8010e-01
+        - Estadístico t de Limma: 1.3444
+      * ¿Es DEG Significativo en COGDX? NO
+        - Rango por p-valor: #9211 de 12556 (Último DEG: #2109)
+        - Log2 Fold Change: 0.054081
+        - FDR (adj. p-valor): 6.5580e-01
+        - p-valor original: 4.8109e-01
+        - Estadístico t de Limma: 0.7055
+
+    - GEN: ZEB1
+      * ¿Es DEG Significativo en BRAAKSC? NO
+        - Rango por p-valor: #4927 de 12556 (Último DEG: #1037)
+        - Log2 Fold Change: 0.447757
+        - FDR (adj. p-valor): 3.4381e-01
+        - p-valor original: 1.3491e-01
+        - Estadístico t de Limma: 1.5022
+      * ¿Es DEG Significativo en CERADSC? SÍ
+        - Rango por p-valor: #2757 de 12556 (Último DEG: #2982)
+        - Log2 Fold Change: 0.669641
+        - FDR (adj. p-valor): 4.3347e-02
+        - p-valor original: 9.5180e-03
+        - Estadístico t de Limma: 2.6140
+      * ¿Es DEG Significativo en COGDX? NO
+        - Rango por p-valor: #2236 de 12556 (Último DEG: #2109)
+        - Log2 Fold Change: 0.629840
+        - FDR (adj. p-valor): 5.6327e-02
+        - p-valor original: 1.0031e-02
+        - Estadístico t de Limma: 2.5927
+
+    - GEN: NR1D1
+      * ¿Es DEG Significativo en BRAAKSC? NO
+        - Rango por p-valor: #5186 de 12556 (Último DEG: #1037)
+        - Log2 Fold Change: 1.628089
+        - FDR (adj. p-valor): 3.6597e-01
+        - p-valor original: 1.5116e-01
+        - Estadístico t de Limma: 1.4420
+      * ¿Es DEG Significativo en CERADSC? NO
+        - Rango por p-valor: #6679 de 12556 (Último DEG: #2982)
+        - Log2 Fold Change: 1.275555
+        - FDR (adj. p-valor): 2.8670e-01
+        - p-valor original: 1.5251e-01
+        - Estadístico t de Limma: 1.4353
+      * ¿Es DEG Significativo en COGDX? NO
+        - Rango por p-valor: #7822 de 12556 (Último DEG: #2109)
+        - Log2 Fold Change: 0.922474
+        - FDR (adj. p-valor): 4.9277e-01
+        - p-valor original: 3.0698e-01
+        - Estadístico t de Limma: 1.0235
+
+    - GEN: BHLHE41
+      * ¿Es DEG Significativo en BRAAKSC? NO
+        - Rango por p-valor: #5280 de 12556 (Último DEG: #1037)
+        - Log2 Fold Change: 0.480827
+        - FDR (adj. p-valor): 3.7321e-01
+        - p-valor original: 1.5694e-01
+        - Estadístico t de Limma: 1.4217
+      * ¿Es DEG Significativo en CERADSC? SÍ
+        - Rango por p-valor: #2482 de 12556 (Último DEG: #2982)
+        - Log2 Fold Change: 0.763939
+        - FDR (adj. p-valor): 3.5504e-02
+        - p-valor original: 7.0207e-03
+        - Estadístico t de Limma: 2.7194
+      * ¿Es DEG Significativo en COGDX? NO
+        - Rango por p-valor: #4219 de 12556 (Último DEG: #2109)
+        - Log2 Fold Change: 0.528110
+        - FDR (adj. p-valor): 1.6429e-01
+        - p-valor original: 5.5203e-02
+        - Estadístico t de Limma: 1.9255
+
+    - GEN: TAL1
+      * ¿Es DEG Significativo en BRAAKSC? NO
+        - Rango por p-valor: #6028 de 12556 (Último DEG: #1037)
+        - Log2 Fold Change: 0.148300
+        - FDR (adj. p-valor): 4.4568e-01
+        - p-valor original: 2.1397e-01
+        - Estadístico t de Limma: 1.2474
+      * ¿Es DEG Significativo en CERADSC? NO
+        - Rango por p-valor: #3472 de 12556 (Último DEG: #2982)
+        - Log2 Fold Change: 0.227784
+        - FDR (adj. p-valor): 6.9698e-02
+        - p-valor original: 1.9277e-02
+        - Estadístico t de Limma: 2.3561
+      * ¿Es DEG Significativo en COGDX? NO
+        - Rango por p-valor: #2825 de 12556 (Último DEG: #2109)
+        - Log2 Fold Change: 0.218200
+        - FDR (adj. p-valor): 7.9742e-02
+        - p-valor original: 1.7941e-02
+        - Estadístico t de Limma: 2.3811
+
+    - GEN: TFAP4
+      * ¿Es DEG Significativo en BRAAKSC? NO
+        - Rango por p-valor: #6109 de 12556 (Último DEG: #1037)
+        - Log2 Fold Change: 0.131567
+        - FDR (adj. p-valor): 4.5401e-01
+        - p-valor original: 2.2093e-01
+        - Estadístico t de Limma: 1.2286
+      * ¿Es DEG Significativo en CERADSC? NO
+        - Rango por p-valor: #10159 de 12556 (Último DEG: #2982)
+        - Log2 Fold Change: 0.050811
+        - FDR (adj. p-valor): 6.9167e-01
+        - p-valor original: 5.5963e-01
+        - Estadístico t de Limma: 0.5842
+      * ¿Es DEG Significativo en COGDX? NO
+        - Rango por p-valor: #5690 de 12556 (Último DEG: #2109)
+        - Log2 Fold Change: 0.128673
+        - FDR (adj. p-valor): 2.8237e-01
+        - p-valor original: 1.2796e-01
+        - Estadístico t de Limma: 1.5268
+
+    - GEN: HDAC1
+      * ¿Es DEG Significativo en BRAAKSC? NO
+        - Rango por p-valor: #6178 de 12556 (Último DEG: #1037)
+        - Log2 Fold Change: 0.579469
+        - FDR (adj. p-valor): 4.5978e-01
+        - p-valor original: 2.2625e-01
+        - Estadístico t de Limma: 1.2145
+      * ¿Es DEG Significativo en CERADSC? NO
+        - Rango por p-valor: #4327 de 12556 (Último DEG: #2982)
+        - Log2 Fold Change: 0.770907
+        - FDR (adj. p-valor): 1.1357e-01
+        - p-valor original: 3.9144e-02
+        - Estadístico t de Limma: 2.0741
+      * ¿Es DEG Significativo en COGDX? NO
+        - Rango por p-valor: #4412 de 12556 (Último DEG: #2109)
+        - Log2 Fold Change: 0.687880
+        - FDR (adj. p-valor): 1.7854e-01
+        - p-valor original: 6.2736e-02
+        - Estadístico t de Limma: 1.8686
+
+    - GEN: PER1
+      * ¿Es DEG Significativo en BRAAKSC? NO
+        - Rango por p-valor: #6843 de 12556 (Último DEG: #1037)
+        - Log2 Fold Change: 1.112789
+        - FDR (adj. p-valor): 5.2349e-01
+        - p-valor original: 2.8533e-01
+        - Estadístico t de Limma: 1.0718
+      * ¿Es DEG Significativo en CERADSC? SÍ
+        - Rango por p-valor: #1793 de 12556 (Último DEG: #2982)
+        - Log2 Fold Change: 2.613412
+        - FDR (adj. p-valor): 1.7795e-02
+        - p-valor original: 2.5420e-03
+        - Estadístico t de Limma: 3.0506
+      * ¿Es DEG Significativo en COGDX? NO
+        - Rango por p-valor: #2954 de 12556 (Último DEG: #2109)
+        - Log2 Fold Change: 1.809825
+        - FDR (adj. p-valor): 8.6775e-02
+        - p-valor original: 2.0415e-02
+        - Estadístico t de Limma: 2.3321
+
+* RUTA: mitotic recombination (GO:0006312) [GO_BP]
+  Detalle de Expresión y Significancia Cruzada de los Genes:
+
+    - GEN: MLH1
+      * ¿Es DEG Significativo en BRAAKSC? NO
+        - Rango por p-valor: #748 de 12556 (Último DEG: #1037)
+        - Log2 Fold Change: -0.387877
+        - FDR (adj. p-valor): 3.5194e-02
+        - p-valor original: 2.0991e-03
+        - Estadístico t de Limma: -3.1239
+      * ¿Es DEG Significativo en CERADSC? NO
+        - Rango por p-valor: #860 de 12556 (Último DEG: #2982)
+        - Log2 Fold Change: -0.385011
+        - FDR (adj. p-valor): 4.0244e-03
+        - p-valor original: 2.7565e-04
+        - Estadístico t de Limma: -3.6921
+      * ¿Es DEG Significativo en COGDX? NO
+        - Rango por p-valor: #1652 de 12556 (Último DEG: #2109)
+        - Log2 Fold Change: -0.289931
+        - FDR (adj. p-valor): 3.2374e-02
+        - p-valor original: 4.2602e-03
+        - Estadístico t de Limma: -2.8822
+
+    - GEN: RAD51C
+      * ¿Es DEG Significativo en BRAAKSC? NO
+        - Rango por p-valor: #1346 de 12556 (Último DEG: #1037)
+        - Log2 Fold Change: -1.137014
+        - FDR (adj. p-valor): 6.8246e-02
+        - p-valor original: 7.3179e-03
+        - Estadístico t de Limma: -2.7147
+      * ¿Es DEG Significativo en CERADSC? SÍ
+        - Rango por p-valor: #1983 de 12556 (Último DEG: #2982)
+        - Log2 Fold Change: -1.014534
+        - FDR (adj. p-valor): 2.1998e-02
+        - p-valor original: 3.4742e-03
+        - Estadístico t de Limma: -2.9518
+      * ¿Es DEG Significativo en COGDX? NO
+        - Rango por p-valor: #3980 de 12556 (Último DEG: #2109)
+        - Log2 Fold Change: -0.661230
+        - FDR (adj. p-valor): 1.4647e-01
+        - p-valor original: 4.6427e-02
+        - Estadístico t de Limma: -2.0005
+
+    - GEN: MSH2
+      * ¿Es DEG Significativo en BRAAKSC? NO
+        - Rango por p-valor: #1603 de 12556 (Último DEG: #1037)
+        - Log2 Fold Change: -0.508276
+        - FDR (adj. p-valor): 8.2591e-02
+        - p-valor original: 1.0549e-02
+        - Estadístico t de Limma: -2.5859
+      * ¿Es DEG Significativo en CERADSC? SÍ
+        - Rango por p-valor: #1439 de 12556 (Último DEG: #2982)
+        - Log2 Fold Change: -0.532062
+        - FDR (adj. p-valor): 1.1253e-02
+        - p-valor original: 1.2899e-03
+        - Estadístico t de Limma: -3.2569
+      * ¿Es DEG Significativo en COGDX? NO
+        - Rango por p-valor: #1140 de 12556 (Último DEG: #2109)
+        - Log2 Fold Change: -0.484038
+        - FDR (adj. p-valor): 1.8003e-02
+        - p-valor original: 1.6346e-03
+        - Estadístico t de Limma: -3.1812
+
+    - GEN: ERCC2
+      * ¿Es DEG Significativo en BRAAKSC? NO
+        - Rango por p-valor: #1756 de 12556 (Último DEG: #1037)
+        - Log2 Fold Change: -0.404442
+        - FDR (adj. p-valor): 9.2043e-02
+        - p-valor original: 1.2872e-02
+        - Estadístico t de Limma: -2.5138
+      * ¿Es DEG Significativo en CERADSC? NO
+        - Rango por p-valor: #2055 de 12556 (Último DEG: #2982)
+        - Log2 Fold Change: -0.393143
+        - FDR (adj. p-valor): 2.3555e-02
+        - p-valor original: 3.8551e-03
+        - Estadístico t de Limma: -2.9183
+      * ¿Es DEG Significativo en COGDX? NO
+        - Rango por p-valor: #1572 de 12556 (Último DEG: #2109)
+        - Log2 Fold Change: -0.395800
+        - FDR (adj. p-valor): 2.9799e-02
+        - p-valor original: 3.7309e-03
+        - Estadístico t de Limma: -2.9251
+
+    - GEN: MSH3
+      * ¿Es DEG Significativo en BRAAKSC? NO
+        - Rango por p-valor: #2204 de 12556 (Último DEG: #1037)
+        - Log2 Fold Change: -0.103803
+        - FDR (adj. p-valor): 1.2468e-01
+        - p-valor original: 2.1886e-02
+        - Estadístico t de Limma: -2.3136
+      * ¿Es DEG Significativo en CERADSC? NO
+        - Rango por p-valor: #1277 de 12556 (Último DEG: #2982)
+        - Log2 Fold Change: -0.132884
+        - FDR (adj. p-valor): 8.7856e-03
+        - p-valor original: 8.9353e-04
+        - Estadístico t de Limma: -3.3644
+      * ¿Es DEG Significativo en COGDX? NO
+        - Rango por p-valor: #3048 de 12556 (Último DEG: #2109)
+        - Log2 Fold Change: -0.083573
+        - FDR (adj. p-valor): 9.1795e-02
+        - p-valor original: 2.2287e-02
+        - Estadístico t de Limma: -2.2984
+
+    - GEN: ERCC1
+      * ¿Es DEG Significativo en BRAAKSC? NO
+        - Rango por p-valor: #2765 de 12556 (Último DEG: #1037)
+        - Log2 Fold Change: -0.783178
+        - FDR (adj. p-valor): 1.6870e-01
+        - p-valor original: 3.7157e-02
+        - Estadístico t de Limma: -2.1006
+      * ¿Es DEG Significativo en CERADSC? NO
+        - Rango por p-valor: #6617 de 12556 (Último DEG: #2982)
+        - Log2 Fold Change: -0.470692
+        - FDR (adj. p-valor): 2.8209e-01
+        - p-valor original: 1.4867e-01
+        - Estadístico t de Limma: -1.4489
+      * ¿Es DEG Significativo en COGDX? NO
+        - Rango por p-valor: #4789 de 12556 (Último DEG: #2109)
+        - Log2 Fold Change: -0.523178
+        - FDR (adj. p-valor): 2.0707e-01
+        - p-valor original: 7.9018e-02
+        - Estadístico t de Limma: -1.7630
+
+
+====================================================================
+DATASET DE ORIGEN: CERADSC
+====================================================================
+No se detectaron rutas significativas en esta condición GSEA sin DEG.
+
+====================================================================
+DATASET DE ORIGEN: COGDX
+====================================================================
+No se detectaron rutas significativas en esta condición GSEA sin DEG.
+

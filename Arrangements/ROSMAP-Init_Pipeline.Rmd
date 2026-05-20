@@ -1,0 +1,529 @@
+---
+title: "Pipeline ROSMAP: Preparación de Datos Multi-Ómicos para Predicción de Alzheimer"
+author: "Enrique Antonio Hernández Salvador"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    theme: flatly
+    highlight: tango
+    number_sections: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo    = TRUE,
+  message = TRUE,
+  warning = FALSE,
+  comment = "#>"
+)
+```
+
+---
+
+# Descripción del Proyecto
+
+Este documento implementa el **pipeline completo de preparación de datos** del proyecto ROSMAP
+(*Religious Orders Study and Memory and Aging Project*), un estudio longitudinal sobre envejecimiento
+y enfermedad de Alzheimer que integra las cohortes ROS y MAP, liderado por el Rush Alzheimer's Disease Center de la Universidad de Rush en colaboración con instituciones como el Broad Institute del MIT y Harvard.
+
+El objetivo es construir tres datasets de predicción independientes —**genes**, **metabolitos** y
+**proteínas**— listos para ser usados con modelos de machine learning, integrando en cada uno las
+variables clínicas objetivo que reflejan la neuropatología y el estado cognitivo de los donantes:
+
+| Variable  | Descripción                                         | Tipo        |
+|-----------|-----------------------------------------------------|-------------|
+| `braaksc` | Estadio de Braak (carga de ovillos neurofibrilares) | Ordinal 0–6 |
+| `ceradsc` | Puntuación CERAD (densidad de placas amiloides)     | Ordinal 1–4 |
+| `cogdx`   | Diagnóstico cognitivo final                         | Ordinal 1–6 |
+
+Las tres variables objetivo se obtienen de los datos clínicos longitudinales de ROSMAP y se
+vinculan a cada modalidad ómica mediante identificadores de muestra. Su naturaleza ordinal las
+hace adecuadas tanto para tareas de regresión como de clasificación.
+
+El flujo de trabajo se divide en **4 bloques secuenciales e interdependientes**:
+
+1. **Extracción y preparación del entorno:** descompresión del archivo fuente y verificación de integridad.
+2. **Carga dinámica y mapeo de datasets:** recorrido recursivo de la estructura de carpetas y asignación semántica de cada fuente de datos.
+3. **Integración clínica, limpieza e imputación:** vinculación de la información ómica con las variables objetivo, eliminación de muestras no etiquetadas y tratamiento de valores faltantes.
+4. **Generación de datasets finales:** exportación de los 9 archivos CSV listos para modelado (3 modalidades × 3 targets).
+
+---
+
+# BLOQUE 1: Extracción y Preparación del Entorno
+
+> **Propósito:** Descomprimir el archivo fuente `ROSMAP.tar`, detectar automáticamente la estructura
+> de carpetas generada y realizar una lectura preliminar de cada modalidad ómica para confirmar
+> que todos los archivos necesarios son accesibles antes de iniciar el procesamiento.
+
+El archivo `ROSMAP.tar` contiene cuatro fuentes de datos principales organizadas en subdirectorios:
+datos clínicos de donantes, residuales de expresión génica (formato RDS), datos de metabolómica
+en formato CSV y datos de proteómica TMT preprocesados. La estructura interna del tarball puede
+variar según su origen, por lo que se implementa una detección automática de la ruta base.
+
+```{r block1-extraction}
+# ==============================================================================
+# BLOQUE 1: EXTRACCIÓN Y PREPARACIÓN DEL ENTORNO
+# ==============================================================================
+
+# Extrae el archivo solo si la carpeta destino no existe, evitando trabajo duplicado
+tar_file <- "ROSMAP.tar"
+
+if (!dir.exists("ROSMAP") && file.exists(tar_file)) {
+  untar(tar_file)
+  message("Archivo ROSMAP.tar extraído correctamente.")
+}
+
+# Detecta la ruta base según la estructura interna del tarball
+if (dir.exists("ROSMAP/ROSMAP")) {
+  base_path <- "ROSMAP/ROSMAP"
+} else {
+  base_path <- "ROSMAP"
+}
+message(paste("Ruta base detectada:", base_path))
+
+# Rutas a cada fuente de datos, centralizadas para facilitar el mantenimiento
+clinical_path <- file.path(base_path, "Donors_metadata/ROSMAP_clinical.csv")
+genes_path    <- file.path(base_path, "Gene_expression/ROSMAP_RINPMIAGESEX_resids.rds")
+metab_path    <- file.path(base_path, "Metabolomics/ROSMAP_assay_metabolomics_metadata.csv")
+prot_path     <- file.path(base_path, "Proteomics/TMT/3.cleanDat.csv")
+
+# Carga y verificación de los datos clínicos, eje central del pipeline
+if (file.exists(clinical_path)) {
+  clinical_data <- read.csv(clinical_path, header = TRUE, sep = ",")
+  message("Datos clínicos cargados correctamente.")
+  print(head(clinical_data))
+} else {
+  stop(paste("Error: No se encuentra el archivo clínico en:", clinical_path))
+}
+
+# Convierte los residuales génicos de RDS a CSV para homogeneizar el pipeline
+if (file.exists(genes_path)) {
+  genes_rds_obj  <- readRDS(genes_path)
+  genes_csv_path <- file.path(base_path, "Gene_expression/RINPMIAGESEX_resids.csv")
+  write.csv(genes_rds_obj, genes_csv_path, row.names = FALSE)
+  message(paste("Conversión genes RDS → CSV completada:", genes_csv_path))
+} else {
+  warning(paste("Archivo de expresión génica no encontrado:", genes_path))
+}
+
+# Lectura preliminar de metabolómica y proteómica para confirmar accesibilidad
+if (file.exists(metab_path)) {
+  metabolomics_preview <- read.csv(metab_path)
+  message(paste("Metabolómica accesible:", nrow(metabolomics_preview), "filas,",
+                ncol(metabolomics_preview), "columnas."))
+}
+
+if (file.exists(prot_path)) {
+  proteomics_preview <- read.csv(prot_path)
+  message(paste("Proteómica accesible:", nrow(proteomics_preview), "filas,",
+                ncol(proteomics_preview), "columnas."))
+}
+
+message("=== Bloque 1 finalizado correctamente. ===")
+```
+
+---
+
+# BLOQUE 2: Carga Dinámica y Mapeo de Datasets
+
+> **Propósito:** Recorrer recursivamente la carpeta ROSMAP y cargar cada archivo relevante en una
+> lista nombrada (`datasets`), garantizando que todos los objetos se referencien con claves
+> semánticas estables e independientes de la ruta física del sistema.
+
+Este enfoque desacopla el código de la estructura de carpetas: si cambia el árbol de directorios,
+basta con actualizar los patrones de detección dentro de la función. Cada fuente de datos recibe
+una clave descriptiva en la lista resultante, lo que facilita el acceso posterior sin depender
+de índices numéricos ni rutas absolutas.
+
+Los seis archivos que el pipeline necesita son:
+
+- **Datos clínicos** (`ROSMAP_clinical.csv`): identificadores y variables objetivo.
+- **Residuales génicos** (`RINPMIAGESEX_resids.csv`): expresión génica ajustada por covariables.
+- **Covariables génicas** (`ROSMAP_RINPMIAGESEX_covs.rds`): contienen el `projid` asociado a cada muestra génica.
+- **Metabolómica Brain514** (`ROSMAP_Metabolon_HD4_Brain514_assay_data.csv`): plataforma Metabolon HD4.
+- **Proteómica TMT limpia** (`3.cleanDat.csv`): matriz proteína × muestra ya preprocesada.
+- **Tabla de traits proteómica** (`0.Traits-AGE_CENSORED.csv`): correspondencia `SampleID` ↔ `projid`.
+
+```{r block2-loading}
+# ==============================================================================
+# BLOQUE 2: CARGA DINÁMICA Y MAPEO DE DATASETS
+# ==============================================================================
+
+# Recorre el árbol de directorios y asigna cada archivo a una clave semántica
+load_rosmap_datasets <- function(directory) {
+
+  all_files    <- list.files(path = directory, recursive = TRUE, full.names = TRUE)
+  datasets_tmp <- list()
+
+  for (file_path in all_files) {
+
+    if (grepl("ROSMAP_clinical\\.csv$", file_path)) {
+      datasets_tmp[["clinical_data"]] <- read.csv(file_path)
+
+    } else if (grepl("RINPMIAGESEX_resids\\.csv$", file_path)) {
+      datasets_tmp[["genes_residuals"]] <- read.csv(file_path)
+
+    } else if (grepl("ROSMAP_RINPMIAGESEX_covs\\.rds$", file_path)) {
+      datasets_tmp[["genes_covariates"]] <- readRDS(file_path)
+
+    } else if (grepl("ROSMAP_Metabolon_HD4_Brain514_assay_data\\.csv$", file_path)) {
+      datasets_tmp[["metabolomics_data"]] <- read.csv(file_path)
+
+    } else if (grepl("3\\.cleanDat\\.csv$", file_path)) {
+      datasets_tmp[["proteomics_data"]] <- read.csv(file_path)
+
+    } else if (grepl("0\\.Traits-AGE_CENSORED\\.csv$", file_path)) {
+      datasets_tmp[["proteomics_traits"]] <- read.csv(file_path)
+    }
+  }
+
+  return(datasets_tmp)
+}
+
+# Requiere que base_path haya sido definido en el Bloque 1
+if (!exists("base_path")) {
+  stop("Error: 'base_path' no encontrada. Ejecuta primero el Bloque 1.")
+}
+
+datasets <- load_rosmap_datasets(base_path)
+message(paste("Datasets cargados:", paste(names(datasets), collapse = ", ")))
+
+# Verifica que las tres variables objetivo están presentes en los datos clínicos
+if ("clinical_data" %in% names(datasets)) {
+  target_vars   <- c("braaksc", "ceradsc", "cogdx")
+  found_targets <- target_vars[target_vars %in% colnames(datasets$clinical_data)]
+  message(paste("Variables objetivo encontradas:", paste(found_targets, collapse = ", ")))
+  print(colnames(datasets$clinical_data)[1:15])
+} else {
+  stop("Error: El dataset clínico no se cargó correctamente.")
+}
+
+message("=== Bloque 2 finalizado correctamente. ===")
+```
+
+---
+
+# BLOQUE 3: Integración Clínica, Limpieza e Imputación
+
+> **Propósito:** Vincular cada dataset ómico con las variables clínicas mediante el identificador
+> de muestra correspondiente, eliminar registros sin etiqueta en las variables objetivo e imputar
+> la media aritmética en los predictores numéricos con valores faltantes.
+
+Cada modalidad ómica utiliza un identificador de muestra diferente y tiene un formato de origen
+distinto, por lo que la integración clínica se realiza de forma específica para cada una. Tras
+la integración, las tres plataformas pasan por el mismo protocolo de control de calidad.
+
+## 3.1 Dataset de Genes
+
+La expresión génica no contiene un identificador de donante en sus propias columnas: las filas
+están alineadas posicionalmente con el archivo de covariables (`genes_covariates`), que sí
+incluye el campo `projid`. La integración consiste en transferir ese identificador por posición
+y después realizar un *merge* con los datos clínicos.
+
+```{r block3-genes}
+# ==============================================================================
+# BLOQUE 3.1: INTEGRACIÓN CLÍNICA — GENES
+# ==============================================================================
+
+clinical_data <- datasets$clinical_data
+genes_data    <- datasets$genes_residuals
+genes_covs    <- datasets$genes_covariates
+
+# Transfiere projid desde las covariables al dataset génico por alineación posicional
+genes_data$projid <- genes_covs$projid
+
+# Reduce los datos clínicos a los campos estrictamente necesarios
+clinical_subset <- clinical_data[, c("projid", "individualID", "braaksc", "ceradsc", "cogdx")]
+
+# Une las etiquetas clínicas al dataset génico por projid
+genes_data <- merge(clinical_subset, genes_data, by = "projid")
+
+message(paste("Dataset genes integrado:", nrow(genes_data), "muestras,",
+              ncol(genes_data), "columnas."))
+
+# Checkpoint intermedio para depuración
+write.csv(genes_data, "genes_clinical_integrated.csv", row.names = FALSE)
+```
+
+## 3.2 Dataset de Metabolitos
+
+Los datos de metabolómica utilizan `individualID` como identificador de muestra, a diferencia
+de `projid` usado en genes. Ambos campos están presentes en los datos clínicos de ROSMAP,
+por lo que el *merge* se realiza directamente sobre `individualID`.
+
+```{r block3-metabolites}
+# ==============================================================================
+# BLOQUE 3.2: INTEGRACIÓN CLÍNICA — METABOLITOS
+# ==============================================================================
+
+clinical_data    <- datasets$clinical_data
+metabolites_data <- datasets$metabolomics_data
+
+clinical_subset <- clinical_data[, c("projid", "individualID", "braaksc", "ceradsc", "cogdx")]
+
+# Une por individualID, identificador nativo de la plataforma metabolómica
+metabolites_data <- merge(clinical_subset, metabolites_data, by = "individualID")
+
+message(paste("Dataset metabolitos integrado:", nrow(metabolites_data), "muestras,",
+              ncol(metabolites_data), "columnas."))
+
+head(metabolites_data[, 1:8])
+
+# Checkpoint intermedio para depuración
+write.csv(metabolites_data, "metabolites_clinical_integrated.csv", row.names = FALSE)
+```
+
+## 3.3 Dataset de Proteínas
+
+La proteómica TMT tiene formato **proteína × muestra** (filas = proteínas, columnas = muestras
+identificadas por `SampleID`), el inverso de los otros datasets. La integración requiere tres pasos:
+primero construir la tabla de correspondencia `SampleID` ↔ `projid` a partir del archivo de traits,
+luego transponer la matriz de proteínas para obtener el formato **muestra × proteína**, y finalmente
+unir ambas tablas por `SampleID`.
+
+```{r block3-proteins}
+# ==============================================================================
+# BLOQUE 3.3: INTEGRACIÓN CLÍNICA — PROTEÍNAS
+# ==============================================================================
+
+traits_data   <- datasets$proteomics_traits
+clinical_data <- datasets$clinical_data
+proteins_data <- datasets$proteomics_data
+
+# Construye la tabla de correspondencia SampleID → projid → variables clínicas
+sample_mapping <- traits_data[, c("SampleID", "projid")]
+sample_mapping <- merge(
+  sample_mapping,
+  clinical_data[, c("projid", "individualID", "braaksc", "ceradsc", "cogdx")],
+  by = "projid"
+)
+
+# Transpone la matriz: de [proteínas × muestras] a [muestras × proteínas]
+# La columna 'X' contiene los nombres de proteína y pasa a ser cabecera de columnas
+proteins_t           <- as.data.frame(t(proteins_data[, -1]))
+colnames(proteins_t) <- proteins_data$X
+proteins_t$SampleID  <- rownames(proteins_t)
+
+# Une la tabla de correspondencia con la matriz transpuesta por SampleID
+proteins_data <- merge(sample_mapping, proteins_t, by = "SampleID")
+
+# Reordena: identificadores y variables objetivo primero, proteínas a continuación
+id_cols       <- c("projid", "individualID", "SampleID", "braaksc", "ceradsc", "cogdx")
+protein_cols  <- setdiff(colnames(proteins_data), id_cols)
+proteins_data <- proteins_data[, c(id_cols, protein_cols)]
+
+message(paste("Dataset proteínas integrado:", nrow(proteins_data), "muestras,",
+              ncol(proteins_data), "columnas."))
+```
+
+## 3.4 Limpieza e Imputación de los Tres Datasets
+
+Una vez integrados, los tres datasets pasan por el mismo protocolo de control de calidad.
+Los criterios aplicados son:
+
+1. **Exclusión de muestras sin etiqueta clínica:** las filas con `NA` en cualquiera de las tres variables objetivo se eliminan, ya que no pueden usarse en entrenamiento supervisado.
+2. **Filtrado de predictores sin varianza:** las columnas con un único valor distinto (varianza cero) no aportan capacidad discriminativa y se descartan.
+3. **Imputación por la media:** los valores faltantes en predictores numéricos se sustituyen por la media de la columna. Las columnas enteramente `NA` se eliminan.
+
+Al término de este bloque los tres datasets están completamente libres de valores nulos (`NA`) y listos para
+ser exportados como archivos de entrada para los modelos.
+
+```{r block3-cleaning}
+# ==============================================================================
+# BLOQUE 3.4: LIMPIEZA E IMPUTACIÓN
+# ==============================================================================
+
+clean_dataset <- function(df) {
+
+  # Columnas que no son predictores y deben quedar intactas
+  metadata_cols <- c("projid", "individualID", "SampleID", "PARENT_SAMPLE_NAME",
+                     "SAMPLE_TYPE", "braaksc", "ceradsc", "cogdx")
+
+  # 1. Elimina muestras sin etiqueta clínica en las variables objetivo
+  target_vars <- c("braaksc", "ceradsc", "cogdx")
+  df <- df[complete.cases(df[, target_vars[target_vars %in% colnames(df)]]), ]
+
+  # 2. Procesa cada predictor numérico
+  predictor_cols <- setdiff(colnames(df), metadata_cols)
+
+  for (col in predictor_cols) {
+    df[[col]] <- as.numeric(as.character(df[[col]]))
+
+    # Elimina columnas con varianza cero (un único valor distinto)
+    if (length(unique(na.omit(df[[col]]))) <= 1) {
+      df[[col]] <- NULL
+      next
+    }
+
+    # Imputa valores faltantes con la media; elimina la columna si es todo NA
+    if (any(is.na(df[[col]]))) {
+      col_mean <- mean(df[[col]], na.rm = TRUE)
+      if (is.nan(col_mean)) {
+        df[[col]] <- NULL
+      } else {
+        df[[col]][is.na(df[[col]])] <- col_mean
+      }
+    }
+  }
+
+  return(df)
+}
+
+genes_data       <- clean_dataset(genes_data)
+metabolites_data <- clean_dataset(metabolites_data)
+proteins_data    <- clean_dataset(proteins_data)
+
+# Comprueba la ausencia total de NA tras la limpieza
+na_check <- sapply(
+  list(Genes = genes_data, Metabolitos = metabolites_data, Proteinas = proteins_data),
+  function(df) any(is.na(df))
+)
+
+message("Resumen de dimensiones tras el control de calidad:")
+message(sprintf("- Genes:       %d muestras x %d variables", nrow(genes_data),       ncol(genes_data)))
+message(sprintf("- Metabolitos: %d muestras x %d variables", nrow(metabolites_data), ncol(metabolites_data)))
+message(sprintf("- Proteínas:   %d muestras x %d variables", nrow(proteins_data),    ncol(proteins_data)))
+```
+
+---
+
+# BLOQUE 4: Generación de Datasets Finales
+
+> **Propósito:** Exportar los 9 archivos CSV listos para modelado, uno por cada combinación de
+> modalidad ómica (genes, metabolitos, proteínas) y variable objetivo (braaksc, ceradsc, cogdx).
+> Cada archivo contiene únicamente los predictores de su modalidad y el valor numérico del target,
+> redondeados a 6 decimales para homogeneidad.
+
+Los archivos integrados y limpios de cada modalidad se guardan primero en `dataset_predictors/`
+como punto de entrada documentado y reutilizable. A partir de ellos se generan los 9 archivos
+finales en `dataset_omics/`, la carpeta que consume directamente el pipeline de modelado.
+
+```{r block4-final-datasets}
+# ==============================================================================
+# BLOQUE 4: GENERACIÓN DE DATASETS FINALES
+# ==============================================================================
+
+# Guarda los datasets integrados y limpios como archivos de entrada documentados
+input_dir <- "dataset_predictors"
+if (!dir.exists(input_dir)) dir.create(input_dir, recursive = TRUE)
+
+write.csv(genes_data,       file.path(input_dir, "p_genes.csv"),       row.names = FALSE)
+write.csv(metabolites_data, file.path(input_dir, "p_metabolites.csv"), row.names = FALSE)
+write.csv(proteins_data,    file.path(input_dir, "p_proteins.csv"),    row.names = FALSE)
+
+# Carpeta de salida para los archivos listos para modelado
+output_dir <- "dataset_omics"
+if (!dir.exists(output_dir)) dir.create(output_dir, recursive = TRUE)
+
+target_vars <- c("braaksc", "ceradsc", "cogdx")
+omics_list  <- list(
+  genes       = "p_genes.csv",
+  metabolites = "p_metabolites.csv",
+  proteins    = "p_proteins.csv"
+)
+
+# Metadatos que se excluyen del conjunto de predictores
+cols_exclude <- c("projid", "individualID", "SampleID", "braaksc", "ceradsc", "cogdx", "PARENT_SAMPLE_NAME", "SAMPLE_TYPE",
+"BATCH_209", "BATCH_305", "BATCH_400", "BATCH_402"
+)
+
+# Genera un CSV final por cada combinación ómica × target
+process_final_dataset <- function(omic_name, input_csv, target_var) {
+
+  input_path <- file.path(input_dir, input_csv)
+  if (!file.exists(input_path)) return(NULL)
+
+  df_raw <- read.csv(input_path)
+
+  # Selecciona predictores y target
+  predictor_cols <- setdiff(colnames(df_raw), cols_exclude)
+  df_predictors  <- df_raw[, predictor_cols]
+  target_values  <- as.numeric(df_raw[[target_var]])
+
+  # Combina predictores y target en el dataset final
+  df_final <- cbind(df_predictors, setNames(data.frame(target_values), target_var))
+
+  # Redondea todas las columnas numéricas a 6 decimales
+  df_final[] <- lapply(df_final, function(x) if (is.numeric(x)) round(x, 6) else x)
+
+  # Exporta con nombre estandarizado: omica-target.csv
+  output_filename <- paste0(omic_name, "-", target_var, ".csv")
+  write.csv(df_final, file.path(output_dir, output_filename), row.names = FALSE, quote = FALSE)
+
+  message(paste("Archivo generado:", output_filename,
+                "| Predictores:", ncol(df_predictors),
+                "| Target:", target_var))
+}
+
+message("Iniciando generación de datasets finales...")
+
+for (omic in names(omics_list)) {
+  for (tg in target_vars) {
+    process_final_dataset(omic, omics_list[[omic]], tg)
+  }
+}
+
+message("=== Pipeline completado: 9 archivos listos en 'dataset_omics/' ===")
+```
+
+---
+
+# Resumen del Pipeline
+
+```{r pipeline-summary, echo=FALSE}
+# Pasos fijos del pipeline (bloques 1–3)
+pipeline_steps <- data.frame(
+  Bloque = c("1", "1", "2", "3", "3", "3"),
+  Archivo = c(
+    "Gene_expression/RINPMIAGESEX_resids.csv",
+    "genes_clinical_integrated.csv / metabolites_clinical_integrated.csv",
+    "— (lista `datasets` en memoria) —",
+    "dataset_predictors/genes.csv",
+    "dataset_predictors/metabolites.csv",
+    "dataset_predictors/proteins.csv"
+  ),
+  Descripcion = c(
+    "Conversión RDS → CSV de residuales génicos",
+    "Checkpoints intermedios de integración clínica",
+    "Todos los datasets en un objeto R estructurado",
+    "Genes + clínica (limpios e imputados)",
+    "Metabolitos + clínica (limpios e imputados)",
+    "Proteínas + clínica (limpios e imputados)"
+  ),
+  stringsAsFactors = FALSE
+)
+
+# Archivos generados dinámicamente en el Bloque 4
+output_dir_path <- "dataset_omics"
+block4_files    <- data.frame(Bloque = character(), Archivo = character(), Descripcion = character())
+
+if (dir.exists(output_dir_path)) {
+  found_files <- list.files(output_dir_path, pattern = "\\.csv$", full.names = FALSE)
+
+  if (length(found_files) > 0) {
+    block4_files <- data.frame(
+      Bloque      = "4",
+      Archivo     = file.path(output_dir_path, found_files),
+      Descripcion = "Dataset final: predictores + target (valor real, 6 decimales)",
+      stringsAsFactors = FALSE
+    )
+  }
+}
+
+pipeline_summary <- rbind(pipeline_steps, block4_files)
+
+knitr::kable(
+  pipeline_summary,
+  caption   = paste("Balance del Pipeline ROSMAP —", Sys.time()),
+  col.names = c("Bloque", "Ruta del Archivo", "Descripción del Contenido")
+)
+```
+
+---
+
+*Documento generado automáticamente con R Markdown.  
+Para reproducir el análisis, ejecutar los bloques en orden secuencial con `ROSMAP.tar`
+en el directorio de trabajo.*

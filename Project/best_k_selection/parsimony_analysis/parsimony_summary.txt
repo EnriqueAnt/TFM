@@ -1,0 +1,45 @@
+================================================================================
+INFORME DE SELECCIÓN POR PARSIMONIA
+Pesos: BA=50%  F1=35%  PS=15%
+Umbral tolerancia: 1.0%
+================================================================================
+
+DATASET: BRAAKSC
+  K elegido (parsimonia): 50
+  K mejor bruto:          50
+  Genes seleccionados:    50
+  Metodología ganadora:   BorderlineSMOTE_RF-R2_FR
+  BA  (test):             0.2914
+  F1  (test):             0.2823
+  PS  (test):             0.4652
+  Score ponderado:        0.3143
+  Score mejor bruto:      0.3143
+  Diferencia:             0.0000 (dentro del umbral)
+------------------------------------------------------------
+
+DATASET: CERADSC
+  K elegido (parsimonia): 1500
+  K mejor bruto:          1500
+  Genes seleccionados:    1500
+  Metodología ganadora:   NCR_RF-R3_Resampl
+  BA  (test):             0.4908
+  F1  (test):             0.4342
+  PS  (test):             0.6140
+  Score ponderado:        0.4895
+  Score mejor bruto:      0.4895
+  Diferencia:             0.0000 (dentro del umbral)
+------------------------------------------------------------
+
+DATASET: COGDX
+  K elegido (parsimonia): 1000
+  K mejor bruto:          1000
+  Genes seleccionados:    1000
+  Metodología ganadora:   ROS_RF-R2_FR
+  BA  (test):             0.3753
+  F1  (test):             0.3674
+  PS  (test):             0.6271
+  Score ponderado:        0.4103
+  Score mejor bruto:      0.4103
+  Diferencia:             0.0000 (dentro del umbral)
+------------------------------------------------------------
+

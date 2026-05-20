@@ -1,0 +1,27 @@
+# IDEs y Entornos
+.vscode/
+.Rproj.user/
+.Rhistory
+.RData*
+.RDataTmp*
+.Ruserdata
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+
+# Datos y Modelos
+# (Se ignoran datos pesados para no saturar GitHub ni subir info clínica protegida)
+*.csv
+*.tsv
+*.xlsx
+*.pkl
+*.joblib
+*.h5
+*.rda
+*.Rds
+*.Rproj
+*.tar
+
+# Archivos del SO
+.DS_Store
+Thumbs.db

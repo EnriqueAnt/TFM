@@ -1,0 +1,65 @@
+
+================================================================================
+ LIGA DE CAMPEONES K: BRAAKSC
+================================================================================
+
+ RANKING FINAL DE COMPETICIÓN
+---------------------------------------------------------------------------------------------------------
+K_Option              Methodology  Total_Signed_Rank  Total_Mean_Rank        Details_SR
+    K=75             ROS_RF-R2_FR                  9               13   BA:6 F1:5 PS:-2
+    K=50 BorderlineSMOTE_RF-R2_FR                  5                7   BA:2 F1:5 PS:-2
+  K=1000          AllKNN_RF-R2_FR                  5                7   BA:1 F1:-1 PS:5
+   K=100          AllKNN_RF-R2_FR                  3                5   BA:1 F1:-2 PS:4
+  K=1500          AllKNN_RF-R2_FR                  1               -1  BA:-1 F1:-3 PS:5
+    K=25             ROS_RF-R2_FR                 -2               -3  BA:-1 F1:3 PS:-4
+  K=2500           Tomek_RF-R2_FR                -10              -13  BA:-4 F1:-6 PS:0
+   K=500     KMeansSMOTE_RF-R2_FR                -11              -15 BA:-4 F1:-1 PS:-6
+---------------------------------------------------------------------------------------------------------
+ GANADOR ESTADÍSTICO PARA BRAAKSC: K=75 (ROS_RF-R2_FR)
+ GANADOR POR PARSIMONIA PARA BRAAKSC: K=50 (BorderlineSMOTE_RF-R2_FR)
+    Comparativa en Liga: SR=5 | Mean=7 | BA:2 F1:5 PS:-2
+
+================================================================================
+ LIGA DE CAMPEONES K: CERADSC
+================================================================================
+
+ RANKING FINAL DE COMPETICIÓN
+---------------------------------------------------------------------------------------------------------
+K_Option              Methodology  Total_Signed_Rank  Total_Mean_Rank       Details_SR
+  K=1500        NCR_RF-R3_Resampl                  4               13  BA:2 F1:-3 PS:5
+    K=50      SMOTETomek_RF-R2_FR                  2               -1  BA:0 F1:6 PS:-4
+   K=500        NCR_RF-R3_Resampl                  2               -3  BA:1 F1:-4 PS:5
+    K=25     AllKNN_RF-R3_Resampl                  1               -1  BA:1 F1:2 PS:-2
+   K=100        NCR_RF-R3_Resampl                  0               -1  BA:1 F1:-4 PS:3
+    K=75   NearMiss_RF-R3_Resampl                  0               -3  BA:1 F1:3 PS:-4
+  K=1000        NCR_RF-R3_Resampl                 -1                3  BA:1 F1:-3 PS:1
+  K=2500 SVC_Balanced-R1_Baseline                 -8               -7 BA:-7 F1:3 PS:-4
+---------------------------------------------------------------------------------------------------------
+ GANADOR ESTADÍSTICO PARA CERADSC: K=1500 (NCR_RF-R3_Resampl)
+ GANADOR POR PARSIMONIA PARA CERADSC: K=1500 (NCR_RF-R3_Resampl)
+    Comparativa en Liga: SR=4 | Mean=13 | BA:2 F1:-3 PS:5
+
+================================================================================
+ LIGA DE CAMPEONES K: COGDX
+================================================================================
+
+ RANKING FINAL DE COMPETICIÓN
+---------------------------------------------------------------------------------------------------------
+K_Option              Methodology  Total_Signed_Rank  Total_Mean_Rank        Details_SR
+   K=100             ROS_RF-R2_FR                  4                9   BA:3 F1:4 PS:-3
+    K=75           Tomek_RF-R2_FR                  4                5   BA:1 F1:-1 PS:4
+  K=1000             ROS_RF-R2_FR                  3                9   BA:1 F1:5 PS:-3
+   K=500          AllKNN_RF-R2_FR                  3                1   BA:2 F1:-3 PS:4
+    K=25             CNN_RF-R2_FR                  0                3   BA:0 F1:-1 PS:1
+  K=1500          AllKNN_RF-R2_FR                  0               -5  BA:-1 F1:-3 PS:4
+    K=50 BorderlineSMOTE_RF-R2_FR                 -2               -5  BA:-1 F1:1 PS:-2
+  K=2500             ROS_RF-R2_FR                -12              -17 BA:-5 F1:-2 PS:-5
+---------------------------------------------------------------------------------------------------------
+ GANADOR ESTADÍSTICO PARA COGDX: K=100 (ROS_RF-R2_FR)
+ GANADOR POR PARSIMONIA PARA COGDX: K=1000 (ROS_RF-R2_FR)
+    Comparativa en Liga: SR=3 | Mean=9 | BA:1 F1:5 PS:-3
+
+================================================================================
+ PROCESO FINALIZADO
+ Report saved to: ./extra\k_champions_league_results.txt
+================================================================================

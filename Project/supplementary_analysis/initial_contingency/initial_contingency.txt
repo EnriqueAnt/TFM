@@ -1,0 +1,148 @@
+
+================= ÍNDICE DE CLASES =================
+
+Braaksc (Estadio de Braak)
+0   → Sin patología
+1-2 → Afectación inicial (región entorrinal)
+3-4 → Etapa intermedia (sistema límbico)
+5-6 → Etapa avanzada (neocórtex)
+
+CERAD
+1 → Alzheimer definitivo (alta densidad de placas)
+2 → Alzheimer probable
+3 → Alzheimer posible
+4 → Sin Alzheimer
+
+Cogdx
+1 → NCI (sin deterioro cognitivo)
+2 → MCI (leve sin otras causas)
+3 → MCI+ (leve con otras causas)
+4 → AD (Alzheimer puro)
+5 → AD+ (Alzheimer con comorbilidades)
+
+================= CORRESPODENCIA =================
+
+--- Braaksc → CERAD ---
+
+Clase 0 en Braaksc: 6 muestras
+  → CERAD clase 1: 0 (0.00%)
+  → CERAD clase 2: 0 (0.00%)
+  → CERAD clase 3: 0 (0.00%)
+  → CERAD clase 4: 6 (100.00%)
+
+Clase 1 en Braaksc: 33 muestras
+  → CERAD clase 1: 0 (0.00%)
+  → CERAD clase 2: 0 (0.00%)
+  → CERAD clase 3: 7 (21.21%)
+  → CERAD clase 4: 26 (78.79%)
+
+Clase 2 en Braaksc: 30 muestras
+  → CERAD clase 1: 0 (0.00%)
+  → CERAD clase 2: 0 (0.00%)
+  → CERAD clase 3: 7 (23.33%)
+  → CERAD clase 4: 23 (76.67%)
+
+Clase 3 en Braaksc: 77 muestras
+  → CERAD clase 1: 0 (0.00%)
+  → CERAD clase 2: 0 (0.00%)
+  → CERAD clase 3: 22 (28.57%)
+  → CERAD clase 4: 55 (71.43%)
+
+Clase 4 en Braaksc: 94 muestras
+  → CERAD clase 1: 32 (34.04%)
+  → CERAD clase 2: 38 (40.43%)
+  → CERAD clase 3: 2 (2.13%)
+  → CERAD clase 4: 22 (23.40%)
+
+Clase 5 en Braaksc: 95 muestras
+  → CERAD clase 1: 69 (72.63%)
+  → CERAD clase 2: 26 (27.37%)
+  → CERAD clase 3: 0 (0.00%)
+  → CERAD clase 4: 0 (0.00%)
+
+Clase 6 en Braaksc: 7 muestras
+  → CERAD clase 1: 7 (100.00%)
+  → CERAD clase 2: 0 (0.00%)
+  → CERAD clase 3: 0 (0.00%)
+  → CERAD clase 4: 0 (0.00%)
+
+--- Braaksc → Cogdx ---
+
+Clase 0 en Braaksc: 6 muestras
+  → Cogdx clase 1: 5 (83.33%)
+  → Cogdx clase 2: 1 (16.67%)
+  → Cogdx clase 3: 0 (0.00%)
+  → Cogdx clase 4: 0 (0.00%)
+  → Cogdx clase 5: 0 (0.00%)
+
+Clase 1 en Braaksc: 33 muestras
+  → Cogdx clase 1: 26 (78.79%)
+  → Cogdx clase 2: 4 (12.12%)
+  → Cogdx clase 3: 3 (9.09%)
+  → Cogdx clase 4: 0 (0.00%)
+  → Cogdx clase 5: 0 (0.00%)
+
+Clase 2 en Braaksc: 30 muestras
+  → Cogdx clase 1: 14 (46.67%)
+  → Cogdx clase 2: 16 (53.33%)
+  → Cogdx clase 3: 0 (0.00%)
+  → Cogdx clase 4: 0 (0.00%)
+  → Cogdx clase 5: 0 (0.00%)
+
+Clase 3 en Braaksc: 77 muestras
+  → Cogdx clase 1: 42 (54.55%)
+  → Cogdx clase 2: 34 (44.16%)
+  → Cogdx clase 3: 1 (1.30%)
+  → Cogdx clase 4: 0 (0.00%)
+  → Cogdx clase 5: 0 (0.00%)
+
+Clase 4 en Braaksc: 94 muestras
+  → Cogdx clase 1: 15 (15.96%)
+  → Cogdx clase 2: 7 (7.45%)
+  → Cogdx clase 3: 0 (0.00%)
+  → Cogdx clase 4: 63 (67.02%)
+  → Cogdx clase 5: 9 (9.57%)
+
+Clase 5 en Braaksc: 95 muestras
+  → Cogdx clase 1: 0 (0.00%)
+  → Cogdx clase 2: 0 (0.00%)
+  → Cogdx clase 3: 0 (0.00%)
+  → Cogdx clase 4: 89 (93.68%)
+  → Cogdx clase 5: 6 (6.32%)
+
+Clase 6 en Braaksc: 7 muestras
+  → Cogdx clase 1: 0 (0.00%)
+  → Cogdx clase 2: 0 (0.00%)
+  → Cogdx clase 3: 0 (0.00%)
+  → Cogdx clase 4: 7 (100.00%)
+  → Cogdx clase 5: 0 (0.00%)
+
+--- CERAD → Cogdx ---
+
+Clase 1 en CERAD: 108 muestras
+  → Cogdx clase 1: 0 (0.00%)
+  → Cogdx clase 2: 0 (0.00%)
+  → Cogdx clase 3: 0 (0.00%)
+  → Cogdx clase 4: 100 (92.59%)
+  → Cogdx clase 5: 8 (7.41%)
+
+Clase 2 en CERAD: 64 muestras
+  → Cogdx clase 1: 0 (0.00%)
+  → Cogdx clase 2: 0 (0.00%)
+  → Cogdx clase 3: 0 (0.00%)
+  → Cogdx clase 4: 57 (89.06%)
+  → Cogdx clase 5: 7 (10.94%)
+
+Clase 3 en CERAD: 38 muestras
+  → Cogdx clase 1: 23 (60.53%)
+  → Cogdx clase 2: 12 (31.58%)
+  → Cogdx clase 3: 1 (2.63%)
+  → Cogdx clase 4: 2 (5.26%)
+  → Cogdx clase 5: 0 (0.00%)
+
+Clase 4 en CERAD: 132 muestras
+  → Cogdx clase 1: 79 (59.85%)
+  → Cogdx clase 2: 50 (37.88%)
+  → Cogdx clase 3: 3 (2.27%)
+  → Cogdx clase 4: 0 (0.00%)
+  → Cogdx clase 5: 0 (0.00%)

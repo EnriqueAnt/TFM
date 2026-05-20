@@ -1,0 +1,803 @@
+====================================================================
+REPORTE GLOBAL DE RUTAS SIGNIFICATIVAS POR FRAGMENTO BIOLÓGICO DE ML
+====================================================================
+Total unified pathways: 117
+Pathways detected by ORA only: 12
+Pathways detected by GSEA only: 99
+Pathways detected by Both (ORA & GSEA): 6
+--------------------------------------------------------------------
+ML Gene Set Overlaps in Pathways (Global):
+- Pathways with Triple Core genes: 47
+- Pathways with Subnucleus genes: 23
+- Pathways with unique genes for Braaksc (Solo Tau): 0
+- Pathways with unique genes for Ceradsc (Solo Amiloide): 117
+- Pathways with unique genes for Cogdx (Clínica): 66
+- Pathways with Braaksc-Ceradsc intersection (Resiliencia): 2
+- Pathways with Braaksc-Cogdx intersection (Tau-Cogdx): 0
+- Pathways with Ceradsc-Cogdx intersection (Amiloide-Cogdx): 117
+--------------------------------------------------------------------
+
+1. FRAGMENTO TRIPLE CORE (Rutas biológicas de herencia sistémica afectadas por componentes del Triple Core de ML)
+   Total de rutas que contienen genes del Triple Core: 47
+--------------------------------------------------------------------
+  * GTPase regulator activity (GO:0030695) [GO_MF]
+    Datasets: CERADSC, COGDX | Genes [4]: DAB2IP/NUCB1/OBSCN/RASGRP2
+  * nucleoside-triphosphatase regulator activity (GO:0060589) [GO_MF]
+    Datasets: CERADSC, COGDX | Genes [4]: DAB2IP/NUCB1/OBSCN/RASGRP2
+  * chromatin remodeling (GO:0006338) [GO_BP]
+    Datasets: CERADSC | Genes [3]: SETD1A/YY1/KMT2D
+  * DNA-binding transcription repressor activity (GO:0001217) [GO_MF]
+    Datasets: BRAAKSC, CERADSC, COGDX | Genes [2]: YY1/MXI1
+  * DNA-binding transcription repressor activity, RNA polymerase II-specific (GO:0001227) [GO_MF]
+    Datasets: BRAAKSC, COGDX | Genes [2]: YY1/MXI1
+  * chromatin binding (GO:0003682) [GO_MF]
+    Datasets: BRAAKSC, CERADSC, COGDX | Genes [2]: CIC/YY1
+  * transcription coactivator activity (GO:0003713) [GO_MF]
+    Datasets: BRAAKSC, COGDX | Genes [2]: DTX1/KMT2D
+  * leukocyte cell-cell adhesion (GO:0007159) [GO_BP]
+    Datasets: CERADSC | Genes [2]: FCHO1/DTX1
+  * transcription factor binding (GO:0008134) [GO_MF]
+    Datasets: BRAAKSC, CERADSC, COGDX | Genes [2]: SETD1A/YY1
+  * gliogenesis (GO:0042063) [GO_BP]
+    Datasets: BRAAKSC, CERADSC, COGDX | Genes [2]: DAB2IP/DTX1
+  * muscle structure development (GO:0061061) [GO_BP]
+    Datasets: CERADSC, COGDX | Genes [2]: YY1/OBSCN
+  * DNA-binding transcription factor binding (GO:0140297) [GO_MF]
+    Datasets: BRAAKSC, CERADSC | Genes [2]: SETD1A/YY1
+  * histone modifying activity (GO:0140993) [GO_MF]
+    Datasets: CERADSC | Genes [2]: SETD1A/KMT2D
+  * DNA-binding transcription activator activity (GO:0001216) [GO_MF]
+    Datasets: BRAAKSC, CERADSC, COGDX | Genes [1]: YY1
+  * membrane raft assembly (GO:0001765) [GO_BP]
+    Datasets: COGDX | Genes [1]: LRCH4
+  * cytoskeletal motor activity (GO:0003774) [GO_MF]
+    Datasets: COGDX | Genes [1]: KIF1A
+  * microtubule motor activity (GO:0003777) [GO_MF]
+    Datasets: COGDX | Genes [1]: KIF1A
+  * actin binding (GO:0003779) [GO_MF]
+    Datasets: CERADSC, COGDX | Genes [1]: CAPZA1
+  * amino acid metabolic process (GO:0006520) [GO_BP]
+    Datasets: CERADSC | Genes [1]: ODC1
+  * actin filament organization (GO:0007015) [GO_BP]
+    Datasets: CERADSC, COGDX | Genes [1]: CAPZA1
+  * beta-catenin binding (GO:0008013) [GO_MF]
+    Datasets: BRAAKSC, CERADSC, COGDX | Genes [1]: SETD1A
+  * plus-end-directed microtubule motor activity (GO:0008574) [GO_MF]
+    Datasets: COGDX | Genes [1]: KIF1A
+  * electron transfer activity (GO:0009055) [GO_MF]
+    Datasets: BRAAKSC, CERADSC | Genes [1]: ME2
+  * glial cell differentiation (GO:0010001) [GO_BP]
+    Datasets: CERADSC, COGDX | Genes [1]: DTX1
+  * epithelial cell migration (GO:0010631) [GO_BP]
+    Datasets: COGDX | Genes [1]: DAB2IP
+  * Wnt signaling pathway (GO:0016055) [GO_BP]
+    Datasets: BRAAKSC | Genes [1]: DAB2IP
+  * positive regulation of cell-cell adhesion (GO:0022409) [GO_BP]
+    Datasets: CERADSC | Genes [1]: FCHO1
+  * membrane raft organization (GO:0031579) [GO_BP]
+    Datasets: COGDX | Genes [1]: LRCH4
+  * mitochondrial translation (GO:0032543) [GO_BP]
+    Datasets: CERADSC, COGDX | Genes [1]: MPV17L2
+  * cellular response to vascular endothelial growth factor stimulus (GO:0035924) [GO_BP]
+    Datasets: BRAAKSC | Genes [1]: DAB2IP
+  * epigenetic regulation of gene expression (GO:0040029) [GO_BP]
+    Datasets: CERADSC | Genes [1]: KMT2D
+  * phosphatidylinositol 3-kinase binding (GO:0043548) [GO_MF]
+    Datasets: BRAAKSC | Genes [1]: DAB2IP
+  * dicarboxylic acid metabolic process (GO:0043648) [GO_BP]
+    Datasets: CERADSC | Genes [1]: ME2
+  * positive regulation of JNK cascade (GO:0046330) [GO_BP]
+    Datasets: CERADSC | Genes [1]: DAB2IP
+  * blood vessel morphogenesis (GO:0048514) [GO_BP]
+    Datasets: CERADSC | Genes [1]: DAB2IP
+  * canonical Wnt signaling pathway (GO:0060070) [GO_BP]
+    Datasets: COGDX | Genes [1]: DAB2IP
+  * response to epidermal growth factor (GO:0070849) [GO_BP]
+    Datasets: BRAAKSC, CERADSC, COGDX | Genes [1]: DAB2IP
+  * cellular response to epidermal growth factor stimulus (GO:0071364) [GO_BP]
+    Datasets: COGDX | Genes [1]: DAB2IP
+  * mitochondrial gene expression (GO:0140053) [GO_BP]
+    Datasets: CERADSC | Genes [1]: MPV17L2
+  * regulation of miRNA metabolic process (GO:2000628) [GO_BP]
+    Datasets: CERADSC | Genes [1]: YY1
+  * Glutathione metabolism (hsa00480) [KEGG]
+    Datasets: CERADSC | Genes [1]: ODC1
+  * Carbon metabolism (hsa01200) [KEGG]
+    Datasets: CERADSC | Genes [1]: ME2
+  * ATP-dependent chromatin remodeling (hsa03082) [KEGG]
+    Datasets: CERADSC, COGDX | Genes [1]: YY1
+  * Notch signaling pathway (hsa04330) [KEGG]
+    Datasets: CERADSC, COGDX | Genes [1]: DTX1
+  * Aldosterone-regulated sodium reabsorption (hsa04960) [KEGG]
+    Datasets: CERADSC | Genes [1]: HSD11B2
+  * Amyotrophic lateral sclerosis (hsa05014) [KEGG]
+    Datasets: CERADSC | Genes [1]: CASP9
+  * Prion disease (hsa05020) [KEGG]
+    Datasets: CERADSC | Genes [1]: CASP9
+
+--------------------------------------------------------------------
+2. FRAGMENTO SUBNÚCLEO IRREDUCIBLE (16 genes biomarcadores clave)
+   Total de rutas que contienen genes del Subnúcleo Irreducible: 23
+--------------------------------------------------------------------
+  * chromatin binding (GO:0003682) [GO_MF]
+    Datasets: BRAAKSC, CERADSC, COGDX | Genes [1]: CIC
+  * cytoskeletal motor activity (GO:0003774) [GO_MF]
+    Datasets: COGDX | Genes [1]: KIF1A
+  * microtubule motor activity (GO:0003777) [GO_MF]
+    Datasets: COGDX | Genes [1]: KIF1A
+  * chromatin remodeling (GO:0006338) [GO_BP]
+    Datasets: CERADSC | Genes [1]: SETD1A
+  * leukocyte cell-cell adhesion (GO:0007159) [GO_BP]
+    Datasets: CERADSC | Genes [1]: FCHO1
+  * beta-catenin binding (GO:0008013) [GO_MF]
+    Datasets: BRAAKSC, CERADSC, COGDX | Genes [1]: SETD1A
+  * transcription factor binding (GO:0008134) [GO_MF]
+    Datasets: BRAAKSC, CERADSC, COGDX | Genes [1]: SETD1A
+  * plus-end-directed microtubule motor activity (GO:0008574) [GO_MF]
+    Datasets: COGDX | Genes [1]: KIF1A
+  * epithelial cell migration (GO:0010631) [GO_BP]
+    Datasets: COGDX | Genes [1]: DAB2IP
+  * Wnt signaling pathway (GO:0016055) [GO_BP]
+    Datasets: BRAAKSC | Genes [1]: DAB2IP
+  * positive regulation of cell-cell adhesion (GO:0022409) [GO_BP]
+    Datasets: CERADSC | Genes [1]: FCHO1
+  * GTPase regulator activity (GO:0030695) [GO_MF]
+    Datasets: CERADSC, COGDX | Genes [1]: DAB2IP
+  * cellular response to vascular endothelial growth factor stimulus (GO:0035924) [GO_BP]
+    Datasets: BRAAKSC | Genes [1]: DAB2IP
+  * gliogenesis (GO:0042063) [GO_BP]
+    Datasets: BRAAKSC, CERADSC, COGDX | Genes [1]: DAB2IP
+  * phosphatidylinositol 3-kinase binding (GO:0043548) [GO_MF]
+    Datasets: BRAAKSC | Genes [1]: DAB2IP
+  * positive regulation of JNK cascade (GO:0046330) [GO_BP]
+    Datasets: CERADSC | Genes [1]: DAB2IP
+  * blood vessel morphogenesis (GO:0048514) [GO_BP]
+    Datasets: CERADSC | Genes [1]: DAB2IP
+  * canonical Wnt signaling pathway (GO:0060070) [GO_BP]
+    Datasets: COGDX | Genes [1]: DAB2IP
+  * nucleoside-triphosphatase regulator activity (GO:0060589) [GO_MF]
+    Datasets: CERADSC, COGDX | Genes [1]: DAB2IP
+  * response to epidermal growth factor (GO:0070849) [GO_BP]
+    Datasets: BRAAKSC, CERADSC, COGDX | Genes [1]: DAB2IP
+  * cellular response to epidermal growth factor stimulus (GO:0071364) [GO_BP]
+    Datasets: COGDX | Genes [1]: DAB2IP
+  * DNA-binding transcription factor binding (GO:0140297) [GO_MF]
+    Datasets: BRAAKSC, CERADSC | Genes [1]: SETD1A
+  * histone modifying activity (GO:0140993) [GO_MF]
+    Datasets: CERADSC | Genes [1]: SETD1A
+
+--------------------------------------------------------------------
+3. FRAGMENTOS DE INTERSECCIÓN ENTRE DOS DATASETS (2 vs 1)
+--------------------------------------------------------------------
+   A. Intersección Braaksc y Ceradsc (Resiliencia Cognitiva)
+      Total de rutas que contienen genes de Resiliencia: 2
+      ------------------------------------------------------------
+    * GTPase regulator activity (GO:0030695) [GO_MF]
+      Datasets: CERADSC, COGDX | Genes [1]: MCF2L
+    * nucleoside-triphosphatase regulator activity (GO:0060589) [GO_MF]
+      Datasets: CERADSC, COGDX | Genes [1]: MCF2L
+
+   B. Intersección Braaksc y Cogdx (Disociación Tau-Cogdx)
+      Total de rutas que contienen genes de Tau-Cogdx: 0
+      ------------------------------------------------------------
+      No se encontraron rutas con genes de esta intersección.
+
+   C. Intersección Ceradsc y Cogdx (Disociación Amiloide-Cogdx)
+      Total de rutas que contienen genes de Amiloide-Cogdx: 117
+      ------------------------------------------------------------
+    * GTPase regulator activity (GO:0030695) [GO_MF]
+      Datasets: CERADSC, COGDX | Genes [40]: GIT1/AGAP3/ARHGAP35/DENND11/GPS2/CHN2/AGFG2/ARAP1/EIF2B1/RAPGEF1/NRP1/GPSM1/PREX1/PIK3R2/MTSS2/ARHGEF10L/PLXNB1/RCC2/TNK2/ARHGEF40/TBC1D24/RALBP1/DENND4B/PLCG1/RAP1A/SEC61B/SYDE1/IQGAP1/MYO9B/TBC1D20/SIRPA/LARS1/RABEP2/RIMS1/DOCK1/DENND2A/IPO5/DENND5A/GARNL3/FAM13B
+    * nucleoside-triphosphatase regulator activity (GO:0060589) [GO_MF]
+      Datasets: CERADSC, COGDX | Genes [40]: GIT1/AGAP3/ARHGAP35/DENND11/GPS2/CHN2/AGFG2/ARAP1/EIF2B1/RAPGEF1/NRP1/GPSM1/PREX1/PIK3R2/MTSS2/ARHGEF10L/PLXNB1/RCC2/TNK2/ARHGEF40/TBC1D24/RALBP1/DENND4B/PLCG1/RAP1A/SEC61B/SYDE1/IQGAP1/MYO9B/TBC1D20/SIRPA/LARS1/RABEP2/RIMS1/DOCK1/DENND2A/IPO5/DENND5A/GARNL3/FAM13B
+    * chromatin remodeling (GO:0006338) [GO_BP]
+      Datasets: CERADSC | Genes [38]: RERE/SRCAP/DDX23/CBX5/SAMD1/SETD2/JADE2/MBD3/CREBBP/BRD3/CTCF/HDGF/CIZ1/PHF19/BAZ1B/KDM2A/PADI2/HIRA/NCOA1/HCFC1/EP300/SMARCD3/AXIN1/PPM1D/TNRC18/RESF1/SPHK2/ATRX/MECP2/FBL/ZBTB7A/NIPBL/DCAF1/USP21/DAXX/BRPF1/PHF2/PRMT2
+    * transcription factor binding (GO:0008134) [GO_MF]
+      Datasets: BRAAKSC, CERADSC, COGDX | Genes [32]: HIRA/CREBBP/FBL/HCFC1/SMARCD3/ZMYND8/CTCF/DAXX/CBX5/FOXO4/TFDP2/DCAF1/NFKBIA/NFKB1/NCOA1/HDGF/USF2/MAP3K10/TLE4/PADI2/KEAP1/LMO3/TEAD2/EBF4/ZBTB7A/EP300/SKI/TAF4/MED13/NFYB/MED12/PRMT2
+    * chromatin binding (GO:0003682) [GO_MF]
+      Datasets: BRAAKSC, CERADSC, COGDX | Genes [31]: STAG1/HIRA/CREBBP/RERE/HCFC1/SMARCD3/PCBP2/CTCF/PAF1/CBX5/MECP2/FOXO4/BRD3/E2F4/NFKB1/NCOA1/SAMD1/MBD3/GPER1/TLE4/ZNF609/POLG/PHF19/MITF/NELFA/ATRX/EP300/TNRC18/URI1/NIPBL/MED12
+    * actin filament organization (GO:0007015) [GO_BP]
+      Datasets: CERADSC, COGDX | Genes [29]: FAM171A1/SPECC1L/ARHGAP35/FLII/ABITRAM/KANK2/COBL/ARAP1/NRP1/CORO1C/PREX1/RHOQ/PIK3R2/GAS2L1/FCHSD2/INPPL1/ARHGEF10L/RND2/NF2/SPIRE1/LIMCH1/ITGB5/ABL1/IQGAP1/NCK2/ACTG1/ZEB2/BRK1/TGFB3
+    * muscle structure development (GO:0061061) [GO_BP]
+      Datasets: CERADSC, COGDX | Genes [27]: CSRP1/HSPB2/FLII/EGLN1/FOXO4/CTCF/ZNF609/HIRA/NAGLU/SMTN/EP300/SKI/SMARCD3/GPER1/NPNT/RBM38/NINJ1/MECP2/SORT1/HMG20B/BCL9L/XKR8/RBPMS2/ERBB3/LAMB2/DOCK1/POU6F1
+    * actin binding (GO:0003779) [GO_MF]
+      Datasets: CERADSC, COGDX | Genes [26]: S100A4/FLII/MYOT/ANLN/COBL/HDGF/TPRN/CORO1C/KLHL17/GAS2L1/MTSS2/SMTN/INPPL1/CLMN/TNS1/FMNL2/NF2/SPIRE1/LIMCH1/DIXDC1/ITPRID2/ABL1/IQGAP1/MYO9B/KLHL5/EMD/ANKRD24
+    * DNA-binding transcription factor binding (GO:0140297) [GO_MF]
+      Datasets: BRAAKSC, CERADSC | Genes [26]: HIRA/CREBBP/HCFC1/SMARCD3/ZMYND8/DAXX/CBX5/FOXO4/DCAF1/NFKBIA/NCOA1/USF2/MAP3K10/TLE4/PADI2/KEAP1/LMO3/EBF4/ZBTB7A/EP300/SKI/TAF4/MED13/NFYB/MED12/PRMT2
+    * gliogenesis (GO:0042063) [GO_BP]
+      Datasets: BRAAKSC, CERADSC, COGDX | Genes [25]: PPP1CC/MECP2/KCNJ10/SUN2/RAF1/ADORA2A/NAGLU/CCDC85C/CSK/POU3F2/NFIB/NF2/SKI/SLC45A3/ABL1/ABCA2/PRX/ZEB2/MED12/LAMB2/ERBB3/RHEB/EIF2B1/ORC3/LAMB1
+    * blood vessel morphogenesis (GO:0048514) [GO_BP]
+      Datasets: CERADSC | Genes [24]: PAK4/EGLN1/FOXO4/APLN/HIPK1/VEZF1/SASH1/TAFA5/NAGLU/MICALL1/ADIPOR2/NINJ1/MECP2/TEAD2/PLCG1/GAB1/RAP1A/GJC1/ABL1/UNC5B/PPP1R16B/PIK3CD/SFRP1/JAM3
+    * Wnt signaling pathway (GO:0016055) [GO_BP]
+      Datasets: BRAAKSC | Genes [23]: AXIN1/FRAT2/PAF1/G3BP1/NFKB1/BCL9L/CSNK1G2/TLE4/MITF/DIXDC1/DVL1/MARK2/LZTS2/PIAS4/PPM1B/EP300/FAM53B/SKI/ABL1/ZEB2/MED12/SFRP1/DVL3
+    * DNA-binding transcription activator activity (GO:0001216) [GO_MF]
+      Datasets: BRAAKSC, CERADSC, COGDX | Genes [22]: ZNF71/SOX12/MTF1/FOXO4/TFDP2/SALL2/E2F4/NFKB1/NFIC/USF2/VEZF1/EBF4/MITF/POU3F2/NFIB/ZBTB7B/CREBRF/TFEB/NFYB/ZEB2/NEUROD2/ELF1
+    * glial cell differentiation (GO:0010001) [GO_BP]
+      Datasets: CERADSC, COGDX | Genes [19]: RHEB/RAF1/ABCA2/ADORA2A/KCNJ10/EIF2B1/SLC45A3/CSK/NAGLU/NFIB/SKI/CCDC85C/PRX/POU3F2/ABL1/ERBB3/LAMB2/ZEB2/MED12
+    * gland development (GO:0048732) [GO_BP]
+      Datasets: CERADSC, COGDX | Genes [19]: GPAT4/ARHGAP35/RAF1/COBL/APLN/USF2/NCOA1/NAGLU/NFIB/INSR/GFER/NFKB1/ZBTB7B/RAP1A/POU3F2/ABL1/PHF2/TGFB3/SFRP1
+    * transcription coactivator activity (GO:0003713) [GO_MF]
+      Datasets: BRAAKSC, COGDX | Genes [18]: CREBBP/RERE/HCFC1/TRIM8/SMARCD3/DAXX/SRCAP/NCOA1/BCL9L/LMO3/GPS2/EP300/MED13/ABL1/MED12/PHF2/USP21/PRMT2
+    * epigenetic regulation of gene expression (GO:0040029) [GO_BP]
+      Datasets: CERADSC | Genes [17]: CBX5/SAMD1/MBD3/CTCF/CIZ1/PHF19/PADI2/EP300/AXIN1/PPM1D/TNRC18/RESF1/SPHK2/ATRX/MECP2/USP21/PHF2
+    * Neurotrophin signaling pathway (hsa04722) [KEGG]
+      Datasets: BRAAKSC, CERADSC, COGDX | Genes [17]: CAMK2G/RAPGEF1/NFKBIA/NFKB1/RAF1/PIK3CD/BAD/PIK3R2/MAP2K7/RAP1A/SORT1/GAB1/CRK/PLCG1/ABL1/SHC2/MAP3K3
+    * leukocyte cell-cell adhesion (GO:0007159) [GO_BP]
+      Datasets: CERADSC | Genes [16]: ITPKB/ADORA2A/CSK/SLC4A2/EP300/SOX12/SMARCD3/YES1/BAD/ZBTB7B/ABL1/NCK2/PIK3CD/SOCS6/SIRPA/PELI1
+    * canonical Wnt signaling pathway (GO:0060070) [GO_BP]
+      Datasets: COGDX | Genes [16]: AXIN1/LZTS2/G3BP1/BCL9L/FAM53B/FRAT2/DVL3/EP300/PPM1B/TLE4/NFKB1/DIXDC1/DVL1/ZEB2/SFRP1/CSNK1G2
+    * response to transforming growth factor beta (GO:0071559) [GO_BP]
+      Datasets: CERADSC, COGDX | Genes [16]: FURIN/CREBBP/EP300/SKI/AXIN1/YES1/NPNT/BCL9L/LTBP3/ZBTB7A/ITGB5/ABL1/CRK/ZEB2/TGFB3/SFRP1
+    * Focal adhesion (hsa04510) [KEGG]
+      Datasets: CERADSC, COGDX | Genes [16]: PAK4/ARHGAP35/PPP1CC/RAF1/RAPGEF1/PIK3R2/ITGA10/BAD/RAP1A/ITGB5/CRK/PIK3CD/LAMB2/DOCK1/COL6A2/SHC2
+    * Hepatocellular carcinoma (hsa05225) [KEGG]
+      Datasets: BRAAKSC, CERADSC | Genes [15]: BCL2L1/AXIN1/SMARCD3/FRAT2/RAF1/PIK3CD/BAD/PIK3R2/KEAP1/DVL1/GAB1/TGFB3/PLCG1/DVL3/SHC2
+    * DNA-binding transcription repressor activity (GO:0001217) [GO_MF]
+      Datasets: BRAAKSC, CERADSC, COGDX | Genes [14]: CTCF/NACC1/NFKB1/HDGF/ZNF205/ZBTB34/ZNF219/MITF/ZBTB12/ZBTB7A/ZBTB7B/SKI/ZEB2/POU6F1
+    * histone modifying activity (GO:0140993) [GO_MF]
+      Datasets: CERADSC | Genes [14]: SRCAP/SETD2/JADE2/CREBBP/BAZ1B/KDM2A/PADI2/NCOA1/EP300/FBL/DCAF1/BRPF1/PHF2/PRMT2
+    * ErbB signaling pathway (hsa04012) [KEGG]
+      Datasets: BRAAKSC, CERADSC | Genes [14]: CAMK2G/RAF1/PIK3CD/BAD/PIK3R2/NCK2/MAP2K7/PAK4/GAB1/CRK/PLCG1/ABL1/ERBB3/SHC2
+    * DNA-binding transcription repressor activity, RNA polymerase II-specific (GO:0001227) [GO_MF]
+      Datasets: BRAAKSC, COGDX | Genes [13]: CTCF/NACC1/NFKB1/HDGF/ZNF205/ZBTB34/ZNF219/MITF/ZBTB12/ZBTB7A/SKI/ZEB2/POU6F1
+    * establishment or maintenance of cell polarity (GO:0007163) [GO_BP]
+      Datasets: CERADSC, COGDX | Genes [13]: ARHGAP35/NDE1/GPSM1/ERBIN/RHOQ/INPPL1/CCDC85C/MARK2/CRB2/ABL1/CRK/SNX27/JAM3
+    * glial cell development (GO:0021782) [GO_BP]
+      Datasets: CERADSC, COGDX | Genes [13]: RAF1/ABCA2/ADORA2A/KCNJ10/EIF2B1/NAGLU/SKI/PRX/POU3F2/ERBB3/LAMB2/ZEB2/MED12
+    * positive regulation of cell-cell adhesion (GO:0022409) [GO_BP]
+      Datasets: CERADSC | Genes [13]: ITPKB/PTPN23/CSK/EP300/SOX12/SMARCD3/YES1/BAD/ZBTB7B/ABL1/NCK2/PIK3CD/SIRPA
+    * MicroRNAs in cancer (hsa05206) [KEGG]
+      Datasets: BRAAKSC, CERADSC, COGDX | Genes [13]: CREBBP/NFKB1/RAF1/PIK3CD/PIK3R2/PAK4/EP300/SLC45A3/CRK/PLCG1/ABL1/ZEB2/ERBB3
+    * Renal cell carcinoma (hsa05211) [KEGG]
+      Datasets: BRAAKSC, CERADSC | Genes [13]: RAPGEF1/CREBBP/EGLN1/RAF1/PIK3CD/BAD/PIK3R2/RAP1A/PAK4/EP300/GAB1/TGFB3/CRK
+    * epithelial cell development (GO:0002064) [GO_BP]
+      Datasets: CERADSC | Genes [12]: GPAT4/AMPD2/RAPGEF1/E2F4/VEZF1/ATRX/BAD/RAP1A/IQGAP1/PPP1R16B/TBC1D20/LAMB2
+    * Proteoglycans in cancer (hsa05205) [KEGG]
+      Datasets: CERADSC | Genes [12]: HSPB2/PPP1CC/RAF1/MRAS/PIK3R2/CAMK2G/PLCG1/GAB1/ITGB5/IQGAP1/PIK3CD/ERBB3
+    * amino acid metabolic process (GO:0006520) [GO_BP]
+      Datasets: CERADSC | Genes [11]: KARS1/IVD/HARS2/LARS1/BCKDK/MTHFD1/MCCC2/GSS/PCCB/PYCR3/ALDH5A1
+    * myelination (GO:0042552) [GO_BP]
+      Datasets: COGDX | Genes [11]: CDK18/RAF1/ABCA2/KCNJ10/SKI/UGT8/ERBB3/NFASC/POU3F2/PRX/JAM3
+    * Chronic myeloid leukemia (hsa05220) [KEGG]
+      Datasets: BRAAKSC, CERADSC, COGDX | Genes [11]: BCL2L1/NFKBIA/NFKB1/RAF1/PIK3CD/BAD/PIK3R2/TGFB3/CRK/ABL1/SHC2
+    * tRNA metabolic process (GO:0006399) [GO_BP]
+      Datasets: CERADSC | Genes [10]: KARS1/HARS2/DUS2/TPRKB/LARS1/EXOSC7/THUMPD3/ELP2/NAT10/LSM6
+    * regulation of fat cell differentiation (GO:0045598) [GO_BP]
+      Datasets: CERADSC | Genes [10]: LRP3/GPS2/CREBL2/LMO3/AXIN1/GPER1/SORT1/ZBTB7B/ZNF385A/SFRP1
+    * chromatin-protein adaptor activity (GO:0140463) [GO_MF]
+      Datasets: CERADSC | Genes [10]: CXXC1/ZMYND8/CBX5/BRD3/PHF19/EP300/TNRC18/ATRX/MECP2/PHF2
+    * Gastric cancer (hsa05226) [KEGG]
+      Datasets: BRAAKSC, COGDX | Genes [10]: AXIN1/FRAT2/RAF1/PIK3CD/PIK3R2/DVL1/GAB1/TGFB3/DVL3/SHC2
+    * peripheral nervous system development (GO:0007422) [GO_BP]
+      Datasets: CERADSC, COGDX | Genes [9]: RAF1/SKI/NFASC/PRX/POU3F2/ERBB3/LAMB2/MED12/UGT8
+    * epithelial cell migration (GO:0010631) [GO_BP]
+      Datasets: COGDX | Genes [9]: ANLN/KANK2/SASH1/PLCG1/CORO1C/MAP4K4/PTPN23/DOCK1/ZEB2
+    * transcription coregulator binding (GO:0001221) [GO_MF]
+      Datasets: COGDX | Genes [8]: CTCF/CREBBP/HDGF/EP300/NFKB1/SMARCD3/ZBTB7A/TEAD2
+    * cytoskeletal motor activity (GO:0003774) [GO_MF]
+      Datasets: COGDX | Genes [8]: KIF13B/MYO9B/KIF5A/KIF5B/KIF1B/KIF1C/KIF19/KIF9
+    * beta-catenin binding (GO:0008013) [GO_MF]
+      Datasets: BRAAKSC, CERADSC, COGDX | Genes [8]: AXIN1/SPECC1L/FOXO4/BCL9L/DVL1/EP300/MED12/DVL3
+    * mitochondrial translation (GO:0032543) [GO_BP]
+      Datasets: CERADSC, COGDX | Genes [8]: HARS2/MRPS22/MRPL13/MRPL3/MRPS18A/COA3/MRPL57/PTCD3
+    * kidney epithelium development (GO:0072073) [GO_BP]
+      Datasets: COGDX | Genes [8]: KANK2/LZTS2/NPNT/POU3F3/AMPD2/IQGAP1/SFRP1/LAMB2
+    * mitochondrial gene expression (GO:0140053) [GO_BP]
+      Datasets: CERADSC | Genes [8]: HARS2/MRPS22/MRPL13/MRPL3/MRPS18A/COA3/MRPL57/PTCD3
+    * Hippo signaling pathway (hsa04390) [KEGG]
+      Datasets: CERADSC, COGDX | Genes [8]: PPP1CC/DVL1/AXIN1/CRB2/TEAD2/NF2/DVL3/TGFB3
+    * Integrin signaling (hsa04518) [KEGG]
+      Datasets: CERADSC, COGDX | Genes [8]: PIK3R2/NPNT/ITGA10/ITGB5/NCK2/PIK3CD/LAMB2/COL6A2
+    * Prostate cancer (hsa05215) [KEGG]
+      Datasets: BRAAKSC | Genes [8]: CREBBP/NFKBIA/NFKB1/RAF1/PIK3CD/BAD/PIK3R2/EP300
+    * microtubule motor activity (GO:0003777) [GO_MF]
+      Datasets: COGDX | Genes [7]: KIF13B/KIF5A/KIF5B/KIF1B/KIF1C/KIF19/KIF9
+    * Schwann cell differentiation (GO:0014037) [GO_BP]
+      Datasets: COGDX | Genes [7]: MED12/RAF1/SKI/ERBB3/POU3F2/PRX/LAMB2
+    * Schwann cell development (GO:0014044) [GO_BP]
+      Datasets: COGDX | Genes [7]: MED12/RAF1/SKI/ERBB3/POU3F2/PRX/LAMB2
+    * ligase activity (GO:0016874) [GO_MF]
+      Datasets: BRAAKSC, CERADSC | Genes [7]: KARS1/LARS1/GSS/MCCC2/PCCB/MTHFD1/HARS2
+    * mitochondrial respiratory chain complex assembly (GO:0033108) [GO_BP]
+      Datasets: BRAAKSC, CERADSC, COGDX | Genes [7]: COA3/IMMP2L/NDUFA6/FOXRED1/DMAC1/COX18/CHCHD7
+    * cell fate commitment (GO:0045165) [GO_BP]
+      Datasets: BRAAKSC, CERADSC, COGDX | Genes [7]: PAF1/MBD3/MITF/POU3F2/NFIB/EP300/SFRP1
+    * positive regulation of transmembrane receptor protein serine/threonine kinase signaling pathway (GO:0090100) [GO_BP]
+      Datasets: CERADSC | Genes [7]: CREBBP/EP300/AXIN1/NPNT/CRB2/ZEB2/TGFB3
+    * protein tyrosine kinase binding (GO:1990782) [GO_MF]
+      Datasets: CERADSC | Genes [7]: GIT1/CSK/PIK3R2/CRK/NCK2/SIRPA/SHC2
+    * B cell receptor signaling pathway (hsa04662) [KEGG]
+      Datasets: CERADSC, COGDX | Genes [7]: NFKBIA/RAF1/PIK3R2/INPPL1/NFKB1/PIK3CD/CD22
+    * Amyotrophic lateral sclerosis (hsa05014) [KEGG]
+      Datasets: CERADSC | Genes [7]: HNRNPA1L3/ACTG1/NDUFA10/NDUFA6/CCS/UQCR10/NDUFB5
+    * histone acetyltransferase activity (GO:0004402) [GO_MF]
+      Datasets: COGDX | Genes [6]: CREBBP/JADE2/SRCAP/BRPF1/NCOA1/EP300
+    * endoderm development (GO:0007492) [GO_BP]
+      Datasets: CERADSC, COGDX | Genes [6]: SETD2/BRD3/EP300/PAF1/ITGB5/MED12
+    * catalytic activity, acting on a tRNA (GO:0140101) [GO_MF]
+      Datasets: BRAAKSC | Genes [6]: KARS1/DUS2/LARS1/NAT10/THUMPD3/HARS2
+    * Notch signaling pathway (hsa04330) [KEGG]
+      Datasets: CERADSC, COGDX | Genes [6]: CREBBP/EP300/DTX3/DVL1/TLE4/DVL3
+    * Signaling pathways regulating pluripotency of stem cells (hsa04550) [KEGG]
+      Datasets: BRAAKSC, CERADSC | Genes [6]: AXIN1/RAF1/PIK3CD/PIK3R2/DVL1/DVL3
+    * endothelium development (GO:0003158) [GO_BP]
+      Datasets: CERADSC | Genes [5]: RAPGEF1/VEZF1/NAGLU/RAP1A/PPP1R16B
+    * plus-end-directed microtubule motor activity (GO:0008574) [GO_MF]
+      Datasets: COGDX | Genes [5]: KIF5A/KIF5B/KIF1B/KIF1C/KIF19
+    * spinal cord development (GO:0021510) [GO_BP]
+      Datasets: BRAAKSC | Genes [5]: GIGYF2/MDGA1/SOX12/NPFF/MED12
+    * positive regulation of transforming growth factor beta receptor signaling pathway (GO:0030511) [GO_BP]
+      Datasets: COGDX | Genes [5]: CREBBP/AXIN1/EP300/NPNT/ZEB2
+    * hippo signaling (GO:0035329) [GO_BP]
+      Datasets: BRAAKSC, CERADSC | Genes [5]: TEAD2/WWC3/MOB3B/NF2/MAP4K4
+    * positive regulation of JNK cascade (GO:0046330) [GO_BP]
+      Datasets: CERADSC | Genes [5]: MAP2K7/MAP3K10/AXIN1/DVL3/CRK
+    * Oxidative phosphorylation (hsa00190) [KEGG]
+      Datasets: BRAAKSC, CERADSC | Genes [5]: UQCR10/NDUFA10/NDUFA6/COX15/NDUFB5
+    * ATP-dependent chromatin remodeling (hsa03082) [KEGG]
+      Datasets: CERADSC, COGDX | Genes [5]: CDK2AP1/SRCAP/MBD3/BAZ1B/SMARCD3
+    * tRNA binding (GO:0000049) [GO_MF]
+      Datasets: CERADSC, COGDX | Genes [4]: KARS1/DUS2/THUMPD3/NAT10
+    * GTPase inhibitor activity (GO:0005095) [GO_MF]
+      Datasets: COGDX | Genes [4]: GPS2/TNK2/IQGAP1/IPO5
+    * electron transfer activity (GO:0009055) [GO_MF]
+      Datasets: BRAAKSC, CERADSC | Genes [4]: UQCR10/NDUFA10/NDUFA6/NDUFB5
+    * active monoatomic ion transmembrane transporter activity (GO:0022853) [GO_MF]
+      Datasets: BRAAKSC | Genes [4]: UQCR10/NDUFA10/NDUFA6/NDUFB5
+    * cortical cytoskeleton organization (GO:0030865) [GO_BP]
+      Datasets: CERADSC, COGDX | Genes [4]: ANLN/RHOQ/FMNL2/IQGAP1
+    * cortical actin cytoskeleton organization (GO:0030866) [GO_BP]
+      Datasets: CERADSC | Genes [4]: ANLN/RHOQ/FMNL2/IQGAP1
+    * endocrine system development (GO:0035270) [GO_BP]
+      Datasets: COGDX | Genes [4]: RAF1/POU3F2/INSR/BAD
+    * odontogenesis of dentin-containing tooth (GO:0042475) [GO_BP]
+      Datasets: CERADSC | Genes [4]: NFIC/ANKRD11/SLC4A2/NF2
+    * endothelial cell differentiation (GO:0045446) [GO_BP]
+      Datasets: BRAAKSC | Genes [4]: RAPGEF1/VEZF1/RAP1A/PPP1R16B
+    * response to epidermal growth factor (GO:0070849) [GO_BP]
+      Datasets: BRAAKSC, CERADSC, COGDX | Genes [4]: GIT1/MCM7/PLCG1/IQGAP1
+    * cellular response to epidermal growth factor stimulus (GO:0071364) [GO_BP]
+      Datasets: COGDX | Genes [4]: GIT1/MCM7/PLCG1/IQGAP1
+    * Aldosterone-regulated sodium reabsorption (hsa04960) [KEGG]
+      Datasets: CERADSC | Genes [4]: SGK1/PIK3R2/INSR/PIK3CD
+    * Prion disease (hsa05020) [KEGG]
+      Datasets: CERADSC | Genes [4]: NDUFA10/NDUFA6/UQCR10/NDUFB5
+    * cell fate specification (GO:0001708) [GO_BP]
+      Datasets: CERADSC | Genes [3]: MBD3/NFIB/POU3F2
+    * NADH dehydrogenase complex assembly (GO:0010257) [GO_BP]
+      Datasets: BRAAKSC | Genes [3]: NDUFA6/FOXRED1/DMAC1
+    * cytochrome complex assembly (GO:0017004) [GO_BP]
+      Datasets: BRAAKSC, COGDX | Genes [3]: COA3/COX15/COX18
+    * chromosome condensation (GO:0030261) [GO_BP]
+      Datasets: BRAAKSC, CERADSC | Genes [3]: GPER1/BAZ1B/ACIN1
+    * dicarboxylic acid metabolic process (GO:0043648) [GO_BP]
+      Datasets: CERADSC | Genes [3]: MTHFD1/ACOT4/ALDH5A1
+    * negative regulation of small molecule metabolic process (GO:0062014) [GO_BP]
+      Datasets: CERADSC | Genes [3]: GIT1/EP300/NFKB1
+    * regulation of miRNA metabolic process (GO:2000628) [GO_BP]
+      Datasets: CERADSC | Genes [3]: APLN/NFIB/NFKB1
+    * Valine, leucine and isoleucine degradation (hsa00280) [KEGG]
+      Datasets: BRAAKSC, CERADSC, COGDX | Genes [3]: MCCC2/PCCB/IVD
+    * Aminoacyl-tRNA biosynthesis (hsa00970) [KEGG]
+      Datasets: CERADSC | Genes [3]: KARS1/HARS2/LARS1
+    * Protein export (hsa03060) [KEGG]
+      Datasets: CERADSC | Genes [3]: SEC61B/SPCS1/IMMP2L
+    * inner mitochondrial membrane organization (GO:0007007) [GO_BP]
+      Datasets: CERADSC | Genes [2]: COX18/TIMM8B
+    * oxidoreductase activity, acting on the aldehyde or oxo group of donors (GO:0016903) [GO_MF]
+      Datasets: CERADSC | Genes [2]: PDHA1/ALDH5A1
+    * membrane raft organization (GO:0031579) [GO_BP]
+      Datasets: COGDX | Genes [2]: PPT1/IQGAP1
+    * response to immobilization stress (GO:0035902) [GO_BP]
+      Datasets: COGDX | Genes [2]: FOXO4/UGT8
+    * cellular response to vascular endothelial growth factor stimulus (GO:0035924) [GO_BP]
+      Datasets: BRAAKSC | Genes [2]: PIK3CD/GAB1
+    * phosphatidylinositol 3-kinase binding (GO:0043548) [GO_MF]
+      Datasets: BRAAKSC | Genes [2]: PIK3R2/INSR
+    * neuron fate commitment (GO:0048663) [GO_BP]
+      Datasets: COGDX | Genes [2]: POU3F2/NFIB
+    * mitogen-activated protein kinase binding (GO:0051019) [GO_MF]
+      Datasets: BRAAKSC, CERADSC, COGDX | Genes [2]: ABL1/PPM1D
+    * muscle tissue morphogenesis (GO:0060415) [GO_BP]
+      Datasets: CERADSC | Genes [2]: EGLN1/NAGLU
+    * E-box binding (GO:0070888) [GO_MF]
+      Datasets: BRAAKSC, CERADSC, COGDX | Genes [2]: MITF/NEUROD2
+    * Glutathione metabolism (hsa00480) [KEGG]
+      Datasets: CERADSC | Genes [2]: GSS/GSTA4
+    * Butanoate metabolism (hsa00650) [KEGG]
+      Datasets: CERADSC | Genes [2]: BDH1/ALDH5A1
+    * Lipoic acid metabolism (hsa00785) [KEGG]
+      Datasets: BRAAKSC, CERADSC | Genes [2]: PDHA1/LIAS
+    * Carbon metabolism (hsa01200) [KEGG]
+      Datasets: CERADSC | Genes [2]: PDHA1/PCCB
+    * Hippo signaling pathway - multiple species (hsa04392) [KEGG]
+      Datasets: CERADSC | Genes [2]: TEAD2/NF2
+    * membrane raft assembly (GO:0001765) [GO_BP]
+      Datasets: COGDX | Genes [1]: IQGAP1
+    * tricarboxylic acid cycle (GO:0006099) [GO_BP]
+      Datasets: CERADSC | Genes [1]: PDHA1
+    * mitotic recombination (GO:0006312) [GO_BP]
+      Datasets: BRAAKSC | Genes [1]: MSH3
+    * plasma membrane raft organization (GO:0044857) [GO_BP]
+      Datasets: COGDX | Genes [1]: IQGAP1
+
+--------------------------------------------------------------------
+4. FRAGMENTOS DE GENES EXCLUSIVOS (Unique por Dataset)
+--------------------------------------------------------------------
+   A. Exclusivos de Braaksc (Solo Tau):
+      Total de rutas que contienen genes exclusivos de Braaksc: 0
+      ------------------------------------------------------------
+      No se encontraron rutas con genes exclusivos de Braaksc.
+
+   B. Exclusivos de Ceradsc (Solo Amiloide):
+      Total de rutas que contienen genes exclusivos de Ceradsc: 117
+      ------------------------------------------------------------
+    * transcription factor binding (GO:0008134) [GO_MF]
+      Datasets: BRAAKSC, CERADSC, COGDX | Genes [28]: CHD4/AKAP8/WFS1/JUND/SETD3/AIP/ZBTB16/SOX10/HEY2/SP1/ARID1A/RBPJ/ZBTB17/INTS13/KAT6A/DOT1L/TGFB1I1/PTMA/SOX8/ASCL1/EHMT1/TCF12/STK4/HIPK2/CRTC3/ZNF618/KAT8/PER1
+    * chromatin remodeling (GO:0006338) [GO_BP]
+      Datasets: CERADSC | Genes [27]: SUPT6H/ARID1A/SGF29/CHD4/BPTF/MIER1/ING2/WAC/EHMT1/CDKN1C/DEK/BCL7B/SETD3/BRD7/HIPK2/RNF168/SIRT7/PHF10/DOT1L/KAT6A/TADA2B/KAT8/UIMC1/PER1/BRPF3/TAF6L/HDGFL2
+    * muscle structure development (GO:0061061) [GO_BP]
+      Datasets: CERADSC, COGDX | Genes [27]: SUPT6H/ARID1A/DLL4/BMPR1A/TGFB1/NOG/HEY2/SOX8/CHUK/PLEC/MAFF/PRKG1/DOCK5/SETD3/BRD7/PHF10/MAML1/RBPJ/VANGL2/SMAD7/PDGFRB/TCF12/KAT8/ITGB1/LAMA2/COL6A1/HDGFL2
+    * chromatin binding (GO:0003682) [GO_MF]
+      Datasets: BRAAKSC, CERADSC, COGDX | Genes [25]: SUPT6H/CHD4/ING2/SMC1A/ZFX/ATXN1L/TADA2B/POLD1/STAG2/WAC/SOX10/MSH6/PHF21A/ARID1A/RBPJ/KAT6A/SIRT7/CENPB/ASCL1/RNF168/PHF10/ING5/KAT8/PER1/ZNF276
+    * Wnt signaling pathway (GO:0016055) [GO_BP]
+      Datasets: BRAAKSC | Genes [25]: FRAT1/GPC4/FZD9/PTPRU/CTNND2/BCL7B/TAX1BP3/SOX10/VANGL2/NOG/USP34/TCF7L1/RBPJ/FBXW4/COL6A1/SMAD7/TGFB1I1/CDC73/TGFB1/HBP1/WNK1/STK11/STK4/BRD7/ILK
+    * DNA-binding transcription factor binding (GO:0140297) [GO_MF]
+      Datasets: BRAAKSC, CERADSC | Genes [25]: CHD4/AKAP8/WFS1/JUND/SETD3/AIP/SOX10/HEY2/SP1/ARID1A/RBPJ/ZBTB17/INTS13/KAT6A/DOT1L/TGFB1I1/PTMA/SOX8/ASCL1/TCF12/STK4/HIPK2/CRTC3/KAT8/PER1
+    * blood vessel morphogenesis (GO:0048514) [GO_BP]
+      Datasets: CERADSC | Genes [22]: DLL4/TMEM201/BMPR1A/TGFB1/NOG/HEY2/FAP/PACSIN2/WNK1/SP1/HIPK2/RBPJ/CEMIP2/APOD/PANK2/SMAD7/PDGFRB/GLUL/STK4/JMJD8/VASH1/ITGB1
+    * actin binding (GO:0003779) [GO_MF]
+      Datasets: CERADSC, COGDX | Genes [21]: PICK1/EZR/DBN1/VASP/TMEM201/KLHL2/CROCC/CORO7/PLEC/CAMK2B/BCL7B/SETD3/MIB2/CXCR4/TLN1/CALD1/HIP1/VASH1/AIF1L/ITGB1/PLEKHG3/LIMD2/SPEF1/ARPC3
+    * actin filament organization (GO:0007015) [GO_BP]
+      Datasets: CERADSC, COGDX | Genes [19]: RFLNB/PICK1/BCAR1/LIMD2/EZR/DBN1/VASP/CORO7/PLEC/DNM2/HSP90B1/ARRB1/CALD1/CDC42EP1/HIP1/LPAR1/AIF1L/ARPC3/KCTD13
+    * GTPase regulator activity (GO:0030695) [GO_MF]
+      Datasets: CERADSC, COGDX | Genes [19]: LAMTOR5/WDR41/TBC1D9B/LAMTOR2/CYTH1/PDE6D/TBC1D17/DOCK5/ARRB1/RASGRP3/GDI2/ARHGAP21/AGAP1/LLGL1/PDGFRB/ARF4/EIF2B3/ITSN1/PLEKHG3
+    * gliogenesis (GO:0042063) [GO_BP]
+      Datasets: BRAAKSC, CERADSC, COGDX | Genes [19]: PICK1/PLEC/SOX10/NOG/CLU/COL6A1/TGFB1/MYCN/OLIG1/SOX8/ASCL1/CXCR4/MYRF/LPAR1/ILK/CNTN2/LAMA2/IL33/EIF2B3
+    * nucleoside-triphosphatase regulator activity (GO:0060589) [GO_MF]
+      Datasets: CERADSC, COGDX | Genes [19]: LAMTOR5/WDR41/TBC1D9B/LAMTOR2/CYTH1/PDE6D/TBC1D17/DOCK5/ARRB1/RASGRP3/GDI2/ARHGAP21/AGAP1/LLGL1/PDGFRB/ARF4/EIF2B3/ITSN1/PLEKHG3
+    * glial cell differentiation (GO:0010001) [GO_BP]
+      Datasets: CERADSC, COGDX | Genes [17]: PICK1/TGFB1/SOX10/SOX8/PLEC/ILK/CLU/CXCR4/MYRF/CNTN2/OLIG1/EIF2B3/LPAR1/ASCL1/COL6A1/MYCN/NOG/LAMA2
+    * transcription coactivator activity (GO:0003713) [GO_MF]
+      Datasets: BRAAKSC, COGDX | Genes [16]: ARRB1/JUND/SETD3/TADA2B/AIP/TAF6L/ARID1A/NFKBIB/KAT6A/DOT1L/TGFB1I1/MAML1/BRD7/HIPK2/CRTC3/KAT8
+    * canonical Wnt signaling pathway (GO:0060070) [GO_BP]
+      Datasets: COGDX | Genes [16]: SMAD7/SOX10/FZD9/WNK1/FRAT1/TCF7L1/ILK/COL6A1/RBPJ/USP34/PTPRU/CTNND2/NOG/TGFB1/STK11/STK4
+    * establishment or maintenance of cell polarity (GO:0007163) [GO_BP]
+      Datasets: CERADSC, COGDX | Genes [13]: EZR/GOLPH3/CYTH1/CORO7/ILK/VANGL2/LLGL1/STK11/MAP7/FEZ1/ITGB1/FRMD4B/PLEKHG3
+    * glial cell development (GO:0021782) [GO_BP]
+      Datasets: CERADSC, COGDX | Genes [13]: PICK1/TGFB1/SOX10/PLEC/ILK/CLU/MYRF/CNTN2/OLIG1/EIF2B3/LPAR1/ASCL1/COL6A1
+    * gland development (GO:0048732) [GO_BP]
+      Datasets: CERADSC, COGDX | Genes [13]: BMPR1A/TGFB1/IRS2/NOG/SOX10/NPC1/CDKN1C/HIPK2/RBPJ/STK11/SOCS2/ASCL1/PRKCSH
+    * DNA-binding transcription activator activity (GO:0001216) [GO_MF]
+      Datasets: BRAAKSC, CERADSC, COGDX | Genes [12]: JUND/ZFX/ZBTB16/SOX10/SP1/RBPJ/ZBTB17/MAFF/MYCN/PBX3/TCF12/ZSCAN21
+    * amino acid metabolic process (GO:0006520) [GO_BP]
+      Datasets: CERADSC | Genes [12]: DALRD3/ECHS1/BCKDHB/FARSB/CSAD/RARS1/AARS2/SDSL/EARS2/SMS/ACADSB/AADAT
+    * leukocyte cell-cell adhesion (GO:0007159) [GO_BP]
+      Datasets: CERADSC | Genes [12]: ARID1A/EZR/GOLPH3/TGFB1/ZBTB16/WNK1/BRD7/PHF10/TNIP1/SMAD7/NCK1/ITGB1
+    * epigenetic regulation of gene expression (GO:0040029) [GO_BP]
+      Datasets: CERADSC | Genes [12]: ARID1A/SGF29/ING2/EHMT1/CDKN1C/BRD7/HIPK2/RNF168/SIRT7/DOT1L/KAT8/MYCN
+    * Amyotrophic lateral sclerosis (hsa05014) [KEGG]
+      Datasets: CERADSC | Genes [12]: DNAH9/DNAL4/NCBP1/SDHB/WDR41/COX7B/TUBB2B/PSMB2/PSMA3/ACTR10/NDUFA5/ATP5PB
+    * mitochondrial respiratory chain complex assembly (GO:0033108) [GO_BP]
+      Datasets: BRAAKSC, CERADSC, COGDX | Genes [11]: SCO1/PET117/SDHAF1/SDHAF4/NDUFAF7/TMEM126B/UQCC1/TMEM223/COA1/ATPAF1/LYRM7
+    * cell fate commitment (GO:0045165) [GO_BP]
+      Datasets: BRAAKSC, CERADSC, COGDX | Genes [11]: CHD4/BMPR1A/DLL4/HEY2/RBPJ/TGFB1I1/CDC73/OLIG1/SOX8/ASCL1/ITGB1
+    * myelination (GO:0042552) [GO_BP]
+      Datasets: COGDX | Genes [10]: PLEC/CNTN2/SOX10/TMEM163/MYRF/ILK/COL6A1/LPAR1/TGFB1/CXCR4
+    * histone modifying activity (GO:0140993) [GO_MF]
+      Datasets: CERADSC | Genes [10]: MIER1/EHMT1/SETD3/RNF168/SIRT7/PHF10/DOT1L/KAT6A/KAT8/BRPF3
+    * tRNA metabolic process (GO:0006399) [GO_BP]
+      Datasets: CERADSC | Genes [9]: DALRD3/EXOSC9/METTL6/POP4/FARSB/RARS1/AARS2/METTL1/EARS2
+    * ligase activity (GO:0016874) [GO_MF]
+      Datasets: BRAAKSC, CERADSC | Genes [9]: DALRD3/RARS1/SUCLG1/AARS2/FARSB/ACSL4/ATP5PB/EARS2/GART
+    * positive regulation of transmembrane receptor protein serine/threonine kinase signaling pathway (GO:0090100) [GO_BP]
+      Datasets: CERADSC | Genes [9]: BMPR1A/TGFB1/ING2/CDKN1C/HIPK2/ILK/TGFB1I1/RBPJ/STK11
+    * catalytic activity, acting on a tRNA (GO:0140101) [GO_MF]
+      Datasets: BRAAKSC | Genes [9]: DALRD3/POP4/RARS1/METTL6/AARS2/FARSB/EARS2/PTRH1/METTL1
+    * Focal adhesion (hsa04510) [KEGG]
+      Datasets: CERADSC, COGDX | Genes [9]: BCAR1/VASP/ILK/SOS2/TLN1/PDGFRB/ITGB1/LAMA2/COL6A1
+    * Hepatocellular carcinoma (hsa05225) [KEGG]
+      Datasets: BRAAKSC, CERADSC | Genes [9]: FRAT1/FZD9/ARID1A/TCF7L1/SOS2/TGFB1/PHF10/BRD7/RPS6KB2
+    * transcription coregulator binding (GO:0001221) [GO_MF]
+      Datasets: COGDX | Genes [8]: JUND/CHD4/ZBTB17/SP1/EHMT1/ZBTB16/ZNF618/PER1
+    * endoderm development (GO:0007492) [GO_BP]
+      Datasets: CERADSC, COGDX | Genes [8]: BMPR1A/TGFB1/NOG/BPTF/DUSP1/COL6A1/KIF16B/CDC73
+    * positive regulation of cell-cell adhesion (GO:0022409) [GO_BP]
+      Datasets: CERADSC | Genes [8]: ARID1A/TGFB1/ZBTB16/BRD7/PHF10/SMAD7/PTPRU/NCK1
+    * muscle tissue morphogenesis (GO:0060415) [GO_BP]
+      Datasets: CERADSC | Genes [8]: DLL4/BMPR1A/TGFB1/NOG/HEY2/RBPJ/VANGL2/SMAD7
+    * response to transforming growth factor beta (GO:0071559) [GO_BP]
+      Datasets: CERADSC, COGDX | Genes [8]: BMPR1A/TGFB1/ING2/CDKN1C/HIPK2/TGFB1I1/SMAD7/STK11
+    * chromatin-protein adaptor activity (GO:0140463) [GO_MF]
+      Datasets: CERADSC | Genes [8]: SGF29/ING2/MSH6/BRD7/ING5/UIMC1/ZNF618/HDGFL2
+    * DNA-binding transcription repressor activity (GO:0001217) [GO_MF]
+      Datasets: BRAAKSC, CERADSC, COGDX | Genes [7]: ZBTB16/HEY2/ZBTB17/E2F6/ASCL1/CC2D1A/ERF
+    * DNA-binding transcription repressor activity, RNA polymerase II-specific (GO:0001227) [GO_MF]
+      Datasets: BRAAKSC, COGDX | Genes [7]: ZBTB16/HEY2/ZBTB17/E2F6/ASCL1/CC2D1A/ERF
+    * peripheral nervous system development (GO:0007422) [GO_BP]
+      Datasets: CERADSC, COGDX | Genes [7]: SOX10/SOX8/PLEC/ILK/ASCL1/LAMA2/COL6A1
+    * cytochrome complex assembly (GO:0017004) [GO_BP]
+      Datasets: BRAAKSC, COGDX | Genes [7]: SCO1/PET117/COX10/UQCC1/TMEM223/COA1/LYRM7
+    * mitochondrial translation (GO:0032543) [GO_BP]
+      Datasets: CERADSC, COGDX | Genes [7]: LRPPRC/MRPS9/AARS2/MRPL15/EARS2/MRPL2/GFM1
+    * mitochondrial gene expression (GO:0140053) [GO_BP]
+      Datasets: CERADSC | Genes [7]: LRPPRC/MRPS9/AARS2/MRPL15/EARS2/MRPL2/GFM1
+    * ATP-dependent chromatin remodeling (hsa03082) [KEGG]
+      Datasets: CERADSC, COGDX | Genes [7]: ARID1A/CHD4/BPTF/BCL7B/BRD7/PHF10/MRGBP
+    * Hippo signaling pathway (hsa04390) [KEGG]
+      Datasets: CERADSC, COGDX | Genes [7]: FZD9/BMPR1A/TGFB1/LLGL1/SMAD7/TCF7L1/WTIP
+    * Integrin signaling (hsa04518) [KEGG]
+      Datasets: CERADSC, COGDX | Genes [7]: TGFB1/ILK/TLN1/PDGFRB/ITGB1/LAMA2/COL6A1
+    * Prion disease (hsa05020) [KEGG]
+      Datasets: CERADSC | Genes [7]: SDHB/COX7B/TUBB2B/PSMB2/PSMA3/NDUFA5/ATP5PB
+    * Proteoglycans in cancer (hsa05205) [KEGG]
+      Datasets: CERADSC | Genes [7]: FZD9/EZR/TGFB1/CAMK2B/SOS2/ITGB1/RPS6KB2
+    * MicroRNAs in cancer (hsa05206) [KEGG]
+      Datasets: BRAAKSC, CERADSC, COGDX | Genes [7]: IRS2/EZR/DDIT4/SOS2/PDGFRB/IKBKB/CDC25B
+    * tRNA binding (GO:0000049) [GO_MF]
+      Datasets: CERADSC, COGDX | Genes [6]: DALRD3/RARS1/AARS2/METTL1/EARS2/PTRH1
+    * electron transfer activity (GO:0009055) [GO_MF]
+      Datasets: BRAAKSC, CERADSC | Genes [6]: ME1/SDHB/ASPH/COX7B/SRD5A1/NDUFA5
+    * membrane raft organization (GO:0031579) [GO_BP]
+      Datasets: COGDX | Genes [6]: NPC1/ABCA7/PACSIN2/ILK/COL6A1/RFTN1
+    * endocrine system development (GO:0035270) [GO_BP]
+      Datasets: COGDX | Genes [6]: BMPR1A/CDKN1C/HIPK2/RBPJ/ASCL1/NOG
+    * Oxidative phosphorylation (hsa00190) [KEGG]
+      Datasets: BRAAKSC, CERADSC | Genes [6]: COX10/SDHB/COX7B/ATP5PB/NDUFA5/ATP6V1G1
+    * Neurotrophin signaling pathway (hsa04722) [KEGG]
+      Datasets: BRAAKSC, CERADSC, COGDX | Genes [6]: RPS6KA2/CAMK2B/IRAK2/NFKBIB/SOS2/IKBKB
+    * Gastric cancer (hsa05226) [KEGG]
+      Datasets: BRAAKSC, COGDX | Genes [6]: FRAT1/FZD9/TCF7L1/SOS2/TGFB1/RPS6KB2
+    * cell fate specification (GO:0001708) [GO_BP]
+      Datasets: CERADSC | Genes [5]: BMPR1A/CHD4/RBPJ/ASCL1/ITGB1
+    * epithelial cell development (GO:0002064) [GO_BP]
+      Datasets: CERADSC | Genes [5]: EZR/TGFB1/SOX8/PLEC/IKBKB
+    * endothelium development (GO:0003158) [GO_BP]
+      Datasets: CERADSC | Genes [5]: EZR/DLL4/HEY2/RBPJ/IKBKB
+    * beta-catenin binding (GO:0008013) [GO_MF]
+      Datasets: BRAAKSC, CERADSC, COGDX | Genes [5]: PTPRU/CTNND2/TAX1BP3/SMAD7/NHERF2
+    * spinal cord development (GO:0021510) [GO_BP]
+      Datasets: BRAAKSC | Genes [5]: DLL4/NOG/CLN8/PBX3/ASCL1
+    * positive regulation of transforming growth factor beta receptor signaling pathway (GO:0030511) [GO_BP]
+      Datasets: COGDX | Genes [5]: ING2/CDKN1C/HIPK2/TGFB1I1/STK11
+    * negative regulation of small molecule metabolic process (GO:0062014) [GO_BP]
+      Datasets: CERADSC | Genes [5]: GCHFR/DDIT4/PRKG1/UBR4/C1QTNF3
+    * kidney epithelium development (GO:0072073) [GO_BP]
+      Datasets: COGDX | Genes [5]: SMAD7/ILK/SOX8/NOG/TGFB1
+    * Carbon metabolism (hsa01200) [KEGG]
+      Datasets: CERADSC | Genes [5]: ECHS1/SDSL/SDHB/SUCLG1/ME1
+    * Notch signaling pathway (hsa04330) [KEGG]
+      Datasets: CERADSC, COGDX | Genes [5]: DLL4/HEY2/MAML1/RBPJ/ATXN1L
+    * B cell receptor signaling pathway (hsa04662) [KEGG]
+      Datasets: CERADSC, COGDX | Genes [5]: CHUK/SOS2/RASGRP3/IKBKB/NFKBIB
+    * Prostate cancer (hsa05215) [KEGG]
+      Datasets: BRAAKSC | Genes [5]: CHUK/TCF7L1/SOS2/PDGFRB/IKBKB
+    * Chronic myeloid leukemia (hsa05220) [KEGG]
+      Datasets: BRAAKSC, CERADSC, COGDX | Genes [5]: CHUK/SOS2/TGFB1/IKBKB/GAB2
+    * membrane raft assembly (GO:0001765) [GO_BP]
+      Datasets: COGDX | Genes [4]: PACSIN2/ILK/COL6A1/RFTN1
+    * cytoskeletal motor activity (GO:0003774) [GO_MF]
+      Datasets: COGDX | Genes [4]: KIF5C/KIF16B/KIF13A/DNAL4
+    * microtubule motor activity (GO:0003777) [GO_MF]
+      Datasets: COGDX | Genes [4]: KIF5C/KIF16B/KIF13A/DNAL4
+    * histone acetyltransferase activity (GO:0004402) [GO_MF]
+      Datasets: COGDX | Genes [4]: PHF10/KAT6A/KAT8/BRPF3
+    * cortical cytoskeleton organization (GO:0030865) [GO_BP]
+      Datasets: CERADSC, COGDX | Genes [4]: EZR/PLEC/TLN1/LLGL1
+    * cortical actin cytoskeleton organization (GO:0030866) [GO_BP]
+      Datasets: CERADSC | Genes [4]: EZR/PLEC/TLN1/LLGL1
+    * hippo signaling (GO:0035329) [GO_BP]
+      Datasets: BRAAKSC, CERADSC | Genes [4]: MAP2K3/STK4/WTIP/CORO7
+    * cellular response to vascular endothelial growth factor stimulus (GO:0035924) [GO_BP]
+      Datasets: BRAAKSC | Genes [4]: DLL4/MAP2K3/PDGFRB/ITGB1
+    * dicarboxylic acid metabolic process (GO:0043648) [GO_BP]
+      Datasets: CERADSC | Genes [4]: PHYH/SDHB/AADAT/ME1
+    * plasma membrane raft organization (GO:0044857) [GO_BP]
+      Datasets: COGDX | Genes [4]: ABCA7/PACSIN2/ILK/COL6A1
+    * endothelial cell differentiation (GO:0045446) [GO_BP]
+      Datasets: BRAAKSC | Genes [4]: EZR/HEY2/RBPJ/IKBKB
+    * regulation of fat cell differentiation (GO:0045598) [GO_BP]
+      Datasets: CERADSC | Genes [4]: TGFB1/ZBTB16/TGFB1I1/STK4
+    * neuron fate commitment (GO:0048663) [GO_BP]
+      Datasets: COGDX | Genes [4]: RBPJ/ASCL1/OLIG1/DLL4
+    * mitogen-activated protein kinase binding (GO:0051019) [GO_MF]
+      Datasets: BRAAKSC, CERADSC, COGDX | Genes [4]: PRKG1/TNIP1/DUSP16/DUSP1
+    * E-box binding (GO:0070888) [GO_MF]
+      Datasets: BRAAKSC, CERADSC, COGDX | Genes [4]: OLIG1/ASCL1/TCF12/PER1
+    * protein tyrosine kinase binding (GO:1990782) [GO_MF]
+      Datasets: CERADSC | Genes [4]: IRS2/NCK1/GAB2/ITGB1
+    * Aminoacyl-tRNA biosynthesis (hsa00970) [KEGG]
+      Datasets: CERADSC | Genes [4]: FARSB/RARS1/AARS2/EARS2
+    * ErbB signaling pathway (hsa04012) [KEGG]
+      Datasets: BRAAKSC, CERADSC | Genes [4]: NCK1/CAMK2B/SOS2/RPS6KB2
+    * tricarboxylic acid cycle (GO:0006099) [GO_BP]
+      Datasets: CERADSC | Genes [3]: SDHAF4/SDHB/SUCLG1
+    * mitotic recombination (GO:0006312) [GO_BP]
+      Datasets: BRAAKSC | Genes [3]: ERCC2/MSH2/MLH1
+    * NADH dehydrogenase complex assembly (GO:0010257) [GO_BP]
+      Datasets: BRAAKSC | Genes [3]: NDUFAF7/TMEM126B/COA1
+    * Schwann cell differentiation (GO:0014037) [GO_BP]
+      Datasets: COGDX | Genes [3]: PLEC/ILK/COL6A1
+    * Schwann cell development (GO:0014044) [GO_BP]
+      Datasets: COGDX | Genes [3]: PLEC/ILK/COL6A1
+    * active monoatomic ion transmembrane transporter activity (GO:0022853) [GO_MF]
+      Datasets: BRAAKSC | Genes [3]: COX7B/NDUFA5/ATP6V1G1
+    * regulation of miRNA metabolic process (GO:2000628) [GO_BP]
+      Datasets: CERADSC | Genes [3]: BMPR1A/TGFB1/MYCN
+    * Valine, leucine and isoleucine degradation (hsa00280) [KEGG]
+      Datasets: BRAAKSC, CERADSC, COGDX | Genes [3]: BCKDHB/ECHS1/ACADSB
+    * Signaling pathways regulating pluripotency of stem cells (hsa04550) [KEGG]
+      Datasets: BRAAKSC, CERADSC | Genes [3]: BMPR1A/FZD9/KAT6A
+    * inner mitochondrial membrane organization (GO:0007007) [GO_BP]
+      Datasets: CERADSC | Genes [2]: OPA1/MICOS13
+    * plus-end-directed microtubule motor activity (GO:0008574) [GO_MF]
+      Datasets: COGDX | Genes [2]: KIF5C/KIF16B
+    * epithelial cell migration (GO:0010631) [GO_BP]
+      Datasets: COGDX | Genes [2]: DOCK5/IRS2
+    * response to immobilization stress (GO:0035902) [GO_BP]
+      Datasets: COGDX | Genes [2]: MYRF/TGFB1
+    * odontogenesis of dentin-containing tooth (GO:0042475) [GO_BP]
+      Datasets: CERADSC | Genes [2]: BMPR1A/TGFB1
+    * positive regulation of JNK cascade (GO:0046330) [GO_BP]
+      Datasets: CERADSC | Genes [2]: MAPKBP1/HIPK2
+    * response to epidermal growth factor (GO:0070849) [GO_BP]
+      Datasets: BRAAKSC, CERADSC, COGDX | Genes [2]: INPP5K/ASCL1
+    * Glutathione metabolism (hsa00480) [KEGG]
+      Datasets: CERADSC | Genes [2]: RRM1/SMS
+    * Lipoic acid metabolism (hsa00785) [KEGG]
+      Datasets: BRAAKSC, CERADSC | Genes [2]: BCKDHB/LIPT1
+    * Aldosterone-regulated sodium reabsorption (hsa04960) [KEGG]
+      Datasets: CERADSC | Genes [2]: ATP1B3/NHERF2
+    * Renal cell carcinoma (hsa05211) [KEGG]
+      Datasets: BRAAKSC, CERADSC | Genes [2]: SOS2/TGFB1
+    * GTPase inhibitor activity (GO:0005095) [GO_MF]
+      Datasets: COGDX | Genes [1]: PDE6D
+    * oxidoreductase activity, acting on the aldehyde or oxo group of donors (GO:0016903) [GO_MF]
+      Datasets: CERADSC | Genes [1]: BCKDHB
+    * chromosome condensation (GO:0030261) [GO_BP]
+      Datasets: BRAAKSC, CERADSC | Genes [1]: AKAP8
+    * phosphatidylinositol 3-kinase binding (GO:0043548) [GO_MF]
+      Datasets: BRAAKSC | Genes [1]: IRS2
+    * cellular response to epidermal growth factor stimulus (GO:0071364) [GO_BP]
+      Datasets: COGDX | Genes [1]: INPP5K
+    * Butanoate metabolism (hsa00650) [KEGG]
+      Datasets: CERADSC | Genes [1]: ECHS1
+    * Protein export (hsa03060) [KEGG]
+      Datasets: CERADSC | Genes [1]: TMEM208
+    * Hippo signaling pathway - multiple species (hsa04392) [KEGG]
+      Datasets: CERADSC | Genes [1]: WTIP
+
+   C. Exclusivos de Cogdx (Clínica):
+      Total de rutas que contienen genes exclusivos de Cogdx: 66
+      ------------------------------------------------------------
+    * Wnt signaling pathway (GO:0016055) [GO_BP]
+      Datasets: BRAAKSC | Genes [5]: WNT7A/PPM1A/CTDNEP1/RNF220/TNKS2
+    * canonical Wnt signaling pathway (GO:0060070) [GO_BP]
+      Datasets: COGDX | Genes [5]: PPM1A/TNKS2/WNT7A/CTDNEP1/RNF220
+    * chromatin remodeling (GO:0006338) [GO_BP]
+      Datasets: CERADSC | Genes [4]: CGGBP1/BMI1/ZMPSTE24/BAZ2A
+    * actin filament organization (GO:0007015) [GO_BP]
+      Datasets: CERADSC, COGDX | Genes [4]: SWAP70/DLC1/ABI1/MICAL3
+    * transcription factor binding (GO:0008134) [GO_MF]
+      Datasets: BRAAKSC, CERADSC, COGDX | Genes [4]: CGGBP1/ZNHIT6/RELA/BAZ2A
+    * GTPase regulator activity (GO:0030695) [GO_MF]
+      Datasets: CERADSC, COGDX | Genes [4]: SWAP70/DLC1/RAPGEF5/KALRN
+    * epigenetic regulation of gene expression (GO:0040029) [GO_BP]
+      Datasets: CERADSC | Genes [4]: CGGBP1/BMI1/ZMPSTE24/BAZ2A
+    * blood vessel morphogenesis (GO:0048514) [GO_BP]
+      Datasets: CERADSC | Genes [4]: HS6ST1/RELA/EFNB2/WNT7A
+    * nucleoside-triphosphatase regulator activity (GO:0060589) [GO_MF]
+      Datasets: CERADSC, COGDX | Genes [4]: SWAP70/DLC1/RAPGEF5/KALRN
+    * Amyotrophic lateral sclerosis (hsa05014) [KEGG]
+      Datasets: CERADSC | Genes [4]: NDC1/PSMA6/TOMM40/UQCRC2
+    * DNA-binding transcription activator activity (GO:0001216) [GO_MF]
+      Datasets: BRAAKSC, CERADSC, COGDX | Genes [3]: ZNF580/RELA/ZNF639
+    * chromatin binding (GO:0003682) [GO_MF]
+      Datasets: BRAAKSC, CERADSC, COGDX | Genes [3]: NCOA5/RELA/BMI1
+    * amino acid metabolic process (GO:0006520) [GO_BP]
+      Datasets: CERADSC | Genes [3]: DBT/CTH/MTR
+    * leukocyte cell-cell adhesion (GO:0007159) [GO_BP]
+      Datasets: CERADSC | Genes [3]: RELA/BMI1/EFNB2
+    * positive regulation of cell-cell adhesion (GO:0022409) [GO_BP]
+      Datasets: CERADSC | Genes [3]: RELA/BMI1/EFNB2
+    * DNA-binding transcription factor binding (GO:0140297) [GO_MF]
+      Datasets: BRAAKSC, CERADSC | Genes [3]: CGGBP1/RELA/BAZ2A
+    * DNA-binding transcription repressor activity (GO:0001217) [GO_MF]
+      Datasets: BRAAKSC, CERADSC, COGDX | Genes [2]: ZBTB14/RELA
+    * DNA-binding transcription repressor activity, RNA polymerase II-specific (GO:0001227) [GO_MF]
+      Datasets: BRAAKSC, COGDX | Genes [2]: ZBTB14/RELA
+    * transcription coactivator activity (GO:0003713) [GO_MF]
+      Datasets: BRAAKSC, COGDX | Genes [2]: NIBAN2/TRIM5
+    * actin binding (GO:0003779) [GO_MF]
+      Datasets: CERADSC, COGDX | Genes [2]: WIPF2/MICAL3
+    * inner mitochondrial membrane organization (GO:0007007) [GO_BP]
+      Datasets: CERADSC | Genes [2]: IMMT/OXA1L
+    * mitochondrial respiratory chain complex assembly (GO:0033108) [GO_BP]
+      Datasets: BRAAKSC, CERADSC, COGDX | Genes [2]: CEP89/OXA1L
+    * positive regulation of JNK cascade (GO:0046330) [GO_BP]
+      Datasets: CERADSC | Genes [2]: TAOK2/WNT7A
+    * gland development (GO:0048732) [GO_BP]
+      Datasets: CERADSC, COGDX | Genes [2]: RELA/ZMPSTE24
+    * muscle structure development (GO:0061061) [GO_BP]
+      Datasets: CERADSC, COGDX | Genes [2]: ZMPSTE24/EFNB2
+    * response to transforming growth factor beta (GO:0071559) [GO_BP]
+      Datasets: CERADSC, COGDX | Genes [2]: PPM1A/WNT7A
+    * Carbon metabolism (hsa01200) [KEGG]
+      Datasets: CERADSC | Genes [2]: IDH3G/ME3
+    * Protein export (hsa03060) [KEGG]
+      Datasets: CERADSC | Genes [2]: SRP54/OXA1L
+    * Signaling pathways regulating pluripotency of stem cells (hsa04550) [KEGG]
+      Datasets: BRAAKSC, CERADSC | Genes [2]: WNT7A/BMI1
+    * Prion disease (hsa05020) [KEGG]
+      Datasets: CERADSC | Genes [2]: PSMA6/UQCRC2
+    * transcription coregulator binding (GO:0001221) [GO_MF]
+      Datasets: COGDX | Genes [1]: RELA
+    * epithelial cell development (GO:0002064) [GO_BP]
+      Datasets: CERADSC | Genes [1]: WNT7A
+    * tricarboxylic acid cycle (GO:0006099) [GO_BP]
+      Datasets: CERADSC | Genes [1]: IDH3G
+    * tRNA metabolic process (GO:0006399) [GO_BP]
+      Datasets: CERADSC | Genes [1]: TRMT44
+    * establishment or maintenance of cell polarity (GO:0007163) [GO_BP]
+      Datasets: CERADSC, COGDX | Genes [1]: WNT7A
+    * peripheral nervous system development (GO:0007422) [GO_BP]
+      Datasets: CERADSC, COGDX | Genes [1]: RELA
+    * beta-catenin binding (GO:0008013) [GO_MF]
+      Datasets: BRAAKSC, CERADSC, COGDX | Genes [1]: RNF220
+    * glial cell differentiation (GO:0010001) [GO_BP]
+      Datasets: CERADSC, COGDX | Genes [1]: RELA
+    * NADH dehydrogenase complex assembly (GO:0010257) [GO_BP]
+      Datasets: BRAAKSC | Genes [1]: OXA1L
+    * Schwann cell differentiation (GO:0014037) [GO_BP]
+      Datasets: COGDX | Genes [1]: RELA
+    * ligase activity (GO:0016874) [GO_MF]
+      Datasets: BRAAKSC, CERADSC | Genes [1]: TTLL1
+    * cytochrome complex assembly (GO:0017004) [GO_BP]
+      Datasets: BRAAKSC, COGDX | Genes [1]: CEP89
+    * mitochondrial translation (GO:0032543) [GO_BP]
+      Datasets: CERADSC, COGDX | Genes [1]: OXA1L
+    * cellular response to vascular endothelial growth factor stimulus (GO:0035924) [GO_BP]
+      Datasets: BRAAKSC | Genes [1]: RELA
+    * gliogenesis (GO:0042063) [GO_BP]
+      Datasets: BRAAKSC, CERADSC, COGDX | Genes [1]: RELA
+    * dicarboxylic acid metabolic process (GO:0043648) [GO_BP]
+      Datasets: CERADSC | Genes [1]: ME3
+    * cell fate commitment (GO:0045165) [GO_BP]
+      Datasets: BRAAKSC, CERADSC, COGDX | Genes [1]: WNT7A
+    * regulation of fat cell differentiation (GO:0045598) [GO_BP]
+      Datasets: CERADSC | Genes [1]: TLCD3B
+    * kidney epithelium development (GO:0072073) [GO_BP]
+      Datasets: COGDX | Genes [1]: EFNB2
+    * mitochondrial gene expression (GO:0140053) [GO_BP]
+      Datasets: CERADSC | Genes [1]: OXA1L
+    * catalytic activity, acting on a tRNA (GO:0140101) [GO_MF]
+      Datasets: BRAAKSC | Genes [1]: TRMT44
+    * chromatin-protein adaptor activity (GO:0140463) [GO_MF]
+      Datasets: CERADSC | Genes [1]: BAZ2A
+    * regulation of miRNA metabolic process (GO:2000628) [GO_BP]
+      Datasets: CERADSC | Genes [1]: RELA
+    * Oxidative phosphorylation (hsa00190) [KEGG]
+      Datasets: BRAAKSC, CERADSC | Genes [1]: UQCRC2
+    * Valine, leucine and isoleucine degradation (hsa00280) [KEGG]
+      Datasets: BRAAKSC, CERADSC, COGDX | Genes [1]: DBT
+    * Lipoic acid metabolism (hsa00785) [KEGG]
+      Datasets: BRAAKSC, CERADSC | Genes [1]: DBT
+    * ATP-dependent chromatin remodeling (hsa03082) [KEGG]
+      Datasets: CERADSC, COGDX | Genes [1]: BAZ2A
+    * Hippo signaling pathway (hsa04390) [KEGG]
+      Datasets: CERADSC, COGDX | Genes [1]: WNT7A
+    * B cell receptor signaling pathway (hsa04662) [KEGG]
+      Datasets: CERADSC, COGDX | Genes [1]: RELA
+    * Neurotrophin signaling pathway (hsa04722) [KEGG]
+      Datasets: BRAAKSC, CERADSC, COGDX | Genes [1]: RELA
+    * Proteoglycans in cancer (hsa05205) [KEGG]
+      Datasets: CERADSC | Genes [1]: WNT7A
+    * MicroRNAs in cancer (hsa05206) [KEGG]
+      Datasets: BRAAKSC, CERADSC, COGDX | Genes [1]: BMI1
+    * Prostate cancer (hsa05215) [KEGG]
+      Datasets: BRAAKSC | Genes [1]: RELA
+    * Chronic myeloid leukemia (hsa05220) [KEGG]
+      Datasets: BRAAKSC, CERADSC, COGDX | Genes [1]: RELA
+    * Hepatocellular carcinoma (hsa05225) [KEGG]
+      Datasets: BRAAKSC, CERADSC | Genes [1]: WNT7A
+    * Gastric cancer (hsa05226) [KEGG]
+      Datasets: BRAAKSC, COGDX | Genes [1]: WNT7A

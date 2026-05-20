@@ -1,0 +1,253 @@
+
+[1m====================================================================================================[0m
+[1m COMPARATIVA DINÁMICA: BRAAKSC[0m
+[1m====================================================================================================[0m
+ [1mConfiguración Seleccionada:[0m
+   [94m Maestro (Parsimonia): K=50 | BorderlineSMOTE_RF-R2_FR[0m
+   [93m Contraste (Ganador Win-Loss Ranking): K=75 | ROS_RF-R2_FR[0m
+
+[1m🧬 LISTADO DEL CONTRASTE (Posicionamiento en Maestro K=50)[0m
+#    | GEN                  | RANK MAESTRO    | SCORE ANOVA 
+-----------------------------------------------------------------
+1    | CIC                  | #1              | 7.2380      
+2    | CMTM4                | #2              | 6.9389      
+3    | LRRC4B               | #3              | 6.7979      
+4    | TMEM107              | #4              | 6.5481      
+5    | TMCC2                | #5              | 6.3151      
+6    | NIT1                 | #6              | 6.2429      
+7    | IP6K2                | #7              | 6.2249      
+8    | ZNF592               | #8              | 6.0889      
+9    | ADAMTS2              | #9              | 6.0133      
+10   | ZNF77                | #10             | 6.0012      
+11   | PPDPF                | #11             | 5.9961      
+12   | DAB2IP               | #12             | 5.8228      
+13   | CAB39L               | #13             | 5.6516      
+14   | SUPT7L               | #14             | 5.6405      
+15   | ERP44                | #15             | 5.6084      
+16   | SETD1A               | #16             | 5.5954      
+17   | CHID1                | #17             | 5.5517      
+18   | SLC4A11              | #18             | 5.5092      
+19   | DPM2                 | #19             | 5.4685      
+20   | DDOST                | #20             | 5.4133      
+21   | PALM3                | #21             | 5.3829      
+22   | ANKRD30B             | #22             | 5.3391      
+23   | BBOF1                | #23             | 5.3366      
+24   | VIPAS39              | #24             | 5.3308      
+25   | NUCB1                | #25             | 5.3110      
+26   | MXI1                 | #26             | 5.2643      
+27   | ODC1                 | #27             | 5.2493      
+28   | HMGN2                | #28             | 5.2247      
+29   | LRCH4                | #29             | 5.1918      
+30   | CAPZA1               | #30             | 5.1585      
+31   | YY1                  | #31             | 5.0854      
+32   | AGPAT1               | #32             | 5.0737      
+33   | MCF2L                | #33             | 5.0702      
+34   | PFKP                 | #34             | 5.0446      
+35   | PA2G4                | #35             | 5.0241      
+36   | FAF2                 | #36             | 5.0237      
+37   | ISYNA1               | #37             | 5.0017      
+38   | SRD5A3               | #38             | 4.9795      
+39   | FCHO1                | #39             | 4.9753      
+40   | HSD11B2              | #40             | 4.9642      
+41   | CASP9                | #41             | 4.9458      
+42   | ME2                  | #42             | 4.9327      
+43   | KIF1A                | #43             | 4.9208      
+44   | KMT2D                | #44             | 4.9119      
+45   | OBSCN                | #45             | 4.8736      
+46   | MPV17L2              | #46             | 4.8701      
+47   | TCTN3                | #47             | 4.8700      
+48   | RASGRP2              | #48             | 4.8671      
+49   | CLASRP               | #49             | 4.8365      
+50   | DTX1                 | #50             | 4.8206      
+51   | TAF1D                | N/A             | 0.0000      
+52   | STAU1                | N/A             | 0.0000      
+53   | CREBL2               | N/A             | 0.0000      
+54   | PDHA1                | N/A             | 0.0000      
+55   | ST3GAL3              | N/A             | 0.0000      
+56   | MRTO4                | N/A             | 0.0000      
+57   | NCK1                 | N/A             | 0.0000      
+58   | SLC6A12              | N/A             | 0.0000      
+59   | PYCR3                | N/A             | 0.0000      
+60   | CAMK2G               | N/A             | 0.0000      
+61   | CMSS1                | N/A             | 0.0000      
+62   | RABGGTA              | N/A             | 0.0000      
+63   | CRELD2               | N/A             | 0.0000      
+64   | HMBOX1               | N/A             | 0.0000      
+65   | EXOSC1               | N/A             | 0.0000      
+66   | AMPD2                | N/A             | 0.0000      
+67   | HSD17B12             | N/A             | 0.0000      
+68   | LRRC34               | N/A             | 0.0000      
+69   | PRPF4                | N/A             | 0.0000      
+70   | STX10                | N/A             | 0.0000      
+71   | SLC6A9               | N/A             | 0.0000      
+72   | PDZD11               | N/A             | 0.0000      
+73   | LAPTM4B              | N/A             | 0.0000      
+74   | CXXC1                | N/A             | 0.0000      
+75   | AIG1                 | N/A             | 0.0000      
+
+[1m GENES FUERA DEL CONTRASTE (Solo en Maestro K=50)[0m
+
+[1m ESTADÍSTICAS DE RELEVANCIA (Score ANOVA)[0m
+   - [94mContraste:[0m    Min: 0.000 | Max: 7.238 | Mean: 3.634 | Std: 2.632
+   - [94mGeneral (K=50):[0m Min: 4.821 | Max: 7.238 | Mean: 5.451 | Std: 0.596
+   - [94mFuera Selección:[0m N/A
+
+ [1mArchivos:[0m TXT (extra/genes_braaksc_k75.txt) | CSV (extra/contrast_mapping_braaksc_k50-vs-k75.csv)
+
+[1m====================================================================================================[0m
+[1m COMPARATIVA DINÁMICA: CERADSC[0m
+[1m====================================================================================================[0m
+ [1mConfiguración Seleccionada:[0m
+   [94m Maestro (Parsimonia): K=1500 | NCR_RF-R3_Resampl[0m
+   [93m Contraste (Modelo alternativo): K=25 | AllKNN_RF-R3_Resampl[0m
+
+[1m🧬 LISTADO DEL CONTRASTE (Posicionamiento en Maestro K=1500)[0m
+#    | GEN                  | RANK MAESTRO    | SCORE ANOVA 
+-----------------------------------------------------------------
+1    | TMEM107              | #1              | 19.6620     
+2    | ZNF592               | #2              | 16.7443     
+3    | SETD1A               | #3              | 15.5606     
+4    | NRIP2                | #4              | 14.8009     
+5    | PPDPF                | #5              | 14.6604     
+6    | HMGN2                | #6              | 14.5995     
+7    | LRRC4B               | #7              | 14.5696     
+8    | CIC                  | #8              | 14.2312     
+9    | TMCC2                | #9              | 14.2173     
+10   | CMTM4                | #10             | 13.8665     
+11   | SLC6A9               | #11             | 13.8480     
+12   | DAB2IP               | #12             | 13.7501     
+13   | DDOST                | #13             | 13.3189     
+14   | FURIN                | #14             | 12.7649     
+15   | PRR13                | #15             | 12.6532     
+16   | ADAMTS2              | #16             | 12.1253     
+17   | GIT1                 | #17             | 12.0063     
+18   | ISYNA1               | #18             | 12.0061     
+19   | CLIP2                | #19             | 11.8643     
+20   | ZNF853               | #20             | 11.8106     
+21   | CHID1                | #21             | 11.7793     
+22   | KIF1A                | #22             | 11.7725     
+23   | SLC6A12              | #23             | 11.6854     
+24   | FCHO1                | #24             | 11.2814     
+25   | ITPK1                | #25             | 11.2617     
+
+[1m GENES FUERA DEL CONTRASTE (Solo en Maestro K=1500)[0m
+   [92m↑ Top 3 mejores fuera:[0m
+     - CCDC69             (Rank #26, Score: 11.1797)
+     - PFKP               (Rank #27, Score: 11.1370)
+     - CXXC1              (Rank #28, Score: 10.9642)
+   [91m↓ Bottom 3 peores fuera:[0m
+     - SMU1               (Rank #1498, Score: 3.9277)
+     - PET117             (Rank #1499, Score: 3.9271)
+     - FNDC5              (Rank #1500, Score: 3.9267)
+
+[1m ESTADÍSTICAS DE RELEVANCIA (Score ANOVA)[0m
+   - [94mContraste:[0m    Min: 11.262 | Max: 19.662 | Mean: 13.474 | Std: 1.956
+   - [94mGeneral (K=1500):[0m Min: 3.927 | Max: 19.662 | Mean: 5.741 | Std: 1.825
+   - [94mFuera Selección:[0m Min: 3.927 | Max: 11.180 | Mean: 5.610 | Std: 1.515
+
+ [1mArchivos:[0m TXT (extra/genes_ceradsc_k25.txt) | CSV (extra/contrast_mapping_ceradsc_k1500-vs-k25.csv)
+
+[1m====================================================================================================[0m
+[1m COMPARATIVA DINÁMICA: COGDX[0m
+[1m====================================================================================================[0m
+ [1mConfiguración Seleccionada:[0m
+   [94m Maestro (Parsimonia): K=1000 | ROS_RF-R2_FR[0m
+   [93m Contraste (Ganador Win-Loss Ranking): K=75 | Tomek_RF-R2_FR[0m
+
+[1m🧬 LISTADO DEL CONTRASTE (Posicionamiento en Maestro K=1000)[0m
+#    | GEN                  | RANK MAESTRO    | SCORE ANOVA 
+-----------------------------------------------------------------
+1    | TMEM107              | #1              | 12.5771     
+2    | ADAMTS2              | #2              | 10.8333     
+3    | CMTM4                | #3              | 10.4628     
+4    | KIF1A                | #4              | 10.0939     
+5    | ZNF592               | #5              | 10.0895     
+6    | SUPT7L               | #6              | 10.0575     
+7    | DDOST                | #7              | 9.6775      
+8    | SLC6A9               | #8              | 9.5889      
+9    | NIT1                 | #9              | 9.4019      
+10   | SETD1A               | #10             | 9.4015      
+11   | DAB2IP               | #11             | 9.3046      
+12   | TMCC2                | #12             | 9.1212      
+13   | ZNF853               | #13             | 8.8439      
+14   | HMGN2                | #14             | 8.7477      
+15   | BCL2L1               | #15             | 8.7227      
+16   | ZBBX                 | #16             | 8.6682      
+17   | CIC                  | #17             | 8.5711      
+18   | TMEM184B             | #18             | 8.5641      
+19   | PPDPF                | #19             | 8.3245      
+20   | FAM156B              | #20             | 8.3098      
+21   | CLIP2                | #21             | 8.2185      
+22   | ADORA1               | #22             | 8.1384      
+23   | CBX5                 | #23             | 8.1160      
+24   | FAM171A1             | #24             | 8.0850      
+25   | LRRC4B               | #25             | 8.0725      
+26   | VIPAS39              | #26             | 8.0723      
+27   | HOPX                 | #27             | 8.0531      
+28   | PRR13                | #28             | 8.0057      
+29   | MAP2K7               | #29             | 8.0014      
+30   | CHID1                | #30             | 7.9966      
+31   | GIT1                 | #31             | 7.9204      
+32   | ARHGAP35             | #32             | 7.9043      
+33   | SLC6A12              | #33             | 7.8024      
+34   | SPECC1L              | #34             | 7.7997      
+35   | NRIP2                | #35             | 7.7759      
+36   | LDLRAP1              | #36             | 7.7651      
+37   | RUSF1                | #37             | 7.6542      
+38   | YY1                  | #38             | 7.6248      
+39   | LRRC39               | #39             | 7.6160      
+40   | CDK2AP1              | #40             | 7.5971      
+41   | C1RL                 | #41             | 7.4820      
+42   | CTCF                 | #42             | 7.4789      
+43   | ITPK1                | #43             | 7.4787      
+44   | CREBBP               | #44             | 7.4489      
+45   | PRELP                | #45             | 7.4359      
+46   | RBP4                 | #46             | 7.4016      
+47   | SMIM27               | #47             | 7.3469      
+48   | FCHO1                | #48             | 7.3210      
+49   | NPNT                 | #49             | 7.2019      
+50   | QDPR                 | #50             | 7.1483      
+51   | DENND11              | #51             | 7.1244      
+52   | PRPF4                | #52             | 7.1089      
+53   | PFKP                 | #53             | 7.0954      
+54   | SLC38A2              | #54             | 7.0504      
+55   | HEXIM1               | #55             | 6.9896      
+56   | GAREM2               | #56             | 6.9612      
+57   | AIG1                 | #57             | 6.9397      
+58   | HSD11B2              | #58             | 6.9286      
+59   | CFAP221              | #59             | 6.9270      
+60   | POGK                 | #60             | 6.9062      
+61   | PPP1CC               | #61             | 6.8938      
+62   | ARAP1                | #62             | 6.8915      
+63   | NUCB1                | #63             | 6.8840      
+64   | TPRN                 | #64             | 6.8702      
+65   | UBAP1                | #65             | 6.8450      
+66   | LRRC34               | #66             | 6.8284      
+67   | TCTN3                | #67             | 6.7798      
+68   | DDX39A               | #68             | 6.7704      
+69   | MEIS3                | #69             | 6.7565      
+70   | ISYNA1               | #70             | 6.7517      
+71   | RAPGEF1              | #71             | 6.7496      
+72   | JADE2                | #72             | 6.7416      
+73   | ZMYND8               | #73             | 6.7359      
+74   | PALM3                | #74             | 6.7268      
+75   | STAG1                | #75             | 6.7158      
+
+[1m GENES FUERA DEL CONTRASTE (Solo en Maestro K=1000)[0m
+   [92m↑ Top 3 mejores fuera:[0m
+     - CHCHD7             (Rank #76, Score: 6.7071)
+     - MEPCE              (Rank #77, Score: 6.6836)
+     - TM7SF2             (Rank #78, Score: 6.6765)
+   [91m↓ Bottom 3 peores fuera:[0m
+     - CRACR2B            (Rank #998, Score: 3.5733)
+     - NIPBL              (Rank #999, Score: 3.5712)
+     - SRP54              (Rank #1000, Score: 3.5690)
+
+[1m ESTADÍSTICAS DE RELEVANCIA (Score ANOVA)[0m
+   - [94mContraste:[0m    Min: 6.716 | Max: 12.577 | Mean: 7.911 | Std: 1.159
+   - [94mGeneral (K=1000):[0m Min: 3.569 | Max: 12.577 | Mean: 4.814 | Std: 1.196
+   - [94mFuera Selección:[0m Min: 3.569 | Max: 6.707 | Mean: 4.563 | Std: 0.773
+
+ [1mArchivos:[0m TXT (extra/genes_cogdx_k75.txt) | CSV (extra/contrast_mapping_cogdx_k1000-vs-k75.csv)
+
+[1m PROCESO FINALIZADO. Reporte guardado en: extra/comparative_analysis_report.txt[0m

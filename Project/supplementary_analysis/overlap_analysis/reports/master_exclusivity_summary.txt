@@ -1,0 +1,34 @@
+INFORME DE EXCLUSIVIDAD GENÓMICA
+========================================
+CONFIG BrA-CeA-CoA [BrA (K=50) | CeA (K=1500) | CoA (K=1000)]:
+Total maestros: 46 | Exclusivos: 0
+    Sin genes exclusivos.
+
+CONFIG BrA-CeA-CoB [BrA (K=50) | CeA (K=1500) | CoB (K=75)]:
+Total maestros: 25 | Exclusivos: 0
+    Sin genes exclusivos.
+
+CONFIG BrA-CeB-CoA [BrA (K=50) | CeB (K=25) | CoA (K=1000)]:
+Total maestros: 16 | Exclusivos: 0
+    Sin genes exclusivos.
+
+CONFIG BrA-CeB-CoB [BrA (K=50) | CeB (K=25) | CoB (K=75)]:
+Total maestros: 16 | Exclusivos: 0
+    Sin genes exclusivos.
+
+CONFIG BrB-CeA-CoA [BrB (K=75) | CeA (K=1500) | CoA (K=1000)]:
+Total maestros: 68 | Exclusivos: 17
+    LISTA COMPLETA: AMPD2, CAMK2G, CMSS1, CREBL2, CRELD2, CXXC1, EXOSC1, HMBOX1, LAPTM4B, PDHA1, PDZD11, PYCR3, RABGGTA, ST3GAL3, STAU1, STX10, TAF1D
+
+CONFIG BrB-CeA-CoB [BrB (K=75) | CeA (K=1500) | CoB (K=75)]:
+Total maestros: 30 | Exclusivos: 0
+    Sin genes exclusivos.
+
+CONFIG BrB-CeB-CoA [BrB (K=75) | CeB (K=25) | CoA (K=1000)]:
+Total maestros: 18 | Exclusivos: 0
+    Sin genes exclusivos.
+
+CONFIG BrB-CeB-CoB [BrB (K=75) | CeB (K=25) | CoB (K=75)]:
+Total maestros: 18 | Exclusivos: 0
+    Sin genes exclusivos.
+

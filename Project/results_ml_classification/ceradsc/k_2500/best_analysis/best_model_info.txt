@@ -1,0 +1,11 @@
+{
+    "dataset": "genes-ceradsc",
+    "method": "SVC_Balanced",
+    "path_workflow": "R1",
+    "run_index": 0,
+    "random_seed": 42,
+    "n_best": 0,
+    "n_best_features": 2500,
+    "n_best_features_full": 0,
+    "selected_features": []
+}

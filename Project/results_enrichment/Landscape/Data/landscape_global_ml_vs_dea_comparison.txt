@@ -1,0 +1,33 @@
+====================================================================
+GLOBAL BIOLOGICAL DISCOVERY: MACHINE LEARNING (AI/ML) VS DEA CORES
+====================================================================
+Este reporte analiza la diferencia entre los genes clave seleccionados por algoritmos de Inteligencia Artificial / Machine Learning (IA/ML) y los detectados por el análisis estadístico tradicional de Expresión Diferencial (DEA) en los 3 datasets.
+--------------------------------------------------------------------
+1. TRIPLE CORE COMPARISON (Genes de ML vs Genes comunes de DEA):
+   - Total Triple Core ML (Core Masters de ML): 46
+   - Total Triple Core DEA (Comunes en los 3 DEAs): 665
+   - Genes del Triple Core ML que NO están en DEA Core (Descubrimientos): 12
+     -> ANKRD30B, BBOF1, CASP9, ERP44, FCHO1, LRCH4, OBSCN, ODC1, RASGRP2, SRD5A3, TCTN3, VIPAS39
+--------------------------------------------------------------------
+2. SUBNUCLEUS COMPARISON (Subnácleo Irreducible vs Genes comunes de DEA):
+   - Total genes en el Subnúcleo Irreducible de ML: 16
+   - Genes del Subnúcleo de ML que NO están en el Triple Core DEA: 1
+     -> FCHO1
+--------------------------------------------------------------------
+3. ANÁLISIS DE SIGNIFICACIÓN DE DEA PARA EL SUBNÚCLEO IRREDUCIBLE:
+  * ADAMTS2 : Significant in Braaksc (YES) | Ceradsc (YES) | Cogdx (YES)
+  * CHID1 : Significant in Braaksc (YES) | Ceradsc (YES) | Cogdx (YES)
+  * CIC : Significant in Braaksc (YES) | Ceradsc (YES) | Cogdx (YES)
+  * CMTM4 : Significant in Braaksc (YES) | Ceradsc (YES) | Cogdx (YES)
+  * DAB2IP : Significant in Braaksc (YES) | Ceradsc (YES) | Cogdx (YES)
+  * DDOST : Significant in Braaksc (YES) | Ceradsc (YES) | Cogdx (YES)
+  * FCHO1 : Significant in Braaksc (NO) | Ceradsc (YES) | Cogdx (YES)
+  * HMGN2 : Significant in Braaksc (YES) | Ceradsc (YES) | Cogdx (YES)
+  * ISYNA1 : Significant in Braaksc (YES) | Ceradsc (YES) | Cogdx (YES)
+  * KIF1A : Significant in Braaksc (YES) | Ceradsc (YES) | Cogdx (YES)
+  * LRRC4B : Significant in Braaksc (YES) | Ceradsc (YES) | Cogdx (YES)
+  * PPDPF : Significant in Braaksc (YES) | Ceradsc (YES) | Cogdx (YES)
+  * SETD1A : Significant in Braaksc (YES) | Ceradsc (YES) | Cogdx (YES)
+  * TMCC2 : Significant in Braaksc (YES) | Ceradsc (YES) | Cogdx (YES)
+  * TMEM107 : Significant in Braaksc (YES) | Ceradsc (YES) | Cogdx (YES)
+  * ZNF592 : Significant in Braaksc (YES) | Ceradsc (YES) | Cogdx (YES)

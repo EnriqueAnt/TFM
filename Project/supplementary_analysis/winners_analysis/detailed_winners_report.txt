@@ -1,0 +1,322 @@
+========================================================================================================================
+                            REPORTE DETALLADO DE SELECCIÓN DE METODOLOGÍAS (ORDENADO POR K)                             
+========================================================================================================================
+
+DATASET: BRAAKSC | K: k_25
+------------------------------------------------------------
+ESTADO: COINCIDENCIA (MATCH YES).
+Ganador: BorderlineSMOTE_RF-R3_Resampl
+Score SR: 93 | Score Media: 102
+Distancia al 2º en SR: 0 | Distancia al 2º en Media: 0
+Aviso: Empate en liderazgo SR (Valor 93). Se eligió por mejor puesto en Media.
+Candidatos empatados en SR:
+  - BorderlineSMOTE_RF-R3_Resampl: Puesto Media #1 (102)
+  - ROS_RF-R2_FR: Puesto Media #2 (102)
+GANADOR FINAL: BorderlineSMOTE_RF-R3_Resampl
+--- Análisis de Balanced Accuracy (BA) ---
+  - SR: El ganador final tiene el mayor BA en SR (38).
+  - Media: El ganador NO tiene el mayor BA en Media. Método(s) líder(es) en BA (Media): SMOTETomek_RF-R3_Resampl (Valor: 42)
+
+DATASET: BRAAKSC | K: k_50
+------------------------------------------------------------
+ESTADO: COINCIDENCIA (MATCH YES).
+Ganador: BorderlineSMOTE_RF-R2_FR
+Score SR: 96 | Score Media: 104
+Distancia al 2º en SR: 6 | Distancia al 2º en Media: 4
+GANADOR FINAL: BorderlineSMOTE_RF-R2_FR
+--- Análisis de Balanced Accuracy (BA) ---
+  - SR: El ganador NO tiene el mayor BA en SR. Método(s) líder(es) en BA (SR): NearMiss_RF-R2_FR (Valor: 40)
+  - Media: El ganador NO tiene el mayor BA en Media. Método(s) líder(es) en BA (Media): NearMiss_RF-R2_FR (Valor: 42)
+
+DATASET: BRAAKSC | K: k_75
+------------------------------------------------------------
+ESTADO: COINCIDENCIA (MATCH YES).
+Ganador: ROS_RF-R2_FR
+Score SR: 107 | Score Media: 114
+Distancia al 2º en SR: 5 | Distancia al 2º en Media: 8
+GANADOR FINAL: ROS_RF-R2_FR
+--- Análisis de Balanced Accuracy (BA) ---
+  - SR: El ganador final tiene el mayor BA en SR (35).
+  - Media: El ganador final tiene el mayor BA en Media (42).
+
+DATASET: BRAAKSC | K: k_100
+------------------------------------------------------------
+ESTADO: COINCIDENCIA (MATCH YES).
+Ganador: AllKNN_RF-R2_FR
+Score SR: 94 | Score Media: 106
+Distancia al 2º en SR: 4 | Distancia al 2º en Media: 0
+GANADOR FINAL: AllKNN_RF-R2_FR
+--- Análisis de Balanced Accuracy (BA) ---
+  - SR: El ganador NO tiene el mayor BA en SR. Método(s) líder(es) en BA (SR): SMOTETomek_RF-R2_FR (Valor: 31)
+  - Media: El ganador NO tiene el mayor BA en Media. Método(s) líder(es) en BA (Media): SMOTETomek_RF-R2_FR (Valor: 42)
+
+DATASET: BRAAKSC | K: k_500
+------------------------------------------------------------
+ESTADO: CONFLICTO DE LIDERAZGO (MATCH NO).
+Líder SR: KMeansSMOTE_RF-R2_FR
+  - Puesto en SR: #1 (Valor: 73)
+  - Puesto en Media: #2 (Valor: 88)
+Líder Media: ROS_RF-R2_FR
+  - Puesto en Media: #1 (Valor: 92)
+  - Puesto en SR: #2 (Valor: 68)
+Cálculo de Decisión:
+  - Ventaja SR (dSR): 5
+  - Ventaja Media (dM): 4
+  - Valor Decisión (3*dSR + dM_rel): (3*5) + (-4) = 11
+RESULTADO: PERSISTENCIA DEL LÍDER ESTADÍSTICO. No se triplica la ventaja.
+GANADOR FINAL: KMeansSMOTE_RF-R2_FR
+--- Análisis de Balanced Accuracy (BA) ---
+  - SR: El ganador NO tiene el mayor BA en SR. Método(s) líder(es) en BA (SR): AllKNN_RF-R3_Resampl (Valor: 32)
+  - Media: El ganador NO tiene el mayor BA en Media. Método(s) líder(es) en BA (Media): SMOTEENN_RF-R2_FR (Valor: 42)
+
+DATASET: BRAAKSC | K: k_1000
+------------------------------------------------------------
+ESTADO: COINCIDENCIA (MATCH YES).
+Ganador: AllKNN_RF-R2_FR
+Score SR: 97 | Score Media: 118
+Distancia al 2º en SR: 21 | Distancia al 2º en Media: 16
+GANADOR FINAL: AllKNN_RF-R2_FR
+--- Análisis de Balanced Accuracy (BA) ---
+  - SR: El ganador final tiene el mayor BA en SR (30).
+  - Media: El ganador final tiene el mayor BA en Media (42).
+
+DATASET: BRAAKSC | K: k_1500
+------------------------------------------------------------
+ESTADO: COINCIDENCIA (MATCH YES).
+Ganador: AllKNN_RF-R2_FR
+Score SR: 87 | Score Media: 120
+Distancia al 2º en SR: 5 | Distancia al 2º en Media: 20
+GANADOR FINAL: AllKNN_RF-R2_FR
+--- Análisis de Balanced Accuracy (BA) ---
+  - SR: El ganador NO tiene el mayor BA en SR. Método(s) líder(es) en BA (SR): AllKNN_RF-R3_Resampl (Valor: 26)
+  - Media: El ganador NO tiene el mayor BA en Media. Método(s) líder(es) en BA (Media): CC_RF-R2_FR (Valor: 42)
+
+DATASET: BRAAKSC | K: k_2500
+------------------------------------------------------------
+ESTADO: COINCIDENCIA (MATCH YES).
+Ganador: Tomek_RF-R2_FR
+Score SR: 78 | Score Media: 90
+Distancia al 2º en SR: 4 | Distancia al 2º en Media: 0
+GANADOR FINAL: Tomek_RF-R2_FR
+--- Análisis de Balanced Accuracy (BA) ---
+  - SR: El ganador NO tiene el mayor BA en SR. Método(s) líder(es) en BA (SR): AllKNN_RF-R3_Resampl (Valor: 23)
+  - Media: El ganador NO tiene el mayor BA en Media. Método(s) líder(es) en BA (Media): CC_RF-R2_FR (Valor: 42)
+
+DATASET: CERADSC | K: k_25
+------------------------------------------------------------
+ESTADO: COINCIDENCIA (MATCH YES).
+Ganador: AllKNN_RF-R3_Resampl
+Score SR: 96 | Score Media: 118
+Distancia al 2º en SR: 6 | Distancia al 2º en Media: 12
+GANADOR FINAL: AllKNN_RF-R3_Resampl
+--- Análisis de Balanced Accuracy (BA) ---
+  - SR: El ganador final tiene el mayor BA en SR (34).
+  - Media: El ganador final tiene el mayor BA en Media (42).
+
+DATASET: CERADSC | K: k_50
+------------------------------------------------------------
+ESTADO: COINCIDENCIA (MATCH YES).
+Ganador: SMOTETomek_RF-R2_FR
+Score SR: 107 | Score Media: 112
+Distancia al 2º en SR: 13 | Distancia al 2º en Media: 4
+GANADOR FINAL: SMOTETomek_RF-R2_FR
+--- Análisis de Balanced Accuracy (BA) ---
+  - SR: El ganador NO tiene el mayor BA en SR. Método(s) líder(es) en BA (SR): NearMiss_RF-R3_Resampl (Valor: 40)
+  - Media: El ganador NO tiene el mayor BA en Media. Método(s) líder(es) en BA (Media): NearMiss_RF-R3_Resampl (Valor: 42)
+
+DATASET: CERADSC | K: k_75
+------------------------------------------------------------
+ESTADO: COINCIDENCIA (MATCH YES).
+Ganador: NearMiss_RF-R3_Resampl
+Score SR: 100 | Score Media: 114
+Distancia al 2º en SR: 3 | Distancia al 2º en Media: 2
+GANADOR FINAL: NearMiss_RF-R3_Resampl
+--- Análisis de Balanced Accuracy (BA) ---
+  - SR: El ganador final tiene el mayor BA en SR (41).
+  - Media: El ganador final tiene el mayor BA en Media (42).
+
+DATASET: CERADSC | K: k_100
+------------------------------------------------------------
+ESTADO: COINCIDENCIA (MATCH YES).
+Ganador: NCR_RF-R3_Resampl
+Score SR: 93 | Score Media: 108
+Distancia al 2º en SR: 0 | Distancia al 2º en Media: 2
+Aviso: Empate en liderazgo SR (Valor 93). Se eligió por mejor puesto en Media.
+Candidatos empatados en SR:
+  - NearMiss_RF-R3_Resampl: Puesto Media #3 (102)
+  - NCR_RF-R3_Resampl: Puesto Media #1 (108)
+GANADOR FINAL: NCR_RF-R3_Resampl
+--- Análisis de Balanced Accuracy (BA) ---
+  - SR: El ganador NO tiene el mayor BA en SR. Método(s) líder(es) en BA (SR): NearMiss_RF-R3_Resampl (Valor: 41)
+  - Media: El ganador final tiene el mayor BA en Media (42).
+
+DATASET: CERADSC | K: k_500
+------------------------------------------------------------
+ESTADO: CONFLICTO DE LIDERAZGO (MATCH NO).
+Líder SR: NCR_RF-R3_Resampl
+  - Puesto en SR: #1 (Valor: 90)
+  - Puesto en Media: #4 (Valor: 92)
+Líder Media: ROS_RF-R2_FR
+  - Puesto en Media: #1 (Valor: 110)
+  - Puesto en SR: #2 (Valor: 79)
+Cálculo de Decisión:
+  - Ventaja SR (dSR): 11
+  - Ventaja Media (dM): 18
+  - Valor Decisión (3*dSR + dM_rel): (3*11) + (-18) = 15
+RESULTADO: PERSISTENCIA DEL LÍDER ESTADÍSTICO. No se triplica la ventaja.
+Metodologías entre el Líder de Media y el Líder SR (Ranking Medias):
+  - BorderlineSMOTE_RF-R2_FR: Puesto Media #2 (108), Puesto SR #4 (78)
+  - SVC_Balanced-R1_Baseline: Puesto Media #3 (108), Puesto SR #3 (79)
+GANADOR FINAL: NCR_RF-R3_Resampl
+--- Análisis de Balanced Accuracy (BA) ---
+  - SR: El ganador final tiene el mayor BA en SR (34).
+  - Media: El ganador final tiene el mayor BA en Media (42).
+
+DATASET: CERADSC | K: k_1000
+------------------------------------------------------------
+ESTADO: CONFLICTO DE LIDERAZGO (MATCH NO).
+Líder SR: NCR_RF-R3_Resampl
+  - Puesto en SR: #1 (Valor: 91)
+  - Puesto en Media: #2 (Valor: 108)
+Líder Media: ROS_RF-R3_Resampl
+  - Puesto en Media: #1 (Valor: 110)
+  - Puesto en SR: #4 (Valor: 77)
+Cálculo de Decisión:
+  - Ventaja SR (dSR): 14
+  - Ventaja Media (dM): 2
+  - Valor Decisión (3*dSR + dM_rel): (3*14) + (-2) = 40
+RESULTADO: PERSISTENCIA DEL LÍDER ESTADÍSTICO. No se triplica la ventaja.
+GANADOR FINAL: NCR_RF-R3_Resampl
+--- Análisis de Balanced Accuracy (BA) ---
+  - SR: El ganador final tiene el mayor BA en SR (40).
+  - Media: El ganador final tiene el mayor BA en Media (42).
+
+DATASET: CERADSC | K: k_1500
+------------------------------------------------------------
+ESTADO: COINCIDENCIA (MATCH YES).
+Ganador: NCR_RF-R3_Resampl
+Score SR: 100 | Score Media: 108
+Distancia al 2º en SR: 17 | Distancia al 2º en Media: 4
+GANADOR FINAL: NCR_RF-R3_Resampl
+--- Análisis de Balanced Accuracy (BA) ---
+  - SR: El ganador final tiene el mayor BA en SR (41).
+  - Media: El ganador final tiene el mayor BA en Media (42).
+
+DATASET: CERADSC | K: k_2500
+------------------------------------------------------------
+ESTADO: CONFLICTO DE LIDERAZGO (MATCH NO).
+Líder SR: NCR_RF-R3_Resampl
+  - Puesto en SR: #1 (Valor: 97)
+  - Puesto en Media: #4 (Valor: 94)
+Líder Media: SVC_Balanced-R1_Baseline
+  - Puesto en Media: #1 (Valor: 112)
+  - Puesto en SR: #2 (Valor: 93)
+Cálculo de Decisión:
+  - Ventaja SR (dSR): 4
+  - Ventaja Media (dM): 18
+  - Valor Decisión (3*dSR + dM_rel): (3*4) + (-18) = -6
+RESULTADO: CAMBIO POR REGLA 3X. El líder de Media es el ganador final.
+Metodologías entre el Líder de Media y el Líder SR (Ranking Medias):
+  - NearMiss_RF-R2_FR: Puesto Media #2 (102), Puesto SR #3 (85)
+  - CNN_RF-R2_FR: Puesto Media #3 (100), Puesto SR #4 (62)
+GANADOR FINAL: SVC_Balanced-R1_Baseline
+--- Análisis de Balanced Accuracy (BA) ---
+  - SR: El ganador NO tiene el mayor BA en SR. Método(s) líder(es) en BA (SR): NearMiss_RF-R2_FR (Valor: 41)
+  - Media: El ganador NO tiene el mayor BA en Media. Método(s) líder(es) en BA (Media): NearMiss_RF-R2_FR (Valor: 42)
+
+DATASET: COGDX | K: k_25
+------------------------------------------------------------
+ESTADO: COINCIDENCIA (MATCH YES).
+Ganador: CNN_RF-R2_FR
+Score SR: 79 | Score Media: 106
+Distancia al 2º en SR: 6 | Distancia al 2º en Media: 18
+GANADOR FINAL: CNN_RF-R2_FR
+--- Análisis de Balanced Accuracy (BA) ---
+  - SR: El ganador NO tiene el mayor BA en SR. Método(s) líder(es) en BA (SR): Tomek_RF-R2_FR (Valor: 23)
+  - Media: El ganador NO tiene el mayor BA en Media. Método(s) líder(es) en BA (Media): NearMiss_RF-R3_Resampl (Valor: 42)
+
+DATASET: COGDX | K: k_50
+------------------------------------------------------------
+ESTADO: COINCIDENCIA (MATCH YES).
+Ganador: BorderlineSMOTE_RF-R2_FR
+Score SR: 96 | Score Media: 114
+Distancia al 2º en SR: 2 | Distancia al 2º en Media: 2
+GANADOR FINAL: BorderlineSMOTE_RF-R2_FR
+--- Análisis de Balanced Accuracy (BA) ---
+  - SR: El ganador final tiene el mayor BA en SR (30).
+  - Media: El ganador NO tiene el mayor BA en Media. Método(s) líder(es) en BA (Media): ROS_RF-R2_FR (Valor: 42)
+
+DATASET: COGDX | K: k_75
+------------------------------------------------------------
+ESTADO: CONFLICTO DE LIDERAZGO (MATCH NO).
+Líder SR: Tomek_RF-R2_FR
+  - Puesto en SR: #1 (Valor: 101)
+  - Puesto en Media: #2 (Valor: 110)
+Líder Media: ROS_RF-R2_FR
+  - Puesto en Media: #1 (Valor: 118)
+  - Puesto en SR: #2 (Valor: 97)
+Cálculo de Decisión:
+  - Ventaja SR (dSR): 4
+  - Ventaja Media (dM): 8
+  - Valor Decisión (3*dSR + dM_rel): (3*4) + (-8) = 4
+RESULTADO: PERSISTENCIA DEL LÍDER ESTADÍSTICO. No se triplica la ventaja.
+GANADOR FINAL: Tomek_RF-R2_FR
+--- Análisis de Balanced Accuracy (BA) ---
+  - SR: El ganador NO tiene el mayor BA en SR. Método(s) líder(es) en BA (SR): ROS_RF-R2_FR (Valor: 32)
+  - Media: El ganador NO tiene el mayor BA en Media. Método(s) líder(es) en BA (Media): ROS_RF-R2_FR (Valor: 42)
+
+DATASET: COGDX | K: k_100
+------------------------------------------------------------
+ESTADO: COINCIDENCIA (MATCH YES).
+Ganador: ROS_RF-R2_FR
+Score SR: 102 | Score Media: 112
+Distancia al 2º en SR: 14 | Distancia al 2º en Media: 17
+GANADOR FINAL: ROS_RF-R2_FR
+--- Análisis de Balanced Accuracy (BA) ---
+  - SR: El ganador NO tiene el mayor BA en SR. Método(s) líder(es) en BA (SR): RUS_RF-R2_FR (Valor: 40)
+  - Media: El ganador NO tiene el mayor BA en Media. Método(s) líder(es) en BA (Media): RUS_RF-R2_FR (Valor: 42)
+
+DATASET: COGDX | K: k_500
+------------------------------------------------------------
+ESTADO: COINCIDENCIA (MATCH YES).
+Ganador: AllKNN_RF-R2_FR
+Score SR: 105 | Score Media: 116
+Distancia al 2º en SR: 14 | Distancia al 2º en Media: 9
+GANADOR FINAL: AllKNN_RF-R2_FR
+--- Análisis de Balanced Accuracy (BA) ---
+  - SR: El ganador final tiene el mayor BA en SR (32).
+  - Media: El ganador final tiene el mayor BA en Media (42).
+
+DATASET: COGDX | K: k_1000
+------------------------------------------------------------
+ESTADO: COINCIDENCIA (MATCH YES).
+Ganador: ROS_RF-R2_FR
+Score SR: 103 | Score Media: 114
+Distancia al 2º en SR: 1 | Distancia al 2º en Media: 8
+GANADOR FINAL: ROS_RF-R2_FR
+--- Análisis de Balanced Accuracy (BA) ---
+  - SR: El ganador final tiene el mayor BA en SR (33).
+  - Media: El ganador NO tiene el mayor BA en Media. Método(s) líder(es) en BA (Media): RUS_RF-R2_FR (Valor: 42)
+
+DATASET: COGDX | K: k_1500
+------------------------------------------------------------
+ESTADO: COINCIDENCIA (MATCH YES).
+Ganador: AllKNN_RF-R2_FR
+Score SR: 102 | Score Media: 114
+Distancia al 2º en SR: 2 | Distancia al 2º en Media: 2
+GANADOR FINAL: AllKNN_RF-R2_FR
+--- Análisis de Balanced Accuracy (BA) ---
+  - SR: El ganador NO tiene el mayor BA en SR. Método(s) líder(es) en BA (SR): NCR_RF-R2_FR (Valor: 34)
+  - Media: El ganador NO tiene el mayor BA en Media. Método(s) líder(es) en BA (Media): NearMiss_RF-R3_Resampl (Valor: 42)
+
+DATASET: COGDX | K: k_2500
+------------------------------------------------------------
+ESTADO: COINCIDENCIA (MATCH YES).
+Ganador: ROS_RF-R2_FR
+Score SR: 89 | Score Media: 98
+Distancia al 2º en SR: 5 | Distancia al 2º en Media: 0
+GANADOR FINAL: ROS_RF-R2_FR
+--- Análisis de Balanced Accuracy (BA) ---
+  - SR: El ganador NO tiene el mayor BA en SR. Método(s) líder(es) en BA (SR): NCR_RF-R3_Resampl (Valor: 29)
+  - Media: El ganador NO tiene el mayor BA en Media. Método(s) líder(es) en BA (Media): NearMiss_RF-R3_Resampl (Valor: 42)
+

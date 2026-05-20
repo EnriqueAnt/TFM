@@ -1,0 +1,19 @@
+INFORME DE ESTABILIDAD Y PATRONES DE GENES MAESTROS
+Genes Estables (en las 8 configs): 16
+Genes Volátiles: 52
+================================================================================
+
+ Aparecen en 4 configuraciones: BrA-CeA-CoA, BrA-CeA-CoB, BrB-CeA-CoA, BrB-CeA-CoB
+Genes (9): HSD11B2, NIT1, NUCB1, PALM3, PFKP, SUPT7L, TCTN3, VIPAS39, YY1
+
+ Aparecen en 4 configuraciones: BrB-CeA-CoA, BrB-CeA-CoB, BrB-CeB-CoA, BrB-CeB-CoB
+Genes (2): SLC6A12, SLC6A9
+
+ Aparecen en 2 configuraciones: BrA-CeA-CoA, BrB-CeA-CoA
+Genes (21): AGPAT1, ANKRD30B, BBOF1, CAB39L, CAPZA1, CASP9, CLASRP, DTX1, ERP44, IP6K2, KMT2D, LRCH4, ME2, MPV17L2, MXI1, OBSCN, ODC1, PA2G4, RASGRP2, SLC4A11, SRD5A3
+
+ Aparecen en 2 configuraciones: BrB-CeA-CoA, BrB-CeA-CoB
+Genes (3): AIG1, LRRC34, PRPF4
+
+ Aparecen en 1 configuraciones: BrB-CeA-CoA
+Genes (17): AMPD2, CAMK2G, CMSS1, CREBL2, CRELD2, CXXC1, EXOSC1, HMBOX1, LAPTM4B, PDHA1, PDZD11, PYCR3, RABGGTA, ST3GAL3, STAU1, STX10, TAF1D

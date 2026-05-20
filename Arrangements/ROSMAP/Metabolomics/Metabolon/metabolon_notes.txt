@@ -1,0 +1,10 @@
+- How has the data been preprocessed?
+Peaks were quantified using area-under-the-curve.  For studies spanning multiple days, a data normalization step was performed to 
+correct variation resulting from instrument inter-day tuning differences. Essentially, each compound was corrected in run-day blocks 
+by registering the medians to equal one (1.00) and normalizing each data point proportionately.
+
+- Where can I find these files?
+https://www.synapse.org/#!Synapse:syn26007830
+
+- Has this data been analyzed before?
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10106526/

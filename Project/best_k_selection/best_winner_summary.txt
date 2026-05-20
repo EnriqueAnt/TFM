@@ -1,0 +1,18 @@
+INFORME EJECUTIVO DE RESULTADOS FINALES
+============================================================
+
+DATASET: BRAAKSC
+  K Final: 50
+  Metodología: BorderlineSMOTE_RF-R2_FR
+  Scores: BA=0.2914, F1=0.2823, PS=0.4652
+----------------------------------------
+DATASET: CERADSC
+  K Final: 1500
+  Metodología: NCR_RF-R3_Resampl
+  Scores: BA=0.4908, F1=0.4342, PS=0.6140
+----------------------------------------
+DATASET: COGDX
+  K Final: 1000
+  Metodología: ROS_RF-R2_FR
+  Scores: BA=0.3753, F1=0.3674, PS=0.6271
+----------------------------------------

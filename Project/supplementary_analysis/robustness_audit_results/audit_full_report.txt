@@ -1,0 +1,1259 @@
+==================================================================================================================================
+                                      REPORT: METHODOLOGY ROBUSTNESS AND DIVERGENCE ANALYSIS                                      
+==================================================================================================================================
+
+==================================================================================================================================
+                                                TABLE 1: SIGNED RANK (SR) ANALYSIS                                                
+==================================================================================================================================
+Dataset         | K       | Best Methodology (Total Score)                | Best Methodology (Weighted Score)
+----------------------------------------------------------------------------------------------------------------------------------
+braaksc         | k_25    | BorderlineSMOTE_RF-R3_Resampl                 | BorderlineSMOTE_RF-R3_Resampl
+braaksc         | k_50    | BorderlineSMOTE_RF-R2_FR                      | SMOTETomek_RF-R2_FR
+braaksc         | k_75    | ROS_RF-R2_FR                                  | ROS_RF-R2_FR
+braaksc         | k_100   | AllKNN_RF-R2_FR                               | SMOTETomek_RF-R2_FR
+braaksc         | k_500   | KMeansSMOTE_RF-R2_FR                          | AllKNN_RF-R3_Resampl
+braaksc         | k_1000  | AllKNN_RF-R2_FR                               | AllKNN_RF-R2_FR
+braaksc         | k_1500  | AllKNN_RF-R2_FR                               | AllKNN_RF-R2_FR
+braaksc         | k_2500  | Tomek_RF-R2_FR                                | BorderlineSMOTE_RF-R3_Resampl
+ceradsc         | k_25    | AllKNN_RF-R3_Resampl                          | AllKNN_RF-R3_Resampl
+ceradsc         | k_50    | SMOTETomek_RF-R2_FR                           | SMOTETomek_RF-R2_FR
+ceradsc         | k_75    | NearMiss_RF-R3_Resampl                        | NearMiss_RF-R3_Resampl
+ceradsc         | k_100   | NearMiss_RF-R3_Resampl                        | NearMiss_RF-R3_Resampl
+ceradsc         | k_500   | NCR_RF-R3_Resampl                             | NCR_RF-R3_Resampl
+ceradsc         | k_1000  | NCR_RF-R3_Resampl                             | NCR_RF-R3_Resampl
+ceradsc         | k_1500  | NCR_RF-R3_Resampl                             | NCR_RF-R3_Resampl
+ceradsc         | k_2500  | NCR_RF-R3_Resampl                             | NCR_RF-R3_Resampl
+cogdx           | k_25    | CNN_RF-R2_FR                                  | ROS_RF-R2_FR
+cogdx           | k_50    | BorderlineSMOTE_RF-R2_FR                      | BorderlineSMOTE_RF-R2_FR
+cogdx           | k_75    | Tomek_RF-R2_FR                                | ROS_RF-R2_FR
+cogdx           | k_100   | ROS_RF-R2_FR                                  | ROS_RF-R2_FR
+cogdx           | k_500   | AllKNN_RF-R2_FR                               | AllKNN_RF-R2_FR
+cogdx           | k_1000  | ROS_RF-R2_FR                                  | ROS_RF-R2_FR
+cogdx           | k_1500  | AllKNN_RF-R2_FR                               | AllKNN_RF-R2_FR
+cogdx           | k_2500  | ROS_RF-R2_FR                                  | ROS_RF-R2_FR
+----------------------------------------------------------------------------------------------------------------------------------
+Mismatches detected in SR: braaksc (k_50), braaksc (k_100), braaksc (k_500), braaksc (k_2500), cogdx (k_25), cogdx (k_75)
+
+
+==================================================================================================================================
+                                                TABLE 2: MEAN PERFORMANCE ANALYSIS                                                
+==================================================================================================================================
+Dataset         | K       | Best Methodology (Total Score)                | Best Methodology (Weighted Score)
+----------------------------------------------------------------------------------------------------------------------------------
+braaksc         | k_25    | BorderlineSMOTE_RF-R3_Resampl                 | BorderlineSMOTE_RF-R3_Resampl
+braaksc         | k_50    | BorderlineSMOTE_RF-R2_FR                      | SMOTETomek_RF-R2_FR
+braaksc         | k_75    | ROS_RF-R2_FR                                  | ROS_RF-R2_FR
+braaksc         | k_100   | SMOTETomek_RF-R2_FR                           | SMOTETomek_RF-R2_FR
+braaksc         | k_500   | ROS_RF-R2_FR                                  | AllKNN_RF-R3_Resampl
+braaksc         | k_1000  | AllKNN_RF-R2_FR                               | AllKNN_RF-R2_FR
+braaksc         | k_1500  | AllKNN_RF-R2_FR                               | AllKNN_RF-R2_FR
+braaksc         | k_2500  | SMOTE_RF-R3_Resampl                           | SMOTE_RF-R3_Resampl
+ceradsc         | k_25    | AllKNN_RF-R3_Resampl                          | AllKNN_RF-R3_Resampl
+ceradsc         | k_50    | SMOTETomek_RF-R2_FR                           | SMOTETomek_RF-R2_FR
+ceradsc         | k_75    | NearMiss_RF-R3_Resampl                        | NearMiss_RF-R3_Resampl
+ceradsc         | k_100   | NCR_RF-R3_Resampl                             | NearMiss_RF-R3_Resampl
+ceradsc         | k_500   | ROS_RF-R2_FR                                  | ROS_RF-R2_FR
+ceradsc         | k_1000  | ROS_RF-R3_Resampl                             | ROS_RF-R3_Resampl
+ceradsc         | k_1500  | NCR_RF-R3_Resampl                             | NCR_RF-R3_Resampl
+ceradsc         | k_2500  | SVC_Balanced-R1_Baseline                      | SVC_Balanced-R1_Baseline
+cogdx           | k_25    | CNN_RF-R2_FR                                  | CNN_RF-R2_FR
+cogdx           | k_50    | BorderlineSMOTE_RF-R2_FR                      | ROS_RF-R2_FR
+cogdx           | k_75    | ROS_RF-R2_FR                                  | ROS_RF-R2_FR
+cogdx           | k_100   | ROS_RF-R2_FR                                  | ROS_RF-R2_FR
+cogdx           | k_500   | AllKNN_RF-R2_FR                               | AllKNN_RF-R2_FR
+cogdx           | k_1000  | ROS_RF-R2_FR                                  | ROS_RF-R2_FR
+cogdx           | k_1500  | AllKNN_RF-R2_FR                               | AllKNN_RF-R2_FR
+cogdx           | k_2500  | ROS_RF-R2_FR                                  | ROS_RF-R2_FR
+----------------------------------------------------------------------------------------------------------------------------------
+Mismatches detected in Mean: braaksc (k_50), braaksc (k_500), ceradsc (k_100), cogdx (k_50)
+
+
+=====================================================================================================================================================================
+                                                        TABLE 3: DETAILED PERFORMANCE METRICS FOR MISMATCHES                                                         
+=====================================================================================================================================================================
+Table | Dataset    | K          | Type  | BA   | F1   | PS   | Total  | Wght.  | W_SR_T | W_SR_P | W_M_T  | W_M_P  | Methodology
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SR    | braaksc    | k_50       | Orig  | 32   | 34   | 30   | 96     | 32.4   | -      | no     | YES    | no     | BorderlineSMOTE_RF-R2_FR
+SR    | braaksc    | k_50       | Pond  | 33   | 38   | 19   | 90     | 32.6   | no     | -      | no     | YES    | SMOTETomek_RF-R2_FR
+Mean  | braaksc    | k_50       | Orig  | 34   | 36   | 34   | 104    | 34.7   | YES    | no     | -      | no     | BorderlineSMOTE_RF-R2_FR
+Mean  | braaksc    | k_50       | Pond  | 40   | 42   | 18   | 100    | 37.4   | no     | YES    | no     | -      | SMOTETomek_RF-R2_FR
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SR    | braaksc    | k_100      | Orig  | 29   | 26   | 39   | 94     | 29.5   | -      | no     | no     | no     | AllKNN_RF-R2_FR
+SR    | braaksc    | k_100      | Pond  | 31   | 37   | 22   | 90     | 31.8   | no     | -      | YES    | YES    | SMOTETomek_RF-R2_FR
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SR    | braaksc    | k_500      | Orig  | 19   | 30   | 24   | 73     | 23.6   | -      | no     | no     | no     | KMeansSMOTE_RF-R2_FR
+SR    | braaksc    | k_500      | Pond  | 32   | 32   | -1   | 63     | 27.1   | no     | -      | no     | YES    | AllKNN_RF-R3_Resampl
+Mean  | braaksc    | k_500      | Orig  | 32   | 32   | 28   | 92     | 31.4   | no     | no     | -      | no     | ROS_RF-R2_FR
+Mean  | braaksc    | k_500      | Pond  | 38   | 42   | 0    | 80     | 33.7   | no     | YES    | no     | -      | AllKNN_RF-R3_Resampl
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SR    | braaksc    | k_2500     | Orig  | 19   | 24   | 35   | 78     | 23.1   | -      | no     | no     | no     | Tomek_RF-R2_FR
+SR    | braaksc    | k_2500     | Pond  | 22   | 34   | 9    | 65     | 24.2   | no     | -      | no     | no     | BorderlineSMOTE_RF-R3_Resampl
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Mean  | ceradsc    | k_100      | Orig  | 42   | 28   | 38   | 108    | 36.5   | no     | no     | -      | no     | NCR_RF-R3_Resampl
+Mean  | ceradsc    | k_100      | Pond  | 40   | 40   | 22   | 102    | 37.3   | YES    | YES    | no     | -      | NearMiss_RF-R3_Resampl
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SR    | cogdx      | k_25       | Orig  | 18   | 26   | 35   | 79     | 23.4   | -      | no     | YES    | YES    | CNN_RF-R2_FR
+SR    | cogdx      | k_25       | Pond  | 20   | 31   | 21   | 72     | 24.0   | no     | -      | no     | no     | ROS_RF-R2_FR
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Mean  | cogdx      | k_50       | Orig  | 40   | 40   | 34   | 114    | 39.1   | YES    | YES    | -      | no     | BorderlineSMOTE_RF-R2_FR
+Mean  | cogdx      | k_50       | Pond  | 42   | 42   | 28   | 112    | 39.9   | no     | no     | no     | -      | ROS_RF-R2_FR
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SR    | cogdx      | k_75       | Orig  | 29   | 31   | 41   | 101    | 31.5   | -      | no     | no     | no     | Tomek_RF-R2_FR
+SR    | cogdx      | k_75       | Pond  | 32   | 37   | 28   | 97     | 33.1   | no     | -      | YES    | YES    | ROS_RF-R2_FR
+
+
+==================================================================================================================================
+                                     GENE SELECTION STABILITY ANALYSIS (ORIGINAL VS WEIGHTED)                                     
+==================================================================================================================================
+[SR] Dataset: braaksc    | K: k_50  
+  - Original Method: BorderlineSMOTE_RF-R2_FR
+  - Weighted Method: SMOTETomek_RF-R2_FR
+  - RESULT: Gene selection is IDENTICAL across both methodologies.
+  - MULTI-DATASET INTEGRATION ANALYSIS:
+    * vs Global Winner (k_50 | BorderlineSMOTE_RF-R2_FR):
+      - Original  Methodology: IDENTICAL
+      - Weighted  Methodology: IDENTICAL
+    * vs GLOBAL INTERSECTION (Common Nucleus | 40 genes):
+      - Original  Methodology: CONTAINS CONSENSUS (Full)
+      - Weighted  Methodology: CONTAINS CONSENSUS (Full)
+    * vs GLOBAL UNION (Project Frontier | 1991 genes):
+      - Original  Methodology: CONSISTENT (All genes within Union)
+      - Weighted  Methodology: CONSISTENT (All genes within Union)
+----------------------------------------------------------------------------------------------------------------------------------
+[Mean] Dataset: braaksc    | K: k_50  
+  - Original Method: BorderlineSMOTE_RF-R2_FR
+  - Weighted Method: SMOTETomek_RF-R2_FR
+  - RESULT: Gene selection is IDENTICAL across both methodologies.
+  - MULTI-DATASET INTEGRATION ANALYSIS:
+    * vs Global Winner (k_50 | BorderlineSMOTE_RF-R2_FR):
+      - Original  Methodology: IDENTICAL
+      - Weighted  Methodology: IDENTICAL
+    * vs GLOBAL INTERSECTION (Common Nucleus | 40 genes):
+      - Original  Methodology: CONTAINS CONSENSUS (Full)
+      - Weighted  Methodology: CONTAINS CONSENSUS (Full)
+    * vs GLOBAL UNION (Project Frontier | 1991 genes):
+      - Original  Methodology: CONSISTENT (All genes within Union)
+      - Weighted  Methodology: CONSISTENT (All genes within Union)
+----------------------------------------------------------------------------------------------------------------------------------
+[SR] Dataset: braaksc    | K: k_100 
+  - Original Method: AllKNN_RF-R2_FR
+  - Weighted Method: SMOTETomek_RF-R2_FR
+  - RESULT: Gene selection is IDENTICAL across both methodologies.
+  - MULTI-DATASET INTEGRATION ANALYSIS:
+    * vs Global Winner (k_50 | BorderlineSMOTE_RF-R2_FR):
+      - Original  Methodology: Superset (Includes Winner)
+      - Weighted  Methodology: Superset (Includes Winner)
+    * vs GLOBAL INTERSECTION (Common Nucleus | 40 genes):
+      - Original  Methodology: CONTAINS CONSENSUS (Full)
+      - Weighted  Methodology: CONTAINS CONSENSUS (Full)
+    * vs GLOBAL UNION (Project Frontier | 1991 genes):
+      - Original  Methodology: EXTENDED (5 new genes outside Union)
+      - Weighted  Methodology: EXTENDED (5 new genes outside Union)
+----------------------------------------------------------------------------------------------------------------------------------
+[SR] Dataset: braaksc    | K: k_500 
+  - Original Method: KMeansSMOTE_RF-R2_FR
+  - Weighted Method: AllKNN_RF-R3_Resampl
+  - RESULT: Gene selection CHANGED. 350 genes substituted (Total K: 500).
+  - MULTI-DATASET INTEGRATION ANALYSIS:
+    * vs Global Winner (k_50 | BorderlineSMOTE_RF-R2_FR):
+      - Original  Methodology: Superset (Includes Winner)
+      - Weighted  Methodology: Different
+    * vs GLOBAL INTERSECTION (Common Nucleus | 40 genes):
+      - Original  Methodology: CONTAINS CONSENSUS (Full)
+      - Weighted  Methodology: PARTIAL (Missing 13 core genes)
+    * vs GLOBAL UNION (Project Frontier | 1991 genes):
+      - Original  Methodology: EXTENDED (120 new genes outside Union)
+      - Weighted  Methodology: EXTENDED (282 new genes outside Union)
+----------------------------------------------------------------------------------------------------------------------------------
+[Mean] Dataset: braaksc    | K: k_500 
+  - Original Method: ROS_RF-R2_FR
+  - Weighted Method: AllKNN_RF-R3_Resampl
+  - RESULT: Gene selection CHANGED. 350 genes substituted (Total K: 500).
+  - MULTI-DATASET INTEGRATION ANALYSIS:
+    * vs Global Winner (k_50 | BorderlineSMOTE_RF-R2_FR):
+      - Original  Methodology: Superset (Includes Winner)
+      - Weighted  Methodology: Different
+    * vs GLOBAL INTERSECTION (Common Nucleus | 40 genes):
+      - Original  Methodology: CONTAINS CONSENSUS (Full)
+      - Weighted  Methodology: PARTIAL (Missing 13 core genes)
+    * vs GLOBAL UNION (Project Frontier | 1991 genes):
+      - Original  Methodology: EXTENDED (120 new genes outside Union)
+      - Weighted  Methodology: EXTENDED (282 new genes outside Union)
+----------------------------------------------------------------------------------------------------------------------------------
+[SR] Dataset: braaksc    | K: k_2500
+  - Original Method: Tomek_RF-R2_FR
+  - Weighted Method: BorderlineSMOTE_RF-R3_Resampl
+  - RESULT: Gene selection CHANGED. 980 genes substituted (Total K: 2500).
+  - MULTI-DATASET INTEGRATION ANALYSIS:
+    * vs Global Winner (k_50 | BorderlineSMOTE_RF-R2_FR):
+      - Original  Methodology: Superset (Includes Winner)
+      - Weighted  Methodology: Superset (Includes Winner)
+    * vs GLOBAL INTERSECTION (Common Nucleus | 40 genes):
+      - Original  Methodology: CONTAINS CONSENSUS (Full)
+      - Weighted  Methodology: CONTAINS CONSENSUS (Full)
+    * vs GLOBAL UNION (Project Frontier | 1991 genes):
+      - Original  Methodology: EXTENDED (1411 new genes outside Union)
+      - Weighted  Methodology: EXTENDED (1609 new genes outside Union)
+----------------------------------------------------------------------------------------------------------------------------------
+[Mean] Dataset: ceradsc    | K: k_100 
+  - Original Method: NCR_RF-R3_Resampl
+  - Weighted Method: NearMiss_RF-R3_Resampl
+  - RESULT: Gene selection CHANGED. 85 genes substituted (Total K: 100).
+  - MULTI-DATASET INTEGRATION ANALYSIS:
+    * vs Global Winner (k_1500 | NCR_RF-R3_Resampl):
+      - Original  Methodology: Subset (Contained)
+      - Weighted  Methodology: Different
+    * vs GLOBAL INTERSECTION (Common Nucleus | 40 genes):
+      - Original  Methodology: PARTIAL (Missing 19 core genes)
+      - Weighted  Methodology: PARTIAL (Missing 33 core genes)
+    * vs GLOBAL UNION (Project Frontier | 1991 genes):
+      - Original  Methodology: CONSISTENT (All genes within Union)
+      - Weighted  Methodology: EXTENDED (50 new genes outside Union)
+----------------------------------------------------------------------------------------------------------------------------------
+[SR] Dataset: cogdx      | K: k_25  
+  - Original Method: CNN_RF-R2_FR
+  - Weighted Method: ROS_RF-R2_FR
+  - RESULT: Gene selection is IDENTICAL across both methodologies.
+  - MULTI-DATASET INTEGRATION ANALYSIS:
+    * vs Global Winner (k_1000 | ROS_RF-R2_FR):
+      - Original  Methodology: Subset (Contained)
+      - Weighted  Methodology: Subset (Contained)
+    * vs GLOBAL INTERSECTION (Common Nucleus | 40 genes):
+      - Original  Methodology: PARTIAL (Missing 25 core genes)
+      - Weighted  Methodology: PARTIAL (Missing 25 core genes)
+    * vs GLOBAL UNION (Project Frontier | 1991 genes):
+      - Original  Methodology: CONSISTENT (All genes within Union)
+      - Weighted  Methodology: CONSISTENT (All genes within Union)
+----------------------------------------------------------------------------------------------------------------------------------
+[Mean] Dataset: cogdx      | K: k_50  
+  - Original Method: BorderlineSMOTE_RF-R2_FR
+  - Weighted Method: ROS_RF-R2_FR
+  - RESULT: Gene selection is IDENTICAL across both methodologies.
+  - MULTI-DATASET INTEGRATION ANALYSIS:
+    * vs Global Winner (k_1000 | ROS_RF-R2_FR):
+      - Original  Methodology: Subset (Contained)
+      - Weighted  Methodology: Subset (Contained)
+    * vs GLOBAL INTERSECTION (Common Nucleus | 40 genes):
+      - Original  Methodology: PARTIAL (Missing 21 core genes)
+      - Weighted  Methodology: PARTIAL (Missing 21 core genes)
+    * vs GLOBAL UNION (Project Frontier | 1991 genes):
+      - Original  Methodology: CONSISTENT (All genes within Union)
+      - Weighted  Methodology: CONSISTENT (All genes within Union)
+----------------------------------------------------------------------------------------------------------------------------------
+[SR] Dataset: cogdx      | K: k_75  
+  - Original Method: Tomek_RF-R2_FR
+  - Weighted Method: ROS_RF-R2_FR
+  - RESULT: Gene selection is IDENTICAL across both methodologies.
+  - MULTI-DATASET INTEGRATION ANALYSIS:
+    * vs Global Winner (k_1000 | ROS_RF-R2_FR):
+      - Original  Methodology: Subset (Contained)
+      - Weighted  Methodology: Subset (Contained)
+    * vs GLOBAL INTERSECTION (Common Nucleus | 40 genes):
+      - Original  Methodology: PARTIAL (Missing 17 core genes)
+      - Weighted  Methodology: PARTIAL (Missing 17 core genes)
+    * vs GLOBAL UNION (Project Frontier | 1991 genes):
+      - Original  Methodology: CONSISTENT (All genes within Union)
+      - Weighted  Methodology: CONSISTENT (All genes within Union)
+----------------------------------------------------------------------------------------------------------------------------------
+
+==================================================================================================================================
+                                    DIVERGENCE ANALYSIS: WEIGHTED METHODS VS GLOBAL STANDARDS                                     
+==================================================================================================================================
+Dataset: braaksc    | K: k_100  | Weighted Method: SMOTETomek_RF-R2_FR
+  - vs GLOBAL WINNER (k_50 | BorderlineSMOTE_RF-R2_FR):
+    * ADDITIONAL Genes (New features) [50]:
+      ADGRL1, AIG1, AMPD2, ARAP1, ARRDC2, C1orf54, CAMK2G, CINP, CMSS1, CREBL2
+      CRELD2, CXXC1, EGLN1, EXOSC1, GIT1, HMBOX1, HSD17B12, LAPTM4B, LRRC34, MBTPS2
+      MEIS3, MEPCE, MRTO4, MXD4, NAA10, NCK1, NRIP2, PDHA1, PDZD11, PHF19
+      PPP1R26, PRPF4, PRR13, PSMA3, PYCR3, RABGGTA, RNF43, SDSL, SLC6A12, SLC6A9
+      SST, ST3GAL3, STAU1, STX10, TAF1D, TM7SF2, TOB1, UBAP1, ZNF704, ZNF853
+  - vs GLOBAL UNION (All Winning Features):
+    * EXTERNAL Genes (Not in any global winner) [5]:
+      MBTPS2, MRTO4, MXD4, NAA10, TOB1
+    * MISSING Union Genes [1896] (Truncated):
+      (Too many genes to list)
+----------------------------------------------------------------------------------------------------------------------------------
+Dataset: braaksc    | K: k_2500 | Weighted Method: BorderlineSMOTE_RF-R3_Resampl
+  - vs GLOBAL WINNER (k_50 | BorderlineSMOTE_RF-R2_FR):
+    * ADDITIONAL Genes (New features) [2450]:
+      AADAT, AAGAB, AAR2, AASDHPPT, ABCA2, ABCA7, ABCA9, ABCB10, ABCB6, ABCB9
+      ABCC5, ABCE1, ABCF3, ABCG4, ABHD10, ABHD11, ABHD14A, ABHD15, ABHD17C, ABHD3
+      ABHD4, ABHD5, ABI2, ABL1, ABLIM3, ABR, ACAP3, ACBD7, ACE, ACIN1
+      ACLY, ACO1, ACOT13, ACOT4, ACOX1, ACOX3, ACSL4, ACSL5, ACTB, ACTG1
+      ACTN2, ACTR2, ACTR6, ACVR1B, ADAM19, ADAM22, ADAM23, ADAM28, ADAM33, ADAM9
+      ADAR, ADAT1, ADCY8, ADD2, ADGRL1, ADIPOR1, ADIPOR2, ADNP2, ADORA1, ADORA2A
+      ADRA2A, AEN, AFDN, AGAP3, AGBL4, AGFG2, AGK, AGO1, AGPAT3, AGRN
+      AGTPBP1, AIG1, AIMP2, AK6, AKAP11, AKAP6, AKAP7, AKAP8, AKR7L, AKT1S1
+      ALDH18A1, ALDH4A1, ALDH5A1, ALG14, ALKBH3, ALKBH7, ALOX5, ALS2, ALS2CL, ALYREF
+      AMACR, AMIGO1, AMPD2, ANAPC1, ANAPC4, ANK2, ANKRD13D, ANKRD28, ANKRD40, ANKRD42
+      ANKRD9, ANLN, ANO5, ANP32B, ANTKMT, AP1AR, AP1M1, AP2B1, AP3B1, AP3M1
+      AP3S1, AP4B1, AP5B1, AP5S1, APBB1, APBB2, APBB3, API5, APLP2, APOC4.APOC2
+      APP, ARAP1, ARF3, ARF5, ARFGAP2, ARFGEF3, ARFIP2, ARGLU1, ARHGAP21, ARHGAP32
+      ARHGAP35, ARHGEF10L, ARHGEF17, ARHGEF2, ARHGEF26, ARHGEF40, ARID1A, ARL17B, ARL6IP1, ARL6IP5
+      ARMC2, ARMC8, ARMCX3, ARMCX4, ARMCX5, ARPC3, ARPP19, ARRB1, ARRDC2, ARSG
+      ART3, ASAH2B, ASAP3, ASB1, ASB6, ASNS, ASPDH, ASRGL1, ASTE1, ASTN2
+      ATAD2B, ATAD3B, ATF2, ATF7IP2, ATG13, ATL1, ATP1B1, ATP23, ATP2B2, ATP5PB
+      ATP6V0E1, ATP6V1B2, ATP6V1E1, ATP6V1G1, ATP6V1G2.DDX39B, ATP8A1, ATP9A, ATP9B, ATPAF1, ATR
+      ATRN, ATXN7L1, ATXN7L3, ATXN7L3B, AVL9, AXIN1, AZGP1, AZI2, B3GALT4, B3GAT2
+      B3GNT2, B3GNTL1, B4GALT2, B4GALT4, B4GALT6, BACE2, BACH1, BAD, BAK1, BASP1
+      BAZ1B, BAZ2B, BCAR1, BCAR3, BCAT1, BCAT2, BCCIP, BCDIN3D, BCKDHB, BCKDK
+      BCL2, BCL2L1, BCL2L2, BCL9L, BCR, BEND7, BEX4, BFAR, BFSP1, BHLHE41
+      BICRAL, BLOC1S6, BMERB1, BMPER, BMPR2, BOK, BORCS6, BPGM, BPTF, BRAP
+      BRAT1, BRD1, BRD2, BRD3, BRD7, BRI3, BRICD5, BRPF1, BRPF3, BSDC1
+      BSPRY, BTF3L4, BZW2, C11orf68, C12orf29, C12orf4, C12orf75, C15orf39, C15orf40, C16orf89
+      C17orf58, C17orf75, C19orf53, C19orf81, C1QTNF5, C1QTNF6, C1orf115, C1orf54, C2CD2, C2CD2L
+      C2orf74, C4orf33, C5orf22, C6orf89, C8orf90, CA5B, CABLES1, CACFD1, CACNA1E, CACNA2D2
+      CACNB4, CACNG7, CALCOCO1, CALD1, CALHM2, CALM1, CALML4, CALY, CAMK1G, CAMK2G
+      CAMK4, CAMSAP1, CAMSAP2, CAP2, CAPRIN2, CAPS2, CASP1, CASTOR1, CBFA2T2, CBFB
+      CBLN3, CBS, CBX5, CBX8, CCAR1, CCDC113, CCDC127, CCDC14, CCDC146, CCDC149
+      CCDC174, CCDC18, CCDC24, CCDC32, CCDC43, CCDC65, CCDC69, CCDC71, CCDC85A, CCDC85C
+      CCDC92, CCDC97, CCHCR1, CCKBR, CCND3, CCNG1, CCNL2, CCNT2, CD151, CD164
+      CD320, CD37, CD4, CD47, CD8A, CDC16, CDC23, CDC26, CDC27, CDC37
+      CDC42, CDC42SE2, CDH20, CDH24, CDH3, CDH8, CDIN1, CDIP1, CDK17, CDK18
+      CDK20, CDK2AP1, CEBPZ, CELSR3, CENPB, CENPO, CENPS.CORT, CENPT, CEP104, CEP120
+      CEP20, CEP290, CEP41, CEP72, CEP83, CEP97, CERS1, CERS4, CERT1, CETN3
+      CFAP221, CFAP251, CFAP298, CFAP43, CFAP74, CFLAR, CHCHD10, CHCHD6, CHCHD7, CHD3
+      CHD4, CHD6, CHD8, CHGA, CHIC1, CHKB.CPT1B, CHL1, CHML, CHMP1A, CHMP3
+      CHMP4A, CHN1, CHN2, CHPF, CHRD, CHST10, CHST14, CHST3, CHST6, CHST7
+      CHSY1, CHURC1, CHURC1.FNTB, CIAO2B, CIAO3, CIB1, CINP, CIPC, CIZ1, CKMT1B
+      CLASP2, CLCN7, CLDN15, CLIP2, CLIP3, CLK1, CLK3, CLK4, CLN3, CLN6
+      CLN8, CLPP, CLSTN3, CLVS2, CLYBL, CMSS1, CMTM3, CMTM6, CMTR1, CNFN
+      CNKSR2, CNN3, CNNM3, CNNM4, CNOT9, CNPY2, CNTNAP1, CNTNAP2, COA1, COA3
+      COASY, COBL, COG1, COG3, COG6, COG7, COL20A1, COL27A1, COL4A1, COL6A2
+      COLGALT2, COMMD6, COMMD9, COPG1, COPS6, COPS9, COPZ1, COQ10B, COQ6, CORO6
+      CORT, COX15, COX18, CPLX2, CPM, CPPED1, CPQ, CPSF1, CPSF3, CPSF6
+      CPT1A, CPT1B, CPT2, CPTP, CRAT, CRB2, CREBBP, CREBL2, CRELD2, CRK
+      CRMP1, CROCC, CRYBG3, CSAD, CSF1R, CSF2RA, CSF3R, CSK, CSMD1, CSNK1E
+      CSNK2A2, CSPP1, CSRNP3, CSRP1, CSTF2, CSTF3, CTCF, CTDNEP1, CTDSP2, CTDSPL
+      CTNND2, CTTN, CTTNBP2, CUL9, CWF19L1, CX3CL1, CXADR, CXCL16, CXXC1, CYB561A3
+      CYB5R4, CYLD, CYP2C8, CYP2E1, CYP4X1, CYRIA, CYRIB, DAD1, DAG1, DAP3
+      DAXX, DBN1, DBR1, DBT, DCAF12, DCAF13, DCAF8, DCTN4, DCTN5, DCTPP1
+      DCUN1D2, DCXR, DDAH2, DDHD2, DDIT4, DDR1, DDX23, DDX25, DDX28, DDX39A
+      DENND11, DENND2A, DENND2B, DENND5A, DEPDC5, DET1, DGAT1, DGCR6, DGCR8, DGLUCY
+      DHRS3, DHRS7, DHRS7B, DHTKD1, DHX16, DHX35, DHX38, DHX57, DHX9, DIP2C
+      DIRAS1, DIRAS2, DIS3L2, DIXDC1, DKK3, DLG5, DLGAP1, DMAC1, DMAC2L, DNAAF1
+      DNAAF11, DNAH1, DNAH7, DNAI7, DNAJB12, DNAJC10, DNAJC13, DNAJC14, DNAJC18, DNAJC4
+      DNAJC6, DNAL4, DNM1, DNM1L, DNMT3A, DOCK3, DOCK6, DOCK7, DOK1, DOK3
+      DOLPP1, DOP1A, DPF2, DPP6, DPP7, DPY19L3, DPYS, DPYSL2, DPYSL3, DRG1
+      DRP2, DSCAML1, DSN1, DTD1, DTX3, DUS2, DUSP10, DUSP15, DUT, DVL1
+      DVL2, DYNC1LI2, DYNC2LI1, DYNLT1, DYRK1A, DZIP3, EBF4, ECE1, ECHS1, ECI2
+      ECM1, EDIL3, EEF1AKMT1, EEF1G, EEF2K, EEF2KMT, EEFSEC, EFHC1, EGLN1, EID1
+      EID2, EID2B, EIF2AK3, EIF2B1, EIF2B3, EIF2S3, EIF3J, EIF3M, EIF4A1, EIF4A2
+      EIF4E3, EIF4G1, EIF4G3, EIF4H, ELF2, ELMO2, ELOVL6, ELP2, EMC6, EMC7
+      EMC8, EMD, EML2, EMP2, EMSY, EMX2, ENDOV, ENO1, ENOX2, ENPP4
+      ENTPD4, ENTREP3, EOLA1, EP300, EPB41L1, EPB41L3, EPDR1, EPG5, EPHA7, EPHX4
+      EPM2AIP1, EPOR, ERBIN, ERCC5, ERGIC1, ERI1, ERICH3, ERMAP, ETF1, ETNK1
+      ETNK2, EVI2B, EVL, EWSR1, EXOC4, EXOC8, EXOSC1, EXOSC4, EYA2, FAAH
+      FAH, FAIM2, FAM107A, FAM114A1, FAM114A2, FAM117A, FAM120B, FAM131B, FAM131C, FAM13B
+      FAM153A, FAM156B, FAM161B, FAM167A, FAM177A1, FAM181B, FAM210B, FAM216A, FAM222A, FAM228A
+      FAM229A, FAM3C, FAM53B, FAM81A, FAM8A1, FANCG, FANK1, FAR1, FARP1, FARS2
+      FARSB, FASTKD3, FAT1, FBL, FBRS, FBXL2, FBXO16, FBXO38, FBXO44, FBXW4
+      FBXW5, FBXW9, FCGR2A, FCHSD2, FDXR, FEN1, FERMT2, FGF12, FGF17, FGF9
+      FHIP1B, FIGN, FIP1L1, FKBP10, FKBP15, FKBP5, FKBP8, FKBPL, FKTN, FLCN
+      FLOT1, FLT1, FLT3LG, FLVCR1, FMC1, FMNL3, FNIP2, FOCAD, FOXN2, FOXO4
+      FOXP1, FOXP2, FOXRED1, FRAT1, FRAT2, FRMD3, FSTL1, FSTL4, FUBP1, FURIN
+      FYCO1, FZD7, FZD9, G3BP2, GAA, GAB1, GABBR1, GABRA1, GABRB2, GAL3ST4
+      GALM, GALNT1, GALNT11, GALNT13, GALNT18, GALNT2, GALT, GAN, GAPDH, GAREM2
+      GARIN5A, GART, GAS2L1, GAS7, GASK1A, GATAD2A, GBF1, GCA, GDAP1, GDI1
+      GDPD1, GFER, GFM1, GGH, GGT7, GGTA1, GIGYF1, GIMAP4, GIT1, GK
+      GLB1L, GLB1L2, GLCE, GLE1, GLIS2, GLMN, GLO1, GLS2, GLT8D1, GLT8D2
+      GMFB, GNA11, GNA12, GNAI1, GNAS, GNG4, GNG5, GNL1, GNL2, GNL3
+      GOLGB1, GOLM1, GOLPH3, GOPC, GORAB, GORASP2, GOSR2, GPAT4, GPCPD1, GPER1
+      GPKOW, GPLD1, GPN1, GPN2, GPR108, GPR137B, GPR158, GPR180, GPR35, GPRASP1
+      GPRASP2, GPS2, GPSM1, GPSM3, GPX3, GRAMD1A, GRIA2, GRIA3, GRIA4, GRIPAP1
+      GRK3, GRK4, GSDMB, GSG1L, GSK3B, GSR, GSS, GSTA4, GTF2H3, GTF3C4
+      GTF3C6, GUCD1, GUCY1B1, GULP1, GYPC, H1.0, H1.10, H2AX, H2BC21, HABP4
+      HACE1, HACL1, HAGHL, HARBI1, HARS2, HAT1, HBA1, HBA2, HBB, HBS1L
+      HCFC1, HCN3, HDAC1, HDAC6, HDAC9, HDGF, HDHD3, HEATR5B, HECW2, HES4
+      HEXB, HEXD, HEXIM1, HIC1, HID1, HIF3A, HIGD1B, HIPK1, HIPK2, HIRA
+      HLA.DMA, HMBOX1, HMG20A, HMG20B, HMGCR, HMGN1, HMGN5, HNRNPA1L3, HNRNPH3, HNRNPL
+      HNRNPM, HOMER3, HOOK2, HOPX, HPCA, HPRT1, HS1BP3, HS3ST5, HSD17B10, HSD17B12
+      HSF1, HSF4, HSPA2, HSPA9, HSPB2, HVCN1, IARS1, IBA57, ICA1L, IDH2
+      IFFO2, IFIT2, IFT122, IFT140, IFT172, IFT20, IGSF3, IGSF8, IKBKB, IL17D
+      IL17RC, IL18, IL33, IMMP1L, IMMP2L, IMP4, IMPDH2, INA, ING2, ING3
+      ING5, INIP, INPP5D, INPP5E, INPP5K, INPPL1, INTS11, INTS13, INTS14, INTS6
+      INTS6L, INTU, IPCEF1, IPO11, IPO5, IPO9, IQCA1, IQGAP1, IRF2, IRF2BP2
+      ISCU, ITFG1, ITFG2, ITGA10, ITGA7, ITGB5, ITPK1, ITPKB, ITPRID2, ITSN1
+      IVD, IZUMO4, JADE2, JAG1, JAGN1, JAKMIP1, JAKMIP2, JAM3, JMJD4, JUP
+      KANK2, KANSL1, KAT14, KAT6B, KATNAL2, KBTBD12, KBTBD4, KCNA6, KCNAB3, KCNIP2
+      KCNJ16, KCNJ9, KCNK9, KCNMA1, KCNMB4, KCNQ5, KCNT1, KCTD12, KCTD18, KDELR2
+      KDM1A, KDM2A, KDM2B, KDM4C, KDM5A, KDM8, KHDRBS1, KIAA0753, KIAA0930, KIAA2013
+      KICS2, KIF13B, KIF1C, KIF27, KIF3B, KIF5B, KIFBP, KIFC2, KLC1, KLF15
+      KLF4, KLHDC3, KLHDC8A, KLHL17, KLHL2, KLHL21, KLHL24, KLHL3, KLHL32, KLHL36
+      KLHL5, KLHL9, KNOP1, KNTC1, KRAS, KRCC1, KTN1, KXD1, L3HYPDH, L3MBTL1
+      L3MBTL4, LACTB, LAMA3, LAMB2, LAMTOR1, LAPTM4A, LAPTM4B, LARP6, LARP7, LARS1
+      LBHD1, LBR, LCA5, LCLAT1, LCOR, LDLRAP1, LEF1, LEFTY1, LENG8, LGALS8
+      LGMN, LHX2, LIAS, LIG3, LIMCH1, LLGL2, LMAN2, LMBR1L, LMO3, LMTK3
+      LPGAT1, LPIN1, LPL, LPP, LRBA, LRFN4, LRP11, LRP3, LRRC20, LRRC28
+      LRRC34, LRRC39, LRRC40, LRRC42, LRRC49, LRRC73, LRSAM1, LSM1, LSM11, LSM4
+      LSM6, LSS, LTBP3, LTC4S, LTO1, LURAP1, LURAP1L, LY6G5C, LYPD1, LYRM1
+      LYRM7, LZTS2, MAB21L3, MACO1, MACROD1, MADD, MAF, MAF1, MAGED4, MAGED4B
+      MAGT1, MAK16, MAL2, MALSU1, MAN2A1, MAN2A2, MAN2B2, MAP2K4, MAP2K7, MAP3K12
+      MAP3K13, MAP3K3, MAP4K4, MAP7, MAP7D1, MAPK10, MAPK4, MAPK7, MAPK8, MAPK8IP3
+      MAPKAPK2, MAPKAPK3, MAPKBP1, MAPRE1, MAPRE3, MARCHF1, MARCHF5, MARCHF6, MARCHF8, MARK1
+      MARK2, MARK3, MASP1, MATCAP1, MATK, MATR3, MAZ, MBD1, MBD3, MBD5
+      MBNL2, MBOAT1, MBTPS2, MCCC2, MCM7, MCPH1, MCRIP2, MDGA1, MDK, MEAF6
+      MEAK7, MECP2, MED12L, MED14, MED16, MED23, MED29, MED30, MEF2D, MEIS3
+      MEPCE, METTL1, METTL16, METTL7A, MEX3C, MFN2, MGAT1, MGAT2, MGAT4B, MGMT
+      MICAL1, MICAL3, MICALL1, MICALL2, MICOS13, MICU2, MID1IP1, MIF, MINDY1, MINDY3
+      MIS12, MITF, MKNK1, MKNK2, MKRN1, MKRN2, MLF2, MLIP, MLKL, MLXIPL
+      MMAB, MMGT1, MOB3A, MOB3B, MOB3C, MORN1, MOSPD1, MPP2, MPP3, MPP7
+      MPST, MPZ, MRAS, MRC2, MROH1, MRPL13, MRPL28, MRPL32, MRPL51, MRPS18A
+      MRPS25, MRPS26, MRPS31, MRPS34, MRPS36, MRS2, MRTO4, MSANTD3, MSH2, MSRB1
+      MSRB3, MT.CO2, MT.ND1, MT1F, MT1M, MT2A, MTA2, MTERF3, MTF1, MTFP1
+      MTHFD1, MTHFS, MTMR2, MTMR6, MTPAP, MTREX, MTSS2, MTX1, MUC1, MUC20
+      MVB12A, MVB12B, MXD4, MYBBP1A, MYBPC1, MYBPHL, MYCBP, MYL6B, MYLIP, MYO15A
+      MYO5A, MYOM2, MYOT, MYRF, MZT1, N4BP1, NAA10, NAA16, NAA20, NAA60
+      NAALAD2, NAB1, NACC2, NADSYN1, NAF1, NALF2, NAP1L1, NAP1L2, NAP1L3, NAPB
+      NAT10, NAT9, NAV3, NBN, NBPF20, NCALD, NCAM2, NCAPG2, NCDN, NCK1
+      NCK2, NCKAP5L, NCOA1, NDE1, NDFIP1, NDFIP2, NDP, NDRG3, NDST1, NDUFA3
+      NDUFA5, NDUFA6, NDUFAF3, NDUFAF8, NDUFB5, NDUFS1, NECAP2, NECTIN3, NEGR1, NEIL1
+      NEK1, NELFB, NEMF, NEU4, NEURL4, NFASC, NFATC3, NFIC, NFKBIA, NFS1
+      NFYB, NINJ1, NIPAL2, NIPAL3, NIPSNAP1, NIPSNAP3B, NKAIN2, NME3, NME9, NMNAT2
+      NOG, NOL7, NOP9, NOTCH4, NPFF, NPHP1, NPIPA9, NPIPB6, NPNT, NPRL2
+      NPRL3, NPTN, NPY1R, NQO2, NR1D2, NR1H3, NR2C2, NR2E1, NR2F1, NRBF2
+      NREP, NRG4, NRGN, NRIP1, NRIP2, NRL, NRN1, NRP1, NRSN2, NRXN3
+      NSFL1C, NSG2, NSMCE1, NSMF, NSUN2, NTAQ1, NUDT19, NUDT2, NUDT21, NUDT7
+      NUDT8, NUFIP1, NUMB, NUP54, NWD1, NYNRIN, OAF, OAT, OCIAD1, ODF2
+      ODF2L, ODR4, OGT, OLFM3, OPN3, ORAI2, ORAI3, ORC3, OSBP, OSBPL11
+      OSCP1, OSGIN2, OST4, OTUD7A, OVGP1, OXCT2, OXNAD1, P2RX7, P4HTM, PABPC4
+      PACSIN2, PAF1, PAFAH1B3, PAFAH2, PAICS, PAIP1, PAIP2B, PANK3, PAOX, PAPLN
+      PAPSS1, PAQR3, PAQR4, PARD3, PARD6A, PARD6G, PARN, PARP16, PARP2, PARP8
+      PASK, PATJ, PAXX, PBDC1, PBX1, PBXIP1, PCBP2, PCCB, PCDH10, PCDH7
+      PCDHGA9, PCOLCE, PCSK1N, PCSK6, PCTP, PCYOX1L, PCYT1A, PDCD2, PDCD6, PDCD6IP
+      PDHA1, PDHX, PDIA4, PDRG1, PDXP, PDZD11, PDZRN3, PEG3, PELI1, PEMT
+      PER1, PES1, PET117, PEX13, PEX5L, PEX6, PFDN2, PGAP2, PGAP6, PGPEP1
+      PGRMC1, PHACTR1, PHETA1, PHF19, PHF2, PHF20L1, PHF21A, PHPT1, PHTF1, PHTF2
+      PHYHD1, PIAS2, PIAS4, PICK1, PIDD1, PIEZO2, PIGL, PIGM, PIGS, PIK3C2B
+      PIK3CB, PIK3CD, PIK3R1, PILRB, PITHD1, PJA2, PKD1, PLA2G5, PLAGL1, PLAGL2
+      PLCB1, PLCB4, PLCD4, PLCE1, PLCG1, PLCL1, PLD4, PLEKHA2, PLEKHA8, PLEKHB1
+      PLEKHB2, PLEKHF2, PLEKHG1, PLEKHG5, PLEKHM1, PLK2, PLPBP, PLXNB1, PLXNB2, PMS1
+      PMS2, PMVK, PNCK, PNISR, PNMA2, PNMA3, PNMA8B, PNPLA6, PNRC1, PODXL
+      PODXL2, POGK, POLDIP2, POLDIP3, POLR2J, POLR2L, POLR3C, POLRMT, POMGNT1, POMP
+      POP4, PORCN, POU3F3, PPCS, PPFIA2, PPIC, PPIF, PPIH, PPIL3, PPIP5K1
+      PPL, PPM1A, PPM1B, PPM1L, PPP1CB, PPP1CC, PPP1R12A, PPP1R14B, PPP1R16A, PPP1R1A
+      PPP1R26, PPP1R3C, PPP1R3D, PPP1R3E, PPP1R3G, PPP1R8, PPP1R9A, PPP2CA, PPP2R1A, PPP3CA
+      PPP3R1, PPP4R1, PPP4R4, PPT1, PRB2, PRCD, PRDM4, PRELP, PREPL, PREX1
+      PRICKLE1, PRICKLE3, PRKACB, PRKAR1A, PRKAR1B, PRKCI, PRKCSH, PRKDC, PRKX, PRMT2
+      PRMT5, PRMT9, PRNP, PRORP, PRPF19, PRPF38B, PRPF39, PRPF4, PRPF40B, PRPF6
+      PRPSAP1, PRR13, PRR5, PRRC2C, PRRT2, PRUNE2, PRX, PRXL2A, PSMA2, PSMA3
+      PSMB2, PSMC3, PSMC4, PSMC5, PSMD10, PSMD7, PSMG2, PTCD2, PTCD3, PTGDR2
+      PTH1R, PTH2R, PTP4A1, PTPDC1, PTPN21, PTPN3, PTPN9, PTPRD, PTPRK, PTPRM
+      PTPRS, PTRH1, PTRHD1, PUM2, PURA, PUS1, PXMP2, PXN, PYCR3, PYROXD1
+      QDPR, QPCTL, QTRT1, QTRT2, RAB11FIP5, RAB13, RAB1B, RAB21, RAB29, RAB2A
+      RAB31, RAB36, RAB3IL1, RAB5C, RAB9A, RABEP2, RABGGTA, RABL2A, RABL3, RABL6
+      RAD23A, RAD23B, RAD51D, RAD9A, RAF1, RAMP1, RANBP10, RANBP3, RAP1GDS1, RAPGEF1
+      RAPGEF2, RAPGEF5, RARS1, RASAL2, RASEF, RASL12, RASSF3, RBFOX1, RBM12, RBM24
+      RBM38, RC3H1, REC8, REEP4, REEP6, RELCH, REPS2, RERE, RESF1, RETREG3
+      RFNG, RFX1, RFX7, RGL2, RGMA, RGP1, RGS10, RHBDF2, RHBDL1, RHEB
+      RHOBTB2, RHOQ, RHOV, RIC3, RIC8B, RIDA, RIIAD1, RILPL2, RIN3, RINT1
+      RIOK3, RIPOR1, RIPOR3, RMDN2, RMND1, RNASEL, RNASET2, RND2, RNF121, RNF128
+      RNF130, RNF144A, RNF166, RNF181, RNF185, RNF207, RNF214, RNF38, RNPEPL1, ROCK1
+      RP9, RPAIN, RPE, RPH3A, RPL39, RPLP1, RPP21, RPRD1B, RPRM, RPRML
+      RPS15A, RPS27L, RPS6KC1, RPS6KL1, RPUSD1, RPUSD2, RRAGC, RRP1, RRP1B, RRP8
+      RSAD1, RSF1, RSPH3, RSPRY1, RTEL1.TNFRSF6B, RTF2, RTN1, RTN4, RTN4IP1, RUFY2
+      RUFY3, RUNDC3B, RUSC2, RUSF1, RXRA, SAFB2, SALL2, SAMD1, SAMD4A, SAMHD1
+      SAPCD2, SAR1A, SAR1B, SARS1, SASH1, SAT2, SC5D, SCAMP3, SCFD1, SCFD2
+      SCG3, SCG5, SCN1A, SCN2A, SCRIB, SCRT2, SCYL1, SDC4, SDSL, SEC22A
+      SEC31A, SEC61A1, SEC61B, SELENOI, SELENON, SELENOS, SELENOT, SELPLG, SENP3, SEPHS1
+      SEPTIN7, SEPTIN8, SERINC3, SERP1, SERPINB9, SERPINI1, SERTAD4, SETD2, SETD5, SEZ6L2
+      SF3A3, SF3B5, SFTPD, SFXN3, SGK1, SGSM1, SH2D5, SH3BP4, SH3BP5, SH3D19
+      SH3D21, SH3PXD2B, SHC1, SHFL, SHLD2, SHROOM2, SIK3, SIKE1, SIPA1, SIPA1L1
+      SIRPA, SIVA1, SIX5, SKI, SKIL, SLC12A6, SLC16A6, SLC23A2, SLC24A2, SLC25A12
+      SLC25A18, SLC25A34, SLC25A36, SLC25A40, SLC25A45, SLC25A46, SLC26A4, SLC26A8, SLC2A4RG, SLC2A5
+      SLC2A8, SLC30A1, SLC31A1, SLC35A1, SLC35A2, SLC35A4, SLC35A5, SLC35B1, SLC35B2, SLC35C2
+      SLC35D1, SLC35E1, SLC35F6, SLC38A11, SLC38A2, SLC39A11, SLC41A1, SLC41A2, SLC49A4, SLC4A2
+      SLC4A8, SLC6A12, SLC6A9, SLC7A5, SLC7A6, SLCO3A1, SLCO4A1, SLIT2, SLX4, SMAD2
+      SMAD6, SMAD7, SMARCAD1, SMG5, SMG6, SMIM19, SMIM27, SMIM3, SMO, SMOX
+      SMPD1, SMPD4, SMTN, SNAP23, SNAP25, SNAPC3, SNCB, SNF8, SNN, SNRNP70
+      SNRPA, SNRPC, SNRPD3, SNRPF, SNRPG, SNTA1, SNX11, SNX12, SNX17, SNX24
+      SNX30, SNX33, SOBP, SOCS4, SOCS6, SON, SORD, SORT1, SOX12, SOX2
+      SOX5, SP100, SP2, SPACA6, SPAG7, SPAG8, SPATA6L, SPDL1, SPECC1L, SPIN1
+      SPINT2, SPIRE2, SPOCK3, SPON2, SPOPL, SPOUT1, SPPL3, SPRN, SPRYD3, SPSB3
+      SPTAN1, SPTBN4, SRARP, SRCAP, SRD5A1, SREK1, SRGAP2B, SRGAP3, SRGN, SRM
+      SRP68, SRPK1, SRPRA, SRRM2, SRRM3, SRRT, SRSF1, SRSF4, SS18L1, SSC5D
+      SSNA1, SSR3, SSRP1, SST, ST3GAL3, ST3GAL5, ST3GAL6, ST6GALNAC4, STAG1, STAM
+      STARD10, STARD13, STARD4, STARD7, STARD8, STARD9, STAT4, STAU1, STAU2, STEAP2
+      STK36, STK38, STOM, STOML1, STPG1, STRIP1, STRN, STX10, STX12, STX1B
+      STX3, STX4, STX5, STX7, STXBP1, STXBP5L, SUB1, SUFU, SUGP2, SULT1A3
+      SUMF1, SUN2, SUPT16H, SUPT5H, SUPT6H, SURF4, SUSD5, SUV39H1, SV2A, SWAP70
+      SWI5, SYAP1, SYDE1, SYNC, SYNM, SYTL4, SZRD1, TADA1, TAF10, TAF1D
+      TAF6L, TAFA5, TAGLN3, TAP2, TASP1, TAX1BP3, TBC1D1, TBC1D10A, TBC1D13, TBC1D17
+      TBC1D20, TBC1D25, TBC1D2B, TBC1D30, TBC1D31, TBC1D9, TBCA, TBCB, TBCEL, TBL2
+      TBXAS1, TCERG1, TCF7L1, TCFL5, TCP11L2, TCTA, TDP1, TDRD3, TDRKH, TECPR1
+      TEN1, TEP1, TEX261, TEX29, TFDP1, TFEB, TGFB1, TGFB2, TGFB3, TGFBR3L
+      THAP11, THBS3, THOC1, THOC5, THOC7, THPO, THSD1, THUMPD3, TIGD1, TIMM10
+      TIMM13, TIMM8B, TK2, TLCD1, TLCD5, TLE5, TLN2, TM7SF2, TM9SF1, TM9SF4
+      TMBIM4, TMC6, TMCO1, TMCO3, TMED4, TMED9, TMEM100, TMEM104, TMEM115, TMEM116
+      TMEM126B, TMEM135, TMEM145, TMEM147, TMEM14A, TMEM14B, TMEM164, TMEM175, TMEM178A, TMEM179
+      TMEM182, TMEM184B, TMEM19, TMEM201, TMEM204, TMEM222, TMEM234, TMEM241, TMEM245, TMEM256
+      TMEM260, TMEM30A, TMEM50B, TMEM62, TMEM67, TMEM8B, TMEM9B, TMLHE, TMOD1, TMUB2
+      TNFRSF18, TNFRSF1A, TNFRSF25, TNNI3K, TNRC18, TNS1, TNS3, TOB1, TOB2, TOMM20
+      TOMM40, TOMM70, TOP1MT, TOP3B, TOPBP1, TOX, TOX2, TP53I13, TP53TG5, TPCN2
+      TPD52, TPM2, TPM4, TPPP, TPRA1, TPRKB, TPRN, TPT1, TRABD, TRAF6
+      TRANK1, TRAP1, TRAPPC1, TRAPPC10, TRAPPC12, TRAPPC4, TRAPPC6B, TRAPPC9, TRIM2, TRIM23
+      TRIM26, TRIM3, TRIM37, TRIM44, TRIM45, TRIM5, TRIM7, TRIM8, TRIP10, TRIQK
+      TRIR, TRIT1, TRMT1, TRMT44, TRMT9B, TRNT1, TRPC1, TRPC4AP, TRPM2, TRPS1
+      TRRAP, TSC1, TSC22D3, TSEN34, TSN, TSPAN31, TSPAN6, TSPAN7, TSPYL1, TSPYL5
+      TSR2, TTC14, TTC21A, TTC31, TTC39C, TTC7A, TTL, TTLL11, TUBB4B, TUBG2
+      TUFM, TULP4, TUT7, TXLNA, TXNDC15, U2AF1L4, U2AF2, UBA52, UBAP1, UBAP1L
+      UBAP2L, UBE2M, UBE2N, UBE2T, UBE2V1, UBE2V2, UBLCP1, UBQLN2, UBR2, UBR3
+      UBR4, UBR7, UBTD1, UBXN11, UCHL5, UCK1, UCK2, UCKL1, UCN, UFC1
+      UGGT2, UNC119B, UNC13D, UNC5A, UNC5B, UNC5C, UNC5D, UNC93B1, UNG, UPF3A
+      UQCC2, UQCC6, UQCR10, UQCR11, UQCRB, URB1, URM1, USE1, USF2, USP11
+      USP19, USP25, USP3, USP31, USP32, USP33, USP39, USP48, UTP15, VAMP1
+      VAMP4, VAMP5, VAT1, VCPIP1, VEGFB, VEZF1, VLDLR, VMA21, VPS16, VPS25
+      VPS26A, VPS29, VPS33B, VPS37B, VPS37D, VPS45, VPS4A, VPS54, VPS8, VRK1
+      VRK3, VSNL1, VSTM2L, VWA5B2, VWA8, WAPL, WAS, WASF1, WASF2, WASH6P
+      WASHC2A, WASHC2C, WASHC5, WBP1, WBP11, WBP1L, WBP2, WDR12, WDR13, WDR26
+      WDR5, WDR54, WDR75, WDR77, WDR81, WFS1, WIPI1, WNT7A, WNT7B, WWC1
+      WWOX, XK, XKR8, XPNPEP3, XPO4, XPO7, XRCC1, XRCC5, XYLT2, YAF2
+      YARS1, YIPF1, YKT6, YLPM1, YME1L1, YPEL2, YPEL3, YPEL4, YWHAE, YWHAG
+      YWHAQ, YWHAZ, ZBBX, ZBED1, ZBTB1, ZBTB11, ZBTB20, ZBTB24, ZBTB26, ZBTB3
+      ZBTB34, ZBTB44, ZBTB47, ZBTB7B, ZBTB9, ZC3H11A, ZC3H12C, ZC3H14, ZC3H18, ZC3H6
+      ZC4H2, ZCCHC17, ZCCHC8, ZCCHC9, ZCWPW1, ZDBF2, ZDHHC11, ZDHHC4, ZDHHC8, ZEB2
+      ZFAND4, ZFC3H1, ZFP14, ZFP36L1, ZFP41, ZFPM1, ZFR, ZFTA, ZFX, ZFYVE27
+      ZHX1, ZHX3, ZIC2, ZKSCAN4, ZKSCAN8P1, ZMYM2, ZMYM3, ZMYM4, ZMYND12, ZMYND8
+      ZNF112, ZNF117, ZNF138, ZNF14, ZNF141, ZNF18, ZNF205, ZNF219, ZNF275, ZNF276
+      ZNF282, ZNF32, ZNF320, ZNF334, ZNF33A, ZNF343, ZNF358, ZNF382, ZNF395, ZNF404
+      ZNF408, ZNF418, ZNF425, ZNF43, ZNF44, ZNF441, ZNF449, ZNF511, ZNF512, ZNF512B
+      ZNF513, ZNF525, ZNF540, ZNF547, ZNF564, ZNF576, ZNF580, ZNF582, ZNF583, ZNF599
+      ZNF609, ZNF611, ZNF613, ZNF618, ZNF622, ZNF629, ZNF664, ZNF672, ZNF703, ZNF704
+      ZNF71, ZNF740, ZNF764, ZNF768, ZNF787, ZNF789, ZNF821, ZNF841, ZNF844, ZNF853
+      ZNF91, ZNHIT6, ZNRF3, ZRANB2, ZSCAN16, ZSCAN18, ZSCAN26, ZSWIM5, ZWILCH, ZXDB
+  - vs GLOBAL UNION (All Winning Features):
+    * EXTERNAL Genes (Not in any global winner) [1609]:
+      AADAT, AAGAB, AASDHPPT, ABCA9, ABCB10, ABCB6, ABCB9, ABCE1, ABCG4, ABHD10
+      ABHD14A, ABHD15, ABHD17C, ABHD3, ABHD4, ABHD5, ABI2, ABLIM3, ABR, ACAP3
+      ACBD7, ACE, ACLY, ACO1, ACOT13, ACOX3, ACTB, ACTN2, ACTR2, ACVR1B
+      ADAM19, ADAM22, ADAM23, ADAM28, ADAR, ADAT1, ADCY8, ADD2, ADIPOR1, ADNP2
+      ADRA2A, AEN, AGK, AGO1, AGPAT3, AGRN, AGTPBP1, AIMP2, AK6, AKAP11
+      AKAP7, AKAP8, AKR7L, AKT1S1, ALDH18A1, ALG14, ALKBH3, ALKBH7, ALOX5, ALS2
+      ALS2CL, ALYREF, AMACR, AMIGO1, ANAPC4, ANK2, ANKRD28, ANKRD42, ANKRD9, ANP32B
+      ANTKMT, AP1AR, AP1M1, AP2B1, AP3B1, AP3M1, AP3S1, AP5S1, APBB1, APBB2
+      APLP2, APOC4.APOC2, APP, ARF3, ARF5, ARFGAP2, ARFGEF3, ARFIP2, ARGLU1, ARHGAP32
+      ARHGEF17, ARHGEF26, ARL17B, ARL6IP5, ARMC2, ARMCX3, ARMCX4, ARPC3, ARPP19, ARRB1
+      ASAH2B, ASAP3, ASB6, ASNS, ASPDH, ASTE1, ATAD2B, ATAD3B, ATF2, ATG13
+      ATL1, ATP1B1, ATP23, ATP2B2, ATP6V0E1, ATP6V1B2, ATP6V1E1, ATP6V1G1, ATP8A1, ATP9A
+      ATP9B, ATPAF1, ATRN, ATXN7L1, ATXN7L3, ATXN7L3B, AZGP1, B3GALT4, B3GAT2, B3GNT2
+      B3GNTL1, B4GALT2, B4GALT4, BACE2, BACH1, BAK1, BASP1, BCAR3, BCAT1, BCAT2
+      BCCIP, BCDIN3D, BCL2, BCL2L2, BCR, BEX4, BFAR, BHLHE41, BICRAL, BLOC1S6
+      BMERB1, BMPER, BMPR2, BOK, BPTF, BRD2, BRI3, BRICD5, BSDC1, BSPRY
+      BZW2, C12orf75, C15orf40, C16orf89, C17orf75, C19orf53, C19orf81, C1QTNF6, C1orf115, C2CD2
+      C2CD2L, C2orf74, C4orf33, C5orf22, C6orf89, C8orf90, CA5B, CABLES1, CACNA1E, CACNA2D2
+      CACNB4, CACNG7, CALCOCO1, CALD1, CALHM2, CALM1, CALML4, CALY, CAMK1G, CAMK4
+      CAMSAP1, CAP2, CAPRIN2, CAPS2, CASP1, CASTOR1, CBFA2T2, CBFB, CBLN3, CBX8
+      CCDC113, CCDC127, CCDC14, CCDC146, CCDC149, CCDC174, CCDC18, CCDC43, CCDC65, CCDC71
+      CCDC85A, CCHCR1, CCKBR, CCND3, CCNG1, CCNL2, CCNT2, CD164, CD320, CD37
+      CD4, CD47, CD8A, CDC16, CDC26, CDC37, CDC42, CDC42SE2, CDH20, CDH3
+      CDH8, CDIN1, CDIP1, CDK17, CEBPZ, CENPB, CENPS.CORT, CEP104, CEP120, CEP290
+      CEP72, CEP97, CERS1, CERT1, CETN3, CFAP251, CFAP74, CHCHD10, CHCHD6, CHD3
+      CHIC1, CHKB.CPT1B, CHL1, CHML, CHMP4A, CHN1, CHPF, CHRD, CHST10, CHST14
+      CHST3, CHST7, CHSY1, CHURC1, CHURC1.FNTB, CIAO2B, CIAO3, CIB1, CLASP2, CLK1
+      CLK3, CLK4, CLN3, CLN8, CLPP, CLSTN3, CLVS2, CMTM6, CMTR1, CNKSR2
+      CNN3, CNNM4, CNTNAP1, CNTNAP2, COA1, COASY, COG3, COLGALT2, COMMD6, COMMD9
+      COPG1, COPS6, COPS9, COQ10B, COQ6, CORO6, CPPED1, CPSF1, CPSF3, CPSF6
+      CPT1A, CPTP, CRAT, CRMP1, CRYBG3, CSF1R, CSF2RA, CSF3R, CSMD1, CSNK1E
+      CSNK2A2, CSRNP3, CSTF2, CTDSP2, CTDSPL, CTTN, CTTNBP2, CUL9, CWF19L1, CX3CL1
+      CXADR, CXCL16, CYB5R4, CYLD, CYP2C8, CYP2E1, CYRIA, CYRIB, DAD1, DAG1
+      DAP3, DBR1, DCAF8, DCTN4, DCTN5, DCTPP1, DCUN1D2, DDHD2, DDR1, DDX25
+      DDX28, DEPDC5, DGAT1, DGCR6, DGLUCY, DHRS3, DHTKD1, DHX35, DHX38, DHX9
+      DIP2C, DIRAS1, DIRAS2, DIS3L2, DKK3, DLG5, DLGAP1, DMAC2L, DNAH1, DNAH7
+      DNAI7, DNAJB12, DNAJC10, DNAJC13, DNAJC14, DNAJC4, DNAJC6, DNAL4, DNM1, DNM1L
+      DNMT3A, DOCK3, DOCK7, DOK1, DOLPP1, DPF2, DPP7, DPY19L3, DPYS, DPYSL2
+      DPYSL3, DRG1, DRP2, DSCAML1, DTD1, DUSP10, DUSP15, DVL2, DYNLT1, DYRK1A
+      ECM1, EDIL3, EEF1AKMT1, EEF1G, EEF2K, EEF2KMT, EEFSEC, EFHC1, EID1, EID2
+      EIF2AK3, EIF3J, EIF3M, EIF4A1, EIF4A2, EIF4E3, EIF4G1, EIF4G3, EIF4H, ELF2
+      ELMO2, EMC6, EMC7, EMC8, EML2, EMP2, EMX2, ENDOV, ENO1, ENOX2
+      ENPP4, ENTPD4, EOLA1, EPB41L3, EPDR1, EPG5, EPHA7, EPHX4, EPM2AIP1, EPOR
+      ERCC5, ERGIC1, ERI1, ERICH3, ERMAP, ETF1, ETNK1, ETNK2, EVI2B, EVL
+      EWSR1, EXOC4, EXOC8, EXOSC4, EYA2, FAAH, FAH, FAIM2, FAM107A, FAM114A1
+      FAM114A2, FAM117A, FAM120B, FAM131C, FAM161B, FAM167A, FAM177A1, FAM181B, FAM210B, FAM216A
+      FAM228A, FAM229A, FAM3C, FAM81A, FANCG, FANK1, FAR1, FARP1, FARS2, FARSB
+      FASTKD3, FAT1, FBXL2, FBXO16, FBXO38, FBXW4, FBXW5, FBXW9, FCGR2A, FDXR
+      FEN1, FERMT2, FGF12, FGF17, FGF9, FIGN, FIP1L1, FKBP10, FKBP15, FKBP5
+      FKBP8, FKBPL, FLCN, FLT1, FLT3LG, FLVCR1, FMC1, FMNL3, FNIP2, FOCAD
+      FOXN2, FOXP1, FOXP2, FRMD3, FSTL1, FSTL4, FUBP1, FYCO1, FZD7, FZD9
+      G3BP2, GAA, GABBR1, GABRA1, GABRB2, GAL3ST4, GALM, GALNT13, GALNT18, GALNT2
+      GALT, GAN, GAPDH, GAS7, GATAD2A, GBF1, GDAP1, GDI1, GDPD1, GGH
+      GIGYF1, GIMAP4, GLB1L, GLB1L2, GLCE, GLE1, GLIS2, GLS2, GMFB, GNAI1
+      GNAS, GNG5, GNL2, GNL3, GOLPH3, GORAB, GORASP2, GPKOW, GPLD1, GPN1
+      GPN2, GPR108, GPR137B, GPR158, GPR180, GPR35, GPRASP1, GPRASP2, GPSM3, GRAMD1A
+      GRIA2, GRIA4, GRIPAP1, GRK3, GRK4, GSDMB, GSG1L, GSK3B, GSR, GTF3C4
+      GTF3C6, GUCY1B1, GULP1, H2AX, H2BC21, HABP4, HACE1, HACL1, HAGHL, HAT1
+      HBA1, HBA2, HBB, HBS1L, HCN3, HDAC1, HDAC6, HDHD3, HEATR5B, HECW2
+      HEXB, HIC1, HID1, HIF3A, HIPK2, HLA.DMA, HMG20A, HMGCR, HMGN1, HMGN5
+      HNRNPH3, HNRNPL, HNRNPM, HPCA, HPRT1, HS3ST5, HSD17B10, HSF1, HSF4, HSPA9
+      HVCN1, IARS1, IBA57, ICA1L, IDH2, IFFO2, IFIT2, IFT122, IFT172, IGSF3
+      IGSF8, IKBKB, IL17D, IL18, IL33, IMMP1L, INA, ING2, ING3, ING5
+      INIP, INPP5K, INTS13, INTS14, INTS6, INTS6L, IPCEF1, IPO11, IPO9, IQCA1
+      IRF2, IRF2BP2, ISCU, ITFG1, ITFG2, ITGA7, ITSN1, JAGN1, JAKMIP1, JMJD4
+      KAT14, KAT6B, KATNAL2, KBTBD12, KBTBD4, KCNA6, KCNAB3, KCNIP2, KCNJ9, KCNK9
+      KCNMA1, KCNMB4, KCNQ5, KCNT1, KCTD12, KCTD18, KDELR2, KDM2B, KDM4C, KDM5A
+      KDM8, KICS2, KIF27, KIF3B, KIFBP, KIFC2, KLC1, KLF15, KLF4, KLHDC3
+      KLHDC8A, KLHL21, KLHL24, KLHL3, KLHL32, KLHL36, KNOP1, KNTC1, KXD1, L3HYPDH
+      L3MBTL1, L3MBTL4, LACTB, LAMA3, LAMTOR1, LAPTM4A, LBHD1, LBR, LCA5, LCOR
+      LEF1, LEFTY1, LENG8, LHX2, LIG3, LLGL2, LMAN2, LMBR1L, LMTK3, LPGAT1
+      LPIN1, LPP, LRBA, LRP11, LRRC20, LRRC40, LRRC42, LRRC49, LSM1, LSM11
+      LSM4, LTC4S, LTO1, LURAP1, LURAP1L, LY6G5C, LYPD1, LYRM1, LYRM7, MAB21L3
+      MACO1, MADD, MAF, MAGED4, MAGT1, MAK16, MAL2, MALSU1, MAN2A1, MAN2A2
+      MAN2B2, MAP2K4, MAP3K12, MAP7, MAPK10, MAPK4, MAPK7, MAPK8, MAPK8IP3, MAPKAPK3
+      MAPRE1, MAPRE3, MARCHF1, MARCHF5, MARCHF6, MARK1, MARK3, MASP1, MATK, MATR3
+      MBD1, MBD5, MBNL2, MBOAT1, MBTPS2, MCPH1, MCRIP2, MDK, MEAF6, MEAK7
+      MED16, MED23, MED30, MEF2D, METTL1, METTL16, METTL7A, MEX3C, MFN2, MGAT2
+      MGAT4B, MGMT, MICAL1, MICOS13, MIF, MINDY3, MIS12, MKNK1, MKNK2, MKRN1
+      MKRN2, MLKL, MLXIPL, MMAB, MOB3A, MOB3C, MPP2, MPP3, MPP7, MPST
+      MPZ, MRC2, MROH1, MRPL28, MRPL32, MRPL51, MRPS25, MRPS26, MRPS31, MRPS34
+      MRTO4, MSANTD3, MSRB1, MT.CO2, MT.ND1, MT1M, MTA2, MTFP1, MTHFS, MTMR2
+      MTMR6, MTPAP, MTREX, MTX1, MUC20, MXD4, MYBBP1A, MYBPC1, MYBPHL, MYCBP
+      MYL6B, MYO15A, MYO5A, MYOM2, MZT1, NAA10, NAA16, NAA60, NAALAD2, NACC2
+      NADSYN1, NAF1, NALF2, NAP1L1, NAP1L2, NAP1L3, NAPB, NAT9, NAV3, NBN
+      NCALD, NCAM2, NCAPG2, NCDN, NDFIP1, NDFIP2, NDP, NDRG3, NDST1, NDUFA3
+      NDUFAF3, NDUFAF8, NECAP2, NEGR1, NEIL1, NELFB, NEMF, NEU4, NEURL4, NFATC3
+      NIPAL3, NIPSNAP1, NIPSNAP3B, NKAIN2, NME3, NME9, NMNAT2, NOG, NOP9, NOTCH4
+      NPHP1, NPIPA9, NPIPB6, NPRL2, NPRL3, NPTN, NPY1R, NR1D2, NR1H3, NR2C2
+      NR2E1, NR2F1, NRBF2, NREP, NRG4, NRGN, NRIP1, NRL, NRN1, NRXN3
+      NSFL1C, NSG2, NSUN2, NTAQ1, NUDT21, NUDT7, NUDT8, NUFIP1, NUMB, NUP54
+      NWD1, OAF, OAT, OCIAD1, ODF2, ODF2L, ODR4, OGT, OLFM3, OPN3
+      ORAI3, OSBP, OSBPL11, OSCP1, OST4, OVGP1, OXCT2, P4HTM, PABPC4, PACSIN2
+      PAFAH2, PAICS, PAIP1, PAIP2B, PANK3, PAPLN, PAPSS1, PAQR3, PAQR4, PARD3
+      PARD6A, PARD6G, PARP16, PARP2, PARP8, PASK, PATJ, PAXX, PBDC1, PBX1
+      PBXIP1, PCDH10, PCDH7, PCDHGA9, PCSK1N, PCTP, PDCD6IP, PDIA4, PDRG1, PDZRN3
+      PER1, PET117, PEX6, PFDN2, PGAP2, PGAP6, PGPEP1, PGRMC1, PHACTR1, PHF20L1
+      PHF21A, PHPT1, PHTF1, PHTF2, PIAS2, PICK1, PIGL, PIGM, PIGS, PIK3CB
+      PIK3R1, PILRB, PITHD1, PJA2, PKD1, PLA2G5, PLAGL2, PLCB1, PLCB4, PLCD4
+      PLCE1, PLCL1, PLD4, PLEKHA2, PLEKHA8, PLEKHF2, PLEKHG1, PLEKHG5, PLK2, PMVK
+      PNISR, PNMA2, PNMA3, PNMA8B, PNRC1, PODXL, PODXL2, POLDIP2, POLDIP3, POLR2J
+      POLR2L, POLR3C, POLRMT, POMGNT1, POP4, PPCS, PPFIA2, PPIC, PPIF, PPIL3
+      PPIP5K1, PPL, PPM1L, PPP1CB, PPP1R12A, PPP1R14B, PPP1R3C, PPP1R3D, PPP1R3G, PPP1R8
+      PPP1R9A, PPP2CA, PPP2R1A, PPP3CA, PPP3R1, PPP4R4, PRB2, PRDM4, PREPL, PRICKLE1
+      PRICKLE3, PRKACB, PRKAR1A, PRKAR1B, PRKCI, PRKCSH, PRKX, PRMT5, PRMT9, PRNP
+      PRORP, PRPF19, PRPF38B, PRPF39, PRPF40B, PRPF6, PRPSAP1, PRR5, PRRC2C, PRRT2
+      PRUNE2, PRXL2A, PSMC3, PSMC4, PSMC5, PSMD10, PSMD7, PSMG2, PTCD2, PTGDR2
+      PTH1R, PTH2R, PTPDC1, PTPN3, PTPN9, PTPRD, PTPRK, PTPRM, PTPRS, PTRH1
+      PTRHD1, PURA, PUS1, PXMP2, PXN, PYROXD1, QPCTL, QTRT1, QTRT2, RAB11FIP5
+      RAB13, RAB1B, RAB21, RAB29, RAB2A, RAB31, RAB3IL1, RAB5C, RABL2A, RAD23B
+      RAD51D, RAPGEF2, RARS1, RASAL2, RASEF, RBFOX1, RBM24, RC3H1, REC8, REEP4
+      REEP6, REPS2, RETREG3, RFNG, RFX7, RGL2, RGMA, RGP1, RGS10, RHBDF2
+      RHBDL1, RHOBTB2, RHOV, RIC3, RIN3, RIOK3, RIPOR1, RMDN2, RNASEL, RNASET2
+      RNF121, RNF144A, RNF166, RNF185, RNF207, RNF214, RNF38, ROCK1, RP9, RPE
+      RPL39, RPLP1, RPP21, RPRML, RPS15A, RPS27L, RPS6KL1, RPUSD2, RRAGC, RRP1B
+      RRP8, RSAD1, RSF1, RSPH3, RSPRY1, RTEL1.TNFRSF6B, RTF2, RTN1, RTN4, RTN4IP1
+      RUFY2, RUFY3, RUNDC3B, RUSC2, RXRA, SAFB2, SAMHD1, SAR1A, SAR1B, SARS1
+      SC5D, SCAMP3, SCFD1, SCG5, SCN1A, SCN2A, SCRIB, SCRT2, SCYL1, SDC4
+      SEC61A1, SELENOI, SELENON, SELENOS, SELENOT, SELPLG, SENP3, SEPTIN7, SERINC3, SERP1
+      SERPINB9, SERPINI1, SERTAD4, SETD5, SEZ6L2, SF3A3, SF3B5, SFTPD, SFXN3, SGSM1
+      SH3BP4, SH3BP5, SH3D19, SH3D21, SHLD2, SHROOM2, SIK3, SIKE1, SIPA1, SIPA1L1
+      SIVA1, SIX5, SKIL, SLC12A6, SLC23A2, SLC24A2, SLC25A12, SLC25A34, SLC25A36, SLC25A45
+      SLC25A46, SLC26A4, SLC26A8, SLC2A4RG, SLC2A5, SLC2A8, SLC35A2, SLC35A4, SLC35A5, SLC35B1
+      SLC35B2, SLC35D1, SLC35E1, SLC38A11, SLC41A2, SLC4A8, SLC7A5, SLCO4A1, SLIT2, SLX4
+      SMAD2, SMAD6, SMAD7, SMARCAD1, SMG5, SMG6, SMIM19, SMO, SMOX, SNAP23
+      SNAP25, SNCB, SNF8, SNRNP70, SNRPA, SNRPC, SNRPG, SNTA1, SNX11, SNX12
+      SNX17, SNX24, SNX30, SNX33, SON, SORD, SOX2, SOX5, SP100, SP2
+      SPAG7, SPATA6L, SPDL1, SPINT2, SPIRE2, SPOCK3, SPOUT1, SPPL3, SPRN, SPRYD3
+      SPTAN1, SPTBN4, SREK1, SRGAP2B, SRGAP3, SRGN, SRM, SRP68, SRPK1, SRPRA
+      SRRM3, SRSF1, SS18L1, SSNA1, SSR3, SSRP1, ST3GAL5, ST3GAL6, ST6GALNAC4, STAM
+      STARD13, STARD4, STARD8, STARD9, STAU2, STEAP2, STK38, STOML1, STPG1, STRIP1
+      STRN, STX12, STX1B, STX3, STX4, STX5, STXBP1, STXBP5L, SUFU, SUGP2
+      SULT1A3, SUMF1, SUPT16H, SUPT5H, SURF4, SUV39H1, SV2A, SWI5, SYAP1, SYNC
+      SYNM, SYTL4, TADA1, TAF10, TAF6L, TAP2, TASP1, TAX1BP3, TBC1D1, TBC1D10A
+      TBC1D13, TBC1D25, TBC1D2B, TBC1D30, TBC1D31, TBC1D9, TBCB, TBCEL, TBL2, TBXAS1
+      TCFL5, TCTA, TDP1, TDRD3, TECPR1, TEN1, TEP1, TEX261, TEX29, TFDP1
+      TGFB1, TGFB2, THAP11, THBS3, THOC5, THSD1, TIGD1, TIMM10, TIMM13, TK2
+      TM9SF1, TMBIM4, TMCO3, TMED9, TMEM100, TMEM116, TMEM126B, TMEM135, TMEM145, TMEM147
+      TMEM164, TMEM175, TMEM178A, TMEM179, TMEM182, TMEM204, TMEM222, TMEM241, TMEM245, TMEM30A
+      TMEM50B, TMEM62, TMEM67, TMEM8B, TMEM9B, TMOD1, TNFRSF1A, TNFRSF25, TNNI3K, TOB1
+      TOB2, TOMM20, TOMM70, TOPBP1, TOX, TOX2, TP53I13, TP53TG5, TPCN2, TPD52
+      TPM2, TPM4, TPRA1, TPT1, TRAF6, TRAPPC1, TRAPPC12, TRAPPC6B, TRIM2, TRIM23
+      TRIM3, TRIM37, TRIM7, TRIQK, TRIT1, TRMT1, TRMT9B, TRNT1, TRPC4AP, TRPM2
+      TRPS1, TSC1, TSC22D3, TSEN34, TSN, TSPAN31, TSPAN6, TSPYL1, TSPYL5, TSR2
+      TTC21A, TTC39C, TTC7A, TTLL11, TUBB4B, TUBG2, TUFM, TUT7, TXLNA, U2AF1L4
+      UBA52, UBAP1L, UBAP2L, UBE2M, UBE2T, UBE2V2, UBLCP1, UBQLN2, UBR3, UBR7
+      UBTD1, UBXN11, UCHL5, UCK2, UCKL1, UCN, UFC1, UNC119B, UNC13D, UNC5A
+      UNC5C, UNC5D, UNG, UPF3A, UQCC2, UQCC6, UQCR11, URB1, URM1, USE1
+      USP19, USP25, USP3, USP32, USP39, USP48, UTP15, VAMP1, VAMP4, VAMP5
+      VCPIP1, VEGFB, VLDLR, VPS16, VPS26A, VPS29, VPS37B, VPS37D, VPS45, VPS4A
+      VPS54, VPS8, VRK1, VSNL1, VSTM2L, VWA5B2, VWA8, WAPL, WAS, WASF1
+      WASF2, WASHC2A, WASHC2C, WASHC5, WBP11, WBP1L, WDR12, WDR13, WDR26, WDR5
+      WDR77, WIPI1, WNT7B, WWOX, XK, XPNPEP3, XPO4, XRCC1, YAF2, YARS1
+      YIPF1, YKT6, YLPM1, YPEL2, YWHAE, YWHAG, YWHAQ, YWHAZ, ZBED1, ZBTB1
+      ZBTB11, ZBTB20, ZBTB24, ZBTB26, ZBTB3, ZBTB9, ZC3H12C, ZC3H14, ZC3H6, ZC4H2
+      ZCCHC8, ZCCHC9, ZDBF2, ZDHHC11, ZDHHC4, ZFAND4, ZFC3H1, ZFP14, ZFP36L1, ZFPM1
+      ZFTA, ZFX, ZFYVE27, ZIC2, ZKSCAN4, ZKSCAN8P1, ZMYM2, ZMYM3, ZMYM4, ZNF138
+      ZNF14, ZNF141, ZNF275, ZNF276, ZNF282, ZNF320, ZNF33A, ZNF343, ZNF382, ZNF395
+      ZNF404, ZNF418, ZNF425, ZNF43, ZNF44, ZNF449, ZNF512B, ZNF525, ZNF576, ZNF582
+      ZNF583, ZNF599, ZNF613, ZNF618, ZNF622, ZNF629, ZNF672, ZNF703, ZNF740, ZNF764
+      ZNF821, ZNF841, ZNF844, ZNF91, ZNRF3, ZRANB2, ZSCAN16, ZSWIM5, ZWILCH
+    * MISSING Union Genes [1100] (Truncated):
+      (Too many genes to list)
+----------------------------------------------------------------------------------------------------------------------------------
+Dataset: braaksc    | K: k_50   | Weighted Method: SMOTETomek_RF-R2_FR
+  - vs GLOBAL WINNER (k_50 | BorderlineSMOTE_RF-R2_FR):
+  - vs GLOBAL UNION (All Winning Features):
+    * Methodology 100% contained within the Global Union.
+    * MISSING Union Genes [1941] (Truncated):
+      (Too many genes to list)
+----------------------------------------------------------------------------------------------------------------------------------
+Dataset: braaksc    | K: k_500  | Weighted Method: AllKNN_RF-R3_Resampl
+  - vs GLOBAL WINNER (k_50 | BorderlineSMOTE_RF-R2_FR):
+    * ADDITIONAL Genes (New features) [468]:
+      ABCB6, ABCB8, ACLY, ACOX1, ADAM8, ADCK1, ADGRL1, ADSL, AGAP3, AHDC1
+      AIG1, AKAP8, AKAP8L, ALDH4A1, ALG13, ALG14, AMPD2, ANKRD42, ANKRD9, AP5M1
+      APOC4.APOC2, APP, APRT, ARHGAP21, ARMC10, ARMCX5, ASAP3, ATP6V1G2.DDX39B, ATP9A, AXIN1
+      BCKDHB, BCL2L1, BCL2L2, BGLAP, BRD1, C11orf68, C12orf4, C15orf40, C1orf54, C21orf58
+      CALR, CAMK2G, CAMK2N2, CAPS2, CARD19, CBFA2T2, CBFB, CCDC24, CCDC43, CCDC74A
+      CCDC85C, CCDC97, CCNDBP1, CD247, CEACAM19, CEBPB, CEBPZOS, CHCHD2, CHCHD7, CHMP3
+      CINP, CIZ1, CLIP2, CLK4, CLYBL, CMPK1, CNIH3, CNN1, CNN3, COG6
+      COL5A2, COMMD9, COPZ1, CORT, COX18, COX7B, CPPED1, CPT2, CREBBP, CREBL2
+      CRELD1, CRELD2, CSAD, CSTB, CTNNBIP1, CUL4A, CYB5R1, CYP2E1, DBT, DCAF12
+      DCAF15, DCTPP1, DENND2A, DESI1, DHRS7B, DNAJC15, DNAJC6, DNAJC8, DUSP12, DUSP9
+      DYRK1A, ECHS1, EEFSEC, EFNB1, EID1, EIF2B5, EIF3K, ENY2, EPHB6, EPS15
+      EWSR1, EXOSC1, F3, FAIM, FAM13B, FAM89B, FBXO22, FBXO9, FDX2, FDXR
+      FEM1C, FGF11, FGF2, FICD, FIP1L1, FKBPL, FMC1, FOCAD, FOXRED1, FPGT
+      FSD1, FZD7, GDI2, GEM, GEMIN5, GGH, GIT1, GLIS2, GLMP, GMDS
+      GMPR2, GNL3, GOLM1, GPCPD1, GPKOW, GPRASP1, GRAMD1A, GRIN2C, GRSF1, GSTA4
+      GTDC1, GTF2H3, H1.10, H4C11, HBS1L, HEXD, HIF1AN, HIPK1, HNRNPA1L3, HPS1
+      HSD17B8, HSF1, HSPB1, HSPB6, HSPG2, HTATSF1, IFT27, IL1RL1, IMP4, IMPDH2
+      INAFM2, INCENP, ING3, INTS11, IRF2BP2, IRS2, IVD, JUND, KCNS3, KCTD9
+      KDELR2, KHDRBS2, KIAA0753, KIF1B, KIF9, LAPTM4B, LARP1, LARP6, LCLAT1, LGI4
+      LGMN, LMBR1, LMBR1L, LMO3, LONRF3, LRRC34, LRRC3B, LRRC51, LRSAM1, LSM5
+      LYRM1, LYRM2, MACROD1, MAGED4B, MAGI1, MAGT1, MAML1, MAN2A2, MAP2K3, MAP3K10
+      MAPK4, MARCHF6, MARK3, MDK, MDM2, MEPCE, METAP1, MFN2, MGAT4B, MICOS13
+      MIER2, MINDY3, MKNK2, MLF2, MMAB, MORF4L1, MORN2, MRPL57, MRPL9, MRPS22
+      MRRF, MRTFB, MT1F, MTIF2, MTMR7, MYO5A, MYRIP, NCAM2, NCOR1, NDUFAF7
+      NDUFB5, NDUFV3, NEK6, NELFB, NFE2L1, NFYB, NHERF1, NOG, NOS2, NR1D2
+      NREP, NRGN, NRIP2, NRL, NRP1, NRSN1, NSMCE1, NTN4, NUDT2, NUTF2
+      OARD1, PAF1, PARP8, PCDHB4, PCDHGA4, PDCD2, PDCD6, PDIA4, PHF19, PHF2
+      PHOSPHO1, PIAS4, PIGU, PLAGL1, PLBD2, PLCD1, PLEKHF2, PLGRKT, PNPLA6, PNRC1
+      PNRC2, POLD2, POLR2G, POMP, POU6F1, PPARGC1A, PPCS, PPIB, PPIF, PPM1A
+      PPM1G, PPP1R1A, PPP1R26, PPP4R3A, PRDM4, PRELP, PRICKLE3, PRKAR1A, PRMT5, PRR13
+      PRSS16, PRXL2A, PSD4, PSMA5, PSMC3, PTCD2, PTGFRN, PTPN21, PTPN9, PYCR3
+      PYROXD1, RABGGTA, RAD23A, RAD51C, RAF1, RALB, RANBP3, RAP1GDS1, RASAL2, RASD1
+      RASSF3, RBM42, RELCH, RELL2, RERE, RFX5, RGP1, RIIAD1, RIOK2, RIPOR1
+      RNF121, RNF181, RNF38, RP9, RSAD1, SAMM50, SAT2, SCCPDH, SCRN3, SDSL
+      SEC22A, SEPHS1, SHC1, SIKE1, SKI, SKP1, SLC16A11, SLC25A37, SLC25A40, SLC30A1
+      SLC31A1, SLC38A2, SLC44A3, SLC4A8, SLC6A9, SLC8A1, SLIT2, SMARCAL1, SMPD4, SNAP29
+      SNN, SNX30, SNX8, SORBS1, SRM, SSR3, SSR4, SST, ST3GAL1, ST6GALNAC4
+      STAM, STARD7, STAU1, STAU2, STK36, STX10, STX3, SULT1A1, SUSD5, SYS1.DBNDD2
+      TAF1D, TASP1, TBC1D13, TBC1D17, TBC1D2B, TBKBP1, TCP11L1, TCP11L2, THOC7, TIMM13
+      TIMM8B, TLCD1, TM6SF1, TM7SF2, TM9SF2, TMEM14B, TMEM164, TMEM184B, TMEM223, TMEM234
+      TMEM237, TMEM256, TMX4, TNFRSF1A, TNRC18, TOP1MT, TP53, TPPP, TRAM1L1, TRIM26
+      TRIM45, TRMT1, TRUB2, TTC14, TTC33, TUFM, TUT7, TXN2, TXNDC17, TXNDC9
+      UBA5, UBALD1, UBE2R2, UBTD1, UBXN8, UCK2, UROD, USP15, UST, VAMP7
+      VASN, VIRMA, VPS25, VPS29, VPS37D, VPS8, WASHC2C, WASHC3, WBP1, WDR12
+      WDR44, WDR5, YEATS4, YPEL3, YTHDF1, YWHAQ, ZBTB2, ZFTRAF1, ZNF141, ZNF212
+      ZNF334, ZNF395, ZNF404, ZNF44, ZNF511, ZNF512B, ZNF528, ZNF704, ZNF706, ZNF71
+      ZNF764, ZNF766, ZNF791, ZNF821, ZNF844, ZNF853, ZW10, ZWINT
+    * MISSING Genes (Lost features) [18]:
+      ADAMTS2, AGPAT1, ANKRD30B, CLASRP, DAB2IP, DPM2, FAF2, FCHO1, HSD11B2, ISYNA1
+      MCF2L, MXI1, OBSCN, PA2G4, SLC4A11, SRD5A3, VIPAS39, ZNF77
+  - vs GLOBAL UNION (All Winning Features):
+    * EXTERNAL Genes (Not in any global winner) [282]:
+      ABCB6, ABCB8, ACLY, ADAM8, ADCK1, ADSL, AKAP8, AKAP8L, ALG13, ALG14
+      ANKRD42, ANKRD9, AP5M1, APOC4.APOC2, APP, ARMC10, ASAP3, ATP9A, BCL2L2, BGLAP
+      C15orf40, C21orf58, CALR, CAMK2N2, CAPS2, CARD19, CBFA2T2, CBFB, CCDC43, CCNDBP1
+      CD247, CEACAM19, CEBPB, CHCHD2, CLK4, CMPK1, CNIH3, CNN1, CNN3, COL5A2
+      COMMD9, CPPED1, CRELD1, CSTB, CTNNBIP1, CUL4A, CYB5R1, CYP2E1, DCAF15, DCTPP1
+      DNAJC15, DNAJC6, DNAJC8, DUSP9, DYRK1A, EEFSEC, EFNB1, EID1, EIF2B5, EIF3K
+      EPHB6, EPS15, EWSR1, F3, FAIM, FAM89B, FBXO9, FDX2, FDXR, FEM1C
+      FGF11, FGF2, FICD, FIP1L1, FKBPL, FMC1, FOCAD, FPGT, FSD1, FZD7
+      GDI2, GEMIN5, GGH, GLIS2, GLMP, GNL3, GPKOW, GPRASP1, GRAMD1A, GRIN2C
+      GRSF1, GTDC1, HBS1L, HIF1AN, HPS1, HSD17B8, HSF1, HSPB1, HSPB6, HSPG2
+      HTATSF1, IFT27, IL1RL1, INAFM2, INCENP, ING3, IRF2BP2, IRS2, KCNS3, KCTD9
+      KDELR2, KHDRBS2, LGI4, LMBR1, LMBR1L, LONRF3, LRRC3B, LYRM1, LYRM2, MAGI1
+      MAGT1, MAN2A2, MAPK4, MARCHF6, MARK3, MDK, MDM2, METAP1, MFN2, MGAT4B
+      MICOS13, MINDY3, MKNK2, MMAB, MORF4L1, MORN2, MRPL9, MRRF, MRTFB, MTIF2
+      MTMR7, MYO5A, MYRIP, NCAM2, NCOR1, NDUFV3, NEK6, NELFB, NFE2L1, NHERF1
+      NOG, NOS2, NR1D2, NREP, NRGN, NRL, NRSN1, NTN4, NUTF2, OARD1
+      PARP8, PCDHB4, PCDHGA4, PDIA4, PHOSPHO1, PIGU, PLBD2, PLEKHF2, PNRC1, PNRC2
+      POLD2, POLR2G, PPARGC1A, PPCS, PPIB, PPIF, PPP4R3A, PRDM4, PRICKLE3, PRKAR1A
+      PRMT5, PRSS16, PRXL2A, PSMA5, PSMC3, PTCD2, PTGFRN, PTPN9, PYROXD1, RAD51C
+      RASAL2, RASD1, RBM42, RELL2, RFX5, RGP1, RIOK2, RIPOR1, RNF121, RNF38
+      RP9, RSAD1, SCCPDH, SCRN3, SIKE1, SKP1, SLC16A11, SLC25A37, SLC44A3, SLC4A8
+      SLC8A1, SLIT2, SMARCAL1, SNAP29, SNX30, SNX8, SORBS1, SRM, SSR3, ST3GAL1
+      ST6GALNAC4, STAM, STAU2, STX3, SYS1.DBNDD2, TASP1, TBC1D13, TBC1D2B, TBKBP1, TIMM13
+      TM6SF1, TM9SF2, TMEM164, TMEM237, TMX4, TNFRSF1A, TP53, TRAM1L1, TRMT1, TRUB2
+      TTC33, TUFM, TUT7, TXN2, TXNDC9, UBA5, UBALD1, UBTD1, UCK2, UROD
+      USP15, UST, VAMP7, VASN, VIRMA, VPS29, VPS37D, VPS8, WASHC2C, WASHC3
+      WDR12, WDR44, WDR5, YEATS4, YTHDF1, YWHAQ, ZFTRAF1, ZNF141, ZNF212, ZNF395
+      ZNF404, ZNF44, ZNF512B, ZNF528, ZNF706, ZNF764, ZNF766, ZNF791, ZNF821, ZNF844
+      ZW10, ZWINT
+    * MISSING Union Genes [1773] (Truncated):
+      (Too many genes to list)
+----------------------------------------------------------------------------------------------------------------------------------
+Dataset: ceradsc    | K: k_100  | Weighted Method: NearMiss_RF-R3_Resampl
+  - vs GLOBAL WINNER (k_1500 | NCR_RF-R3_Resampl):
+    * ADDITIONAL Genes (New features) [60]:
+      AKAP8, ANXA4, ASCL1, ASIC1, ATPSCKMT, B3GLCT, BBC3, BCDIN3D, BCL7B, CDAN1
+      CDH11, CEP126, CNIH2, COQ5, DENND5A, DNAJC24, EIF2B2, FAM104B, FBLN5, GLT8D2
+      GRID1, HPCAL1, HSP90B1, ITIH5, LRRC57, MAP3K1, MNS1, MYCBP, MYCN, NOL3
+      NPNT, NT5DC1, NUP43, PARD6A, PCSK6, PHF13, PNCK, POLL, RBBP9, SDK1
+      SEMA4A, SFRP1, SH3D19, SHC2, SLCO1A2, SSB, TATDN3, TFPT, TMEM160, TPCN2
+      TRMT13, TTC9B, TTF1, TTLL11, TYW5, UBALD1, UCN, USP2, ZNF429, ZSCAN18
+    * MISSING Genes (Lost features) [1460]:
+      AAMDC, AAR2, AASS, AATK, ABCA2, ABCA7, ABCB7, ABCC5, ABCC9, ABITRAM
+      ABL1, ACIN1, ACOT4, ACOX1, ACSL4, ACSL5, ACTR3, ACTR6, ADAMTS2, ADAT3
+      ADCY5, ADGRF5, ADGRG1, ADGRL1, ADIPOR2, ADO, ADORA2A, ADORA2B, ADSS1, AFDN
+      AGAP1, AGAP2, AGAP3, AGPAT1, AHCYL1, AHDC1, AIG1, AIMP1, AKAP6, ALDH1A1
+      ALDH4A1, ALDH5A1, ALG9, AMD1, AMN1, AMOTL1, AMPD2, AMZ2, ANAPC1, ANKRD11
+      ANKRD13D, ANKRD16, ANKRD29, ANKRD30B, ANKRD35, ANKRD40, ANKRD46, ANO5, ANO6, AP1S2
+      AP5B1, AP5Z1, APH1A, API5, APOD, APOL3, APOLD1, APOO, APRT, AQP11
+      ARAP1, ARF1, ARFRP1, ARHGAP21, ARHGAP24, ARHGAP35, ARHGEF10L, ARHGEF16, ARHGEF2, ARHGEF40
+      ARID1A, ARID3B, ARL14EP, ARL6IP1, ARL8B, ARMC8, ARMCX5, ARMH4, ARRDC2, ART3
+      ARV1, ASB1, ASPH, ASPSCR1, ASRGL1, ASTN2, ATF5, ATF7IP2, ATP10A, ATP5PB
+      ATP6V1G2.DDX39B, ATP7B, ATR, ATRIP, AVL9, AXIN1, AZI2, B4GALNT1, B4GALT1, B4GALT6
+      B9D1, BAZ2B, BBOF1, BBS4, BCAM, BCAR1, BCKDHA, BCKDHB, BCL2L1, BCL9L
+      BEND7, BFSP1, BLZF1, BMI1, BMPR1A, BOLA3, BORCS6, BPGM, BPNT1, BRAT1
+      BRD1, BRD3, BRD7, BRF1, BRIX1, BRMS1, BRPF1, BRPF3, BRSK2, BTBD6
+      BTF3L4, BTN2A2, C11orf68, C12orf4, C12orf76, C15orf39, C16orf86, C17orf107, C17orf58, C18orf32
+      C1GALT1, C1QTNF5, C1RL, C1S, C1orf50, C3orf80, C4A, C4B, C4orf19, C8orf58
+      C8orf82, CAB39L, CABLES2, CACFD1, CACNB3, CAMK2A, CAMKK2, CAMKMT, CAMSAP2, CAPZA1
+      CARHSP1, CASKIN1, CASP9, CAV2, CBX5, CC2D1A, CCAR1, CCDC6, CCDC69, CCDC74A
+      CCDC77, CCDC9, CCDC92, CCDC97, CD151, CD59, CD81, CDADC1, CDC25B, CDC27
+      CDC42EP1, CDC42EP5, CDCA7L, CDH23, CDH24, CDK16, CDK18, CDK19, CDK20, CDK5R1
+      CDK7, CDKN1C, CDKN2AIP, CDO1, CDR2L, CDYL, CECR2, CELF6, CELSR2, CELSR3
+      CENPT, CEP170B, CEP20, CEP250, CEP41, CEP95, CEPT1, CERS4, CFAP298, CFAP43
+      CFAP69, CFH, CFI, CFLAR, CGGBP1, CGNL1, CHCHD7, CHD4, CHD6, CHD8
+      CHGA, CHID1, CHMP1A, CHMP3, CHN2, CHP1, CHST6, CINP, CIZ1, CKMT1B
+      CKMT2, CLASRP, CLCN7, CLDN5, CLEC14A, CLIP2, CLIP3, CLN5, CLN6, CLTB
+      CMSS1, CMTM3, CNGB1, CNTN3, COA7, COBL, COG6, COG7, COL26A1, COL27A1
+      COL4A1, COL4A2, COL6A2, COLEC12, COMMD10, COPA, COPS5, COPZ1, COQ2, CORO2B
+      CORT, COX10, COX15, COX7A2, COX7B, CPEB1, CPLX2, CPT1B, CPT2, CRB2
+      CREBBP, CREBL2, CRISPLD2, CROCC, CROT, CRTC3, CRYZL1, CSAD, CSDC2, CSK
+      CSNK1D, CSNK1G2, CSPP1, CSRP1, CSRP2, CSTF3, CTCF, CTDSP1, CTNND2, CTSD
+      CWF19L2, CXXC1, CYB561A3, CYP4X1, DAB2IP, DACT3, DALRD3, DBT, DCAF1, DCAF12
+      DCAF13, DCX, DCXR, DDHD1, DDIT4, DDN, DDOST, DDX23, DDX39A, DEF8
+      DENND11, DENND2A, DENND2B, DENND4B, DENR, DESI1, DGCR6L, DGCR8, DHFR2, DHRS7B
+      DHX37, DHX57, DIAPH1, DIMT1, DIXDC1, DLD, DLGAP2, DLL4, DLST, DMAC1
+      DMKN, DMXL2, DNAAF1, DNAAF11, DNAJA3, DNAJC18, DNAJC19, DNM2, DNPEP, DOCK6
+      DOP1A, DPP6, DPY19L2, DSN1, DTX1, DTX3, DUSP1, DUSP12, DUSP23, DUSP28
+      DUSP7, DUT, DVL1, DVL3, DYNC1LI2, DYNLL2, DYNLRB1, DZIP1, DZIP3, E2F3
+      E2F4, EARS2, EBAG9, EBF4, ECE1, ECHS1, ECI2, EEF1D, EFEMP1, EGLN1
+      EHBP1, EHD1, EHD2, EIF2A, EIF2B1, EIF2B3, EIF3G, EIF3H, EIF4EBP1, EIF5B
+      ELF1, ELMO1, ELOVL6, ELP2, EMILIN3, EML6, EMSY, ENTPD5, ENTREP3, ENY2
+      EP300, EPB41L1, EPB41L4B, EPC2, EPHA10, EPHX2, EPN1, EPS8, ERBIN, ERF
+      ERG, ERP44, ESAM, ESF1, ESYT2, ETFA, ETFB, EVI5L, EXOC2, EXOSC1
+      EXOSC10, EXOSC9, EXTL1, FADS2, FAM110D, FAM124A, FAM131A, FAM131B, FAM13B, FAM153A
+      FAM169A, FAM193A, FAM200A, FAM222A, FAM234A, FAM50A, FAM53B, FAM8A1, FAP, FAR2
+      FBL, FBLN1, FBRS, FBRSL1, FBXL16, FBXO2, FBXO22, FBXO41, FBXO46, FCF1
+      FCHO1, FCHSD2, FIGNL1, FKBP9, FKTN, FLII, FLOT1, FN1, FNBP1L, FOXG1
+      FOXJ3, FOXK2, FRAT1, FRAT2, FRMD5, FSTL3, FURIN, FXYD1, G3BP1, GAB1
+      GAB2, GAL3ST1, GAP43, GAREM2, GARIN5A, GARNL3, GART, GASK1A, GCA, GEMIN2
+      GFER, GFM1, GGA2, GGT1, GGT5, GGT7, GGTA1, GHITM, GIGYF2, GIMAP5
+      GIT1, GJA4, GJB6, GK, GLI4, GLMN, GMDS, GMPR2, GNA12, GNG11
+      GNG4, GNL1, GNPDA2, GNS, GOLGB1, GOLM1, GON4L, GOPC, GOSR2, GPALPP1
+      GPAT4, GPATCH3, GPC5, GPCPD1, GPER1, GPN3, GPNMB, GPS2, GPX3, GRIA3
+      GRIK1, GRK6, GSTA4, GSTM3, GSTP1, GUCD1, GUF1, GYG2, GYPC, H1.0
+      H1.10, H2AJ, H4C11, H4C3, HADH, HADHA, HAMP, HARS2, HDAC4, HDGFL2
+      HDLBP, HEBP1, HECTD2, HERPUD1, HES4, HEXD, HEXIM1, HEY2, HEYL, HIKESHI
+      HIPK1, HIRA, HLA.DPB1, HLA.E, HMBOX1, HMG20B, HMGCL, HMGN2, HNRNPA1L3, HNRNPAB
+      HOMER3, HOPX, HPN, HRC, HS1BP3, HS3ST4, HSD11B2, HSD17B12, HSPA2, HSPB2
+      HTT, HYI, HYKK, ICAM1, ID3, IDH3A, IFNGR1, IFT140, IFT81, IFT88
+      IGFBP2, IL13RA1, IL17RC, IL1R1, IMMP2L, IMP4, INPP4B, INPP5D, INPP5E, INPPL1
+      INTS11, INTS2, IP6K2, IPO5, IPP, IQCE, IRAG1, ISYNA1, ITGA1, ITGA10
+      ITGA6, ITGAV, ITGB4, ITGB5, ITM2A, ITM2C, ITPK1, ITPKB, ITPR2, ITPRID2
+      IVD, IZUMO4, JADE2, JAG1, JAK3, JAKMIP2, JPH3, JPH4, JUND, JUP
+      KANK3, KANSL1, KATNA1, KATNAL1, KAZN, KCNC4, KCNIP1, KCNJ8, KCNN1, KCTD5
+      KDM2A, KIAA0753, KIAA1217, KIAA1522, KIAA2013, KIF13B, KIF16B, KIF19, KIF1C, KIF25
+      KIN, KLHDC9, KLHL17, KLHL2, KLHL35, KLHL5, KLHL9, KMT2D, KRAS, KRBOX5
+      KRCC1, KRT17, KSR1, LAMA2, LAMB1, LAMB2, LAMTOR2, LAMTOR5, LAP3, LAPTM4B
+      LARP1, LARP6, LARP7, LDLRAP1, LEPROT, LGALS8, LGMN, LHFPL2, LIAS, LIMD2
+      LIMK2, LKAAEAR1, LLGL1, LMF2, LMNA, LMO3, LPAR1, LPCAT3, LPL, LRATD2
+      LRCH4, LRFN4, LRIG1, LRP2BP, LRP3, LRPPRC, LRRC28, LRRC34, LRRC39, LRRC51
+      LRRC56, LRRC73, LSM5, LSM6, LSR, LSS, LTBP3, LYN, LZTS2, LZTS3
+      MACROD1, MAF1, MAGED4B, MAGOHB, MAML1, MAOA, MAP2, MAP2K3, MAP2K7, MAP3K10
+      MAP3K13, MAP4K4, MAP6, MAP6D1, MAPK13, MAPKAPK2, MAPKBP1, MARCHF4, MARCHF8, MARK4
+      MARVELD1, MAST3, MATCAP1, MATN3, MBD3, MCCC2, MCM7, MCTS1, MED10, MEI1
+      MEIS3, MEPCE, MEST, METRN, MEX3D, MGAT1, MGME1, MGST1, MICALL1, MICALL2
+      MICU2, MID1IP1, MIDEAS, MIER2, MINDY4, MKLN1, MLF2, MLIP, MMGT1, MMP14
+      MMP24, MOSPD1, MPV17, MR1, MREG, MRO, MRPL13, MRPL3, MRPS22, MRPS28
+      MRPS30, MRPS36, MRS2, MSH2, MSH3, MT.CO1, MT.CO3, MT1F, MTARC2, MTERF3
+      MTF2, MTFMT, MTHFD1, MTRF1, MTSS2, MUC1, MVB12A, MVB12B, MXI1, MYCT1
+      MYLIP, MYO18A, MYO6, MYRF, N4BP1, NAA35, NAAA, NAALADL1, NAB1, NACC1
+      NAPG, NBPF20, NCK1, NCK2, NCKAP5L, NCOA1, NCOR2, NDEL1, NDUFA1, NDUFA10
+      NDUFA5, NDUFA6, NDUFAF7, NDUFB5, NDUFC1, NDUFS1, NEK1, NELFA, NET1, NEURL1
+      NFASC, NFIC, NFIX, NFKBIA, NFKBIB, NFYB, NINJ2, NIPA1, NIPAL2, NIPSNAP2
+      NIT1, NKAIN3, NKAIN4, NKX6.2, NOD1, NOL7, NOMO1, NOP2, NOTCH1, NQO2
+      NRIP2, NRIP3, NRSN2, NSD2, NSMCE1, NSMCE4A, NT5E, NT5M, NTNG1, NUDCD1
+      NUDT19, NUDT2, NUP153, NUP62, NUPR1, NXN, NXPH1, NYNRIN, OBSCN, ODC1
+      OLIG1, ORAI2, ORMDL1, OS9, OSBPL2, OSGIN2, OXNAD1, OXSM, P2RY11, P4HB
+      PA2G4, PABIR2, PADI2, PAF1, PAFAH1B3, PAK4, PALM3, PAOX, PARVB, PAXIP1
+      PCBP1, PCBP3, PCCB, PCDHGA5, PCNX3, PCP4L1, PCSK1, PCYOX1L, PCYT1A, PDCD2
+      PDE7B, PDHA1, PDIK1L, PDXP, PDZD11, PEA15, PEG3, PELI2, PEMT, PES1
+      PEX13, PEX5L, PFDN1, PFKP, PGF, PHETA1, PHF2, PHF21B, PHKG1, PHRF1
+      PHYH, PHYHD1, PIAS4, PIDD1, PIEZO1, PIK3CD, PIP5K1C, PIR, PISD, PITPNM1
+      PITPNM3, PITRM1, PKMYT1, PKN1, PLAGL1, PLCD1, PLCH1, PLCL2, PLEC, PLEKHB2
+      PLEKHF1, PLEKHG2, PLEKHG3, PLEKHO1, PLIN3, PLK5, PLPBP, PLXNB1, PLXNB2, PLXNB3
+      PLXNC1, PNMA5, PNPLA6, POFUT2, POGK, POLD1, POLD4, POLR1F, POLR2K, POMP
+      PORCN, POU6F1, PPM1A, PPM1G, PPP1CC, PPP1R10, PPP1R12B, PPP1R16B, PPP1R26, PPP1R3E
+      PPP2R3B, PPP2R5C, PPP4C, PPP4R1, PPT1, PRCD, PRELP, PREX1, PRKAB1, PRKAG1
+      PRKCH, PRKD3, PROM1, PROS1, PRPF4, PRR12, PRR13, PSD4, PSMA2, PSMA3
+      PSMB2, PSMD12, PTBP3, PTCD3, PTK2B, PTP4A1, PTP4A3, PTPN21, PTPN23, PTPRCAP
+      PTPRU, PTTG1IP, PUM2, QDPR, R3HDM2, RAB2B, RAB34, RAB37, RABEP2, RABGGTB
+      RABIF, RABL6, RAD23A, RAF1, RALB, RAMP1, RANBP3, RANBP6, RAP1B, RAP1GAP2
+      RAP1GDS1, RAPGEF1, RAPGEF5, RASL12, RASSF3, RASSF4, RBM12, RBM17, RBM25, RBM38
+      RCAN1, RCC2, RCSD1, RELCH, RERE, RETSAT, RFT1, RFX1, RGN, RHBDF1
+      RHOU, RHPN2, RIC8B, RIDA, RIF1, RILPL2, RIMS1, RIMS3, RIOX1, RIPOR3
+      RMND1, RMND5A, RNF128, RNF130, RNF144B, RNF149, RNF157, RNF165, RNF170, RNF220
+      RNF40, RNF43, RNPEPL1, RO60, ROBO2, RPAIN, RPGRIP1L, RPH3A, RPL10, RPL15
+      RPRM, RPS6KB2, RPS6KC1, RRAGB, RRM1, RRP15, RTF1, RTL8C, RTN2, RUBCNL
+      RUFY1, RUSF1, RWDD1, S100A4, SAAL1, SAMD4A, SAMM50, SAPCD2, SASH1, SAT1
+      SBF1, SCAF11, SCAMP4, SCFD2, SCG3, SCN3B, SCO1, SCOC, SCRG1, SDHB
+      SDHD, SDSL, SEC11C, SEC14L1, SEC16A, SEC22A, SEC31A, SEMA5B, SEPTIN2, SEPTIN3
+      SEPTIN9, SETD2, SFXN5, SGK1, SH2D5, SH3GL1, SH3GL3, SH3PXD2B, SHANK1, SHANK3
+      SHFL, SHKBP1, SIRPA, SKI, SLC12A7, SLC16A14, SLC16A6, SLC25A18, SLC25A26, SLC25A30
+      SLC25A40, SLC26A11, SLC2A1, SLC30A10, SLC31A1, SLC35A1, SLC35C1, SLC35C2, SLC35D2, SLC35F6
+      SLC38A2, SLC40A1, SLC41A3, SLC43A3, SLC45A3, SLC49A4, SLC4A11, SLC4A2, SLC66A1, SLC6A11
+      SLC6A12, SLC7A6, SLC8B1, SLC9A9, SLCO3A1, SMIM10L2A, SMIM10L2B, SMIM27, SMIM3, SMIM7
+      SMPD1, SMPD4, SMU1, SNAPC3, SNN, SNPH, SNRPD3, SNTB1, SNX27, SOBP
+      SOCS6, SOD3, SOGA1, SOX10, SOX8, SPAG4, SPATA13, SPATA24, SPATA5L1, SPECC1L
+      SPEF1, SPEN, SPIN1, SPIN2B, SPIRE1, SPON2, SPPL2A, SPSB1, SPSB3, SPTSSB
+      SRARP, SRCAP, SRD5A1, SREBF2, SRRD, SRRM4, SRRT, SRSF4, SSC4D, SSH3
+      SST, ST3GAL3, ST6GAL2, ST6GALNAC1, ST8SIA5, STAC3, STAG1, STARD3NL, STARD7, STAT4
+      STAT5A, STAU1, STK36, STOM, STRN4, STUM, STX7, SUB1, SUCLG1, SULF1
+      SULF2, SULT1A1, SUMF2, SUN2, SUPT3H, SUPT6H, SUPT7L, SUSD5, SYDE1, SYN3
+      SYNPR, SYT11, SYT5, SZRD1, SZT2, TAB2, TAC3, TADA2B, TAF4, TAGLN2
+      TAGLN3, TARS2, TBC1D10B, TBC1D17, TBC1D19, TBC1D2, TBR1, TBRG1, TBX2, TCF20
+      TCF7L1, TCP11L1, TCP11L2, TDRKH, TEN1.CDK3, TEPSIN, TEX2, TFEB, TGFBR3L, THAP5
+      THBS4, THOC1, THOC7, THPO, THTPA, TIE1, TIMM10B, TIMM8B, TLCD1, TLCD5
+      TLE5, TLN1, TLN2, TM7SF2, TMCC2, TMCO1, TMED4, TMEM104, TMEM115, TMEM123
+      TMEM126A, TMEM141, TMEM14A, TMEM14B, TMEM161B, TMEM163, TMEM169, TMEM184B, TMEM223, TMEM259
+      TMEM68, TMEM69, TMLHE, TMPRSS3, TMUB1, TMUB2, TNFRSF18, TNFSF13, TNIP1, TNRC18
+      TNS3, TOLLIP, TPBG, TPBGL, TPPP, TPRN, TRABD, TRAF1, TRAF3IP2, TRAK2
+      TRANK1, TRAP1, TRAPPC10, TRAPPC11, TRAPPC3, TRAPPC4, TRIM26, TRIM44, TRIM45, TRIM66
+      TRIM9, TRIP10, TRIR, TRO, TRRAP, TSC2, TSPAN7, TSPAN9, TSTD2, TTBK1
+      TTC14, TTC31, TTC38, TTC39A, TTC7B, TTI1, TTL, TTLL12, TUBA1B, TUBG1
+      TULP4, TXNDC11, TXNDC12, TXNDC15, TXNDC17, U2AF2, UACA, UBAC2, UBAP1, UBE2D1
+      UBE2I, UBE2J1, UBE2N, UBE2R2, UBE3B, UBR2, UBR4, UBXN8, UGGT2, UGP2
+      UHMK1, UNC79, UQCC1, UQCR10, UQCRB, UQCRC2, USO1, USP31, USP33, USP7
+      VAT1, VEZF1, VGF, VIPAS39, VPS26B, VPS33B, VPS35, VSIR, VTA1, VWA1
+      VWA5A, VWC2, VWF, WASH6P, WBP1, WDFY2, WDR36, WDR41, WDR45B, WDR75
+      WDR81, WFS1, WLS, WNK2, WNT10B, WSB2, WWC1, WWC3, WWP1, WWTR1
+      XPA, XRCC4, XXYLT1, XYLT2, YES1, YIPF2, YJU2, YME1L1, YOD1, YPEL3
+      YY1, ZBBX, ZBTB12, ZBTB17, ZBTB2, ZBTB34, ZBTB38, ZBTB4, ZBTB44, ZBTB47
+      ZC3H11A, ZC3H18, ZC3H7B, ZCCHC14, ZCCHC24, ZCWPW1, ZDHHC1, ZDHHC8, ZEB2, ZFP41
+      ZFR, ZGPAT, ZHX3, ZIC1, ZIC4, ZMAT1, ZMPSTE24, ZMYND8, ZNF117, ZNF142
+      ZNF160, ZNF169, ZNF18, ZNF205, ZNF213, ZNF223, ZNF318, ZNF319, ZNF32, ZNF334
+      ZNF358, ZNF384, ZNF398, ZNF408, ZNF415, ZNF462, ZNF511, ZNF514, ZNF518A, ZNF540
+      ZNF547, ZNF575, ZNF581, ZNF592, ZNF598, ZNF606, ZNF608, ZNF609, ZNF611, ZNF646
+      ZNF664, ZNF682, ZNF704, ZNF71, ZNF768, ZNF784, ZNF787, ZNF853, ZNF875, ZXDB
+  - vs GLOBAL UNION (All Winning Features):
+    * EXTERNAL Genes (Not in any global winner) [50]:
+      AKAP8, ANXA4, ASCL1, ASIC1, ATPSCKMT, B3GLCT, BBC3, BCDIN3D, BCL7B, CDAN1
+      CDH11, CEP126, CNIH2, COQ5, DNAJC24, EIF2B2, FAM104B, FBLN5, GRID1, HPCAL1
+      HSP90B1, ITIH5, LRRC57, MAP3K1, MNS1, MYCBP, MYCN, NOL3, NT5DC1, NUP43
+      PARD6A, PHF13, RBBP9, SDK1, SEMA4A, SH3D19, SLCO1A2, SSB, TFPT, TMEM160
+      TPCN2, TRMT13, TTC9B, TTF1, TTLL11, TYW5, UBALD1, UCN, USP2, ZNF429
+    * MISSING Union Genes [1941] (Truncated):
+      (Too many genes to list)
+----------------------------------------------------------------------------------------------------------------------------------
+Dataset: cogdx      | K: k_25   | Weighted Method: ROS_RF-R2_FR
+  - vs GLOBAL WINNER (k_1000 | ROS_RF-R2_FR):
+    * MISSING Genes (Lost features) [975]:
+      A2ML1, AATK, ABCA2, ABCF3, ABHD11, ABI1, ABITRAM, ABL1, ACBD4, ACIN1
+      ACOT4, ACTG1, ADAM33, ADAM9, ADCYAP1, ADGRL1, ADIPOR2, ADORA2A, ADSS1, AGAP3
+      AGAP6, AGBL4, AGFG2, AGPAT1, AIFM3, AIG1, ALDH5A1, ALG6, AMD1, AMPD2
+      ANKRD11, ANKRD13D, ANKRD24, ANKRD30B, ANKRD40, ANLN, AP4B1, AP5B1, APBB3, APLN
+      APOBEC3G, APRT, ARAP1, AREL1, ARHGAP35, ARHGEF10L, ARHGEF40, ARID3B, ARRDC2, ARSG
+      ATF7IP2, ATG4D, ATRX, AXIN1, B9D1, BABAM2, BAD, BAZ1B, BAZ2A, BBOF1
+      BCKDK, BCL9L, BDH1, BEND7, BMI1, BOLA3, BRAP, BRD3, BRD9, BRK1
+      BRPF1, BRWD1, BTBD6, BUB3, C11orf68, C12orf29, C17orf114, C17orf58, C1QTNF5, C1RL
+      C1orf159, C1orf50, C1orf54, C20orf96, C2orf88, C8orf58, CAB39L, CAMK2G, CAPN15, CAPZA1
+      CARHSP1, CASC3, CASKIN1, CASP9, CATSPERG, CAVIN1, CBS, CCDC24, CCDC32, CCDC59
+      CCDC69, CCDC85C, CCDC9B, CCP110, CCS, CD22, CDC23, CDK18, CDK2AP1, CDK7
+      CDR2L, CELF6, CENPO, CEP295, CEP83, CEP89, CERS4, CES4A, CFAP221, CFAP298
+      CFAP91, CGGBP1, CHCHD7, CHID1, CHN2, CHP1, CHST6, CINP, CIPC, CIZ1
+      CLASRP, CLCN7, CLDN15, CLMN, CLN6, CLTB, CLYBL, CMSS1, CMTM3, CNFN
+      CNKSR3, CNNM3, CNOT9, CNPY2, COA3, COBL, COG1, COL26A1, COL27A1, COL5A3
+      COL6A2, COPZ1, CORO1C, CORT, COX15, COX18, CPM, CPQ, CPT2, CRACR2B
+      CRB2, CREBBP, CREBL2, CREBRF, CRELD2, CRK, CRLS1, CROT, CRYZL1, CSK
+      CSNK1G2, CSRP1, CSTF3, CTCF, CTDNEP1, CTH, CTXN1, CXXC1, CYB561A3, CYBC1
+      DAXX, DBI, DBT, DCAF1, DCAF16, DCAF4, DDAH2, DDX23, DDX39A, DECR2
+      DENND11, DENND2A, DENND4B, DENND5A, DET1, DGCR8, DHRS7, DHX16, DIXDC1, DLC1
+      DLG2, DMAC1, DMKN, DNAAF1, DNAAF11, DOCK1, DOK3, DOP1A, DPM1, DPP6
+      DRD4, DSN1, DTX1, DTX3, DTX4, DUS2, DUSP28, DVL1, DVL3, DYNC1LI2
+      DYNC2LI1, DYNLL2, DZIP3, E2F3, E2F4, EBF4, ECE1, ECSCR, EFNB2, EGLN1
+      EID2B, EIF2B1, EIF3F, EIF3H, ELF1, ELP2, EMC3, EMD, EMP3, ENTREP3
+      EP300, ERBB3, ERBIN, ERP44, ETHE1, EXOSC1, EXOSC7, EXT2, FAM107B, FAM13B
+      FAM153A, FAM222A, FAM53B, FANCE, FBL, FBRSL1, FBXO2, FBXO44, FCF1, FCHO1
+      FCHSD2, FHIP1B, FLII, FMNL2, FOXN3, FOXO4, FOXRED1, FRAT2, FRMPD2, FURIN
+      G3BP1, GAB1, GALNT1, GALNT11, GAREM2, GARIN5A, GARNL3, GAS2L1, GCC1, GEM
+      GFER, GIGYF2, GIT1, GJC1, GLO1, GLT8D1, GLT8D2, GNA11, GNG4, GNLY
+      GOLM1, GOPC, GOSR2, GPAT4, GPCPD1, GPER1, GPHN, GPR137, GPS2, GPSM1
+      GRIK2, GSS, GSTA4, GTF2H3, GYPC, HARBI1, HARS2, HCFC1, HCN2, HDAC9
+      HDGF, HELZ2, HES4, HEXIM1, HIGD1B, HIKESHI, HIPK1, HIRA, HMBOX1, HMG20B
+      HMGB2, HMGN4, HNRNPA1L3, HOMER3, HOOK2, HOPX, HS6ST1, HSD11B2, HSPA2, HSPB2
+      ICAM5, IDH3G, IFT22, IFT43, IGIP, IL17RC, IMMP2L, IMMT, IMP4, IMPDH2
+      INPPL1, INSR, INTS15, INTS3, INTU, IP6K2, IPO5, IQGAP1, ISYNA1, ITGA10
+      ITGB5, ITPK1, ITPKB, ITPRID2, IVD, IVNS1ABP, JADE2, JAM3, KALRN, KANK2
+      KANSL1, KARS1, KCNA1, KCNJ10, KCNJ16, KCNN1, KDM1A, KDM2A, KEAP1, KHDRBS1
+      KIAA0753, KIAA0930, KIAA1958, KIAA2026, KIF13B, KIF19, KIF1B, KIF1C, KIF21B, KIF5A
+      KIF5B, KIF9, KLHDC9, KLHL17, KLHL35, KLHL5, KMT2D, KRBOX1, KTN1, LAMB1
+      LAMB2, LAMP2, LAPTM4B, LARP1, LARP7, LARS1, LCLAT1, LDLRAP1, LETM2, LETMD1
+      LGALS3, LIAS, LIMCH1, LMO3, LRCH4, LRFN4, LRP2BP, LRP3, LRRC1, LRRC28
+      LRRC34, LRRC39, LRRC59, LRRC73, LRRN2, LRSAM1, LSM6, LSS, LTBP3, LZTS2
+      MAF1, MAGOHB, MANBAL, MAP2K7, MAP3K10, MAP3K13, MAP3K3, MAP4K4, MAP7D1, MAPK1IP1L
+      MARCHF8, MARK2, MATCAP1, MAZ, MBD3, MCCC2, MCM6, MCM7, MDGA1, ME2
+      ME3, MEA1, MECP2, MED12, MED12L, MED13, MED14, MED29, MEGF9, MEIS3
+      MEPCE, METTL7B, MGAT1, MICAL3, MICALL1, MID1IP1, MINDY1, MITF, MLIP, MOB2
+      MOB3B, MORN1, MPV17L2, MR1, MRAS, MRPL13, MRPL3, MRPL57, MRPS18A, MRPS22
+      MRPS6, MSH3, MSRB3, MT1F, MT2A, MTF1, MTG1, MTHFD1, MTMR10, MTR
+      MTSS2, MVB12B, MVP, MXI1, MYLIP, MYO9B, MYOT, N4BP1, NAA20, NACC1
+      NAGLU, NAT10, NBPF20, NCK2, NCOA1, NCOA5, NDC1, NDE1, NDUFA10, NDUFA6
+      NDUFB5, NECTIN3, NELFA, NEUROD2, NF2, NFASC, NFIB, NFIC, NFKB1, NFKBIA
+      NFS1, NFYB, NHP2, NIBAN2, NINJ1, NIPBL, NKX6.2, NPFF, NPNT, NRIP2
+      NRP1, NRSN2, NSMCE1, NSMF, NTNG1, NUCB1, NUDT2, NUP214, NYNRIN, OBSCN
+      ODC1, OGA, ORAI2, ORC3, OTUD3, OTUD4, OTUD7A, OXA1L, OXNAD1, P2RX6
+      P2RX7, PA2G4, PACSIN3, PADI2, PAF1, PAFAH1B3, PAK4, PALM3, PAOX, PARN
+      PCBP2, PCCB, PCIF1, PCOLCE, PCSK6, PCYOX1L, PDCD2, PDCD6, PDE4DIP, PDHA1
+      PDHX, PDP2, PDS5B, PDZD11, PELI1, PEX13, PFKP, PGM3, PHETA1, PHF19
+      PHF2, PHLPP1, PHRF1, PIAS4, PIDD1, PIEZO2, PIK3C2B, PIK3CD, PIK3R2, PLA2G4C
+      PLAGL1, PLB1, PLCG1, PLEKHB1, PLEKHM1, PLEKHM2, PLGRKT, PLPP2, PLXNB1, PMS1
+      PMS2, PNCK, PNMA5, PNPLA6, POGK, POLD4, POLG, POLL, POLR2F, POLR3F
+      PORCN, POU3F2, POU3F3, POU6F1, PPIH, PPIP5K2, PPM1A, PPM1B, PPM1D, PPM1G
+      PPP1CC, PPP1R16A, PPP1R16B, PPP1R1A, PPP1R3E, PPP4R1, PPP4R2, PPT1, PRCD, PRELP
+      PREX1, PRKCG, PRKDC, PRMT2, PRPF4, PRR12, PRR13, PRX, PSMA6, PTBP3
+      PTCD3, PTP4A1, PTP4A2, PTPN21, PTPN23, PTPRF, PYCR3, QDPR, RAB20, RAB36
+      RAB9A, RABEP2, RABGGTA, RABL3, RABL6, RAD9A, RAF1, RALBP1, RALY, RANBP10
+      RANBP3, RAP1A, RAPGEF1, RAPGEF5, RASGRP2, RBFA, RBM17, RBM38, RBP4, RBPMS2
+      RCC2, RELA, RENBP, REPS1, RERE, RESF1, RFX1, RHEB, RHNO1, RHOQ
+      RIIAD1, RIMS1, RINT1, RIPOR3, RND2, RNF130, RNF165, RNF181, RNF216, RNF220
+      RPGRIP1L, RPH3A, RPL15, RPL21, RPL22L1, RPRD1B, RPUSD1, RRAGB, RRP1, RRS1
+      RTL8C, RTN2, RUSF1, RWDD1, S100A4, S100A6, SALL2, SAMD1, SAMD4A, SASH1
+      SAT2, SCARF2, SCFD2, SCG3, SCN3B, SEC31A, SEC61B, SELENOP, SEPHS1, SEPTIN8
+      SERPINB1, SESN3, SETD2, SFRP1, SFSWAP, SGK1, SH3PXD2B, SHC1, SHC2, SHISA5
+      SIRPA, SKI, SKIC8, SLC16A14, SLC16A6, SLC25A18, SLC25A26, SLC25A48, SLC30A1, SLC30A3
+      SLC38A2, SLC39A11, SLC41A1, SLC43A3, SLC44A1, SLC45A3, SLC4A11, SLC4A2, SLC5A3, SLC66A1
+      SLC6A12, SLCO3A1, SMARCA2, SMARCD3, SMIM10L2A, SMIM27, SMIM3, SMPD4, SMTN, SMU1
+      SMYD5, SNN, SNPH, SNRPF, SNX27, SOCS4, SOCS6, SOGA1, SORT1, SOX12
+      SPACA6, SPACA9, SPAG8, SPCS1, SPECC1, SPECC1L, SPHK2, SPIN2B, SPIRE1, SPOPL
+      SRCAP, SRD5A3, SRP54, SRRM2, SRRT, SRSF4, SSC5D, SSR4, SST, ST3GAL3
+      ST6GAL2, STAG1, STAP2, STARD10, STARD7, STAT4, STAU1, STX10, SUB1, SULT1A1
+      SUN2, SWAP70, SYDE1, SYNCRIP, SYT5, TAF1D, TAF4, TAF9B, TAFA5, TAMM41
+      TAOK2, TATDN3, TBC1D20, TBC1D24, TBCA, TCERG1, TCP11L2, TCTN2, TCTN3, TDRKH
+      TEAD2, TEPSIN, TEX2, TFDP2, TFEB, TGFB3, TGFBR3L, THPO, THUMPD3, TIMELESS
+      TIMM8B, TLCD1, TLCD3B, TLE4, TM7SF2, TM9SF4, TMC6, TMED4, TMEM134, TMEM14B
+      TMEM19, TMEM209, TMEM234, TMEM256, TMEM260, TMEM74B, TMLHE, TMUB2, TNFRSF18, TNFRSF6B
+      TNK2, TNKS1BP1, TNKS2, TNPO1, TNRC18, TNS1, TOMM40, TOMM6, TOP1MT, TOP3B
+      TPRKB, TPRN, TRABD, TRANK1, TRAP1, TRAPPC9, TREX1, TRIM44, TRIM45, TRIM5
+      TRIM8, TRIP10, TRIR, TRMT44, TRPC1, TSPAN7, TTI1, TTLL1, U2AF1, U2AF2
+      UBAP1, UBE2D1, UBE2V1, UBL5, UBTD2, UBXN8, UCK1, UGGT2, UGT8, UNC5B
+      UNC79, UNC93B1, UQCR10, UQCRC2, URI1, USF2, USP11, USP12, USP21, USP31
+      VAT1, VEZF1, VIPAS39, VMA21, VMP1, VPS25, VPS33B, VRK3, VTA1, VWA3A
+      VWA5A, WBP2, WDR54, WDR55, WDR75, WDR81, WIPF2, WNT7A, WWC3, XKR8
+      XPO7, XRCC5, YES1, YJU2, YPEL4, YWHAB, YY1, ZBTB12, ZBTB14, ZBTB34
+      ZBTB38, ZBTB44, ZBTB47, ZBTB7A, ZBTB7B, ZC3H11A, ZCCHC14, ZCCHC17, ZDHHC23, ZDHHC8
+      ZEB2, ZFP41, ZFP91, ZFR, ZHX1, ZHX3, ZMPSTE24, ZMYND12, ZMYND8, ZNF101
+      ZNF112, ZNF17, ZNF18, ZNF205, ZNF219, ZNF26, ZNF318, ZNF32, ZNF334, ZNF337
+      ZNF358, ZNF385A, ZNF420, ZNF441, ZNF467, ZNF511, ZNF512, ZNF513, ZNF540, ZNF547
+      ZNF580, ZNF598, ZNF609, ZNF639, ZNF652, ZNF664, ZNF704, ZNF71, ZNF768, ZNF787
+      ZNF789, ZNF875, ZNHIT6, ZSCAN18, ZSCAN26
+  - vs GLOBAL UNION (All Winning Features):
+    * Methodology 100% contained within the Global Union.
+    * MISSING Union Genes [1966] (Truncated):
+      (Too many genes to list)
+----------------------------------------------------------------------------------------------------------------------------------
+Dataset: cogdx      | K: k_50   | Weighted Method: ROS_RF-R2_FR
+  - vs GLOBAL WINNER (k_1000 | ROS_RF-R2_FR):
+    * MISSING Genes (Lost features) [950]:
+      A2ML1, AATK, ABCA2, ABCF3, ABHD11, ABI1, ABITRAM, ABL1, ACBD4, ACIN1
+      ACOT4, ACTG1, ADAM33, ADAM9, ADCYAP1, ADGRL1, ADIPOR2, ADORA2A, ADSS1, AGAP3
+      AGAP6, AGBL4, AGFG2, AGPAT1, AIFM3, AIG1, ALDH5A1, ALG6, AMD1, AMPD2
+      ANKRD11, ANKRD13D, ANKRD24, ANKRD30B, ANKRD40, ANLN, AP4B1, AP5B1, APBB3, APLN
+      APOBEC3G, APRT, ARAP1, AREL1, ARHGEF10L, ARHGEF40, ARID3B, ARRDC2, ARSG, ATF7IP2
+      ATG4D, ATRX, AXIN1, B9D1, BABAM2, BAD, BAZ1B, BAZ2A, BBOF1, BCKDK
+      BCL9L, BDH1, BEND7, BMI1, BOLA3, BRAP, BRD3, BRD9, BRK1, BRPF1
+      BRWD1, BTBD6, BUB3, C11orf68, C12orf29, C17orf114, C17orf58, C1QTNF5, C1orf159, C1orf50
+      C1orf54, C20orf96, C2orf88, C8orf58, CAB39L, CAMK2G, CAPN15, CAPZA1, CARHSP1, CASC3
+      CASKIN1, CASP9, CATSPERG, CAVIN1, CBS, CCDC24, CCDC32, CCDC59, CCDC69, CCDC85C
+      CCDC9B, CCP110, CCS, CD22, CDC23, CDK18, CDK7, CDR2L, CELF6, CENPO
+      CEP295, CEP83, CEP89, CERS4, CES4A, CFAP221, CFAP298, CFAP91, CGGBP1, CHCHD7
+      CHN2, CHP1, CHST6, CINP, CIPC, CIZ1, CLASRP, CLCN7, CLDN15, CLMN
+      CLN6, CLTB, CLYBL, CMSS1, CMTM3, CNFN, CNKSR3, CNNM3, CNOT9, CNPY2
+      COA3, COBL, COG1, COL26A1, COL27A1, COL5A3, COL6A2, COPZ1, CORO1C, CORT
+      COX15, COX18, CPM, CPQ, CPT2, CRACR2B, CRB2, CREBL2, CREBRF, CRELD2
+      CRK, CRLS1, CROT, CRYZL1, CSK, CSNK1G2, CSRP1, CSTF3, CTDNEP1, CTH
+      CTXN1, CXXC1, CYB561A3, CYBC1, DAXX, DBI, DBT, DCAF1, DCAF16, DCAF4
+      DDAH2, DDX23, DDX39A, DECR2, DENND11, DENND2A, DENND4B, DENND5A, DET1, DGCR8
+      DHRS7, DHX16, DIXDC1, DLC1, DLG2, DMAC1, DMKN, DNAAF1, DNAAF11, DOCK1
+      DOK3, DOP1A, DPM1, DPP6, DRD4, DSN1, DTX1, DTX3, DTX4, DUS2
+      DUSP28, DVL1, DVL3, DYNC1LI2, DYNC2LI1, DYNLL2, DZIP3, E2F3, E2F4, EBF4
+      ECE1, ECSCR, EFNB2, EGLN1, EID2B, EIF2B1, EIF3F, EIF3H, ELF1, ELP2
+      EMC3, EMD, EMP3, ENTREP3, EP300, ERBB3, ERBIN, ERP44, ETHE1, EXOSC1
+      EXOSC7, EXT2, FAM107B, FAM13B, FAM153A, FAM222A, FAM53B, FANCE, FBL, FBRSL1
+      FBXO2, FBXO44, FCF1, FCHSD2, FHIP1B, FLII, FMNL2, FOXN3, FOXO4, FOXRED1
+      FRAT2, FRMPD2, FURIN, G3BP1, GAB1, GALNT1, GALNT11, GAREM2, GARIN5A, GARNL3
+      GAS2L1, GCC1, GEM, GFER, GIGYF2, GJC1, GLO1, GLT8D1, GLT8D2, GNA11
+      GNG4, GNLY, GOLM1, GOPC, GOSR2, GPAT4, GPCPD1, GPER1, GPHN, GPR137
+      GPS2, GPSM1, GRIK2, GSS, GSTA4, GTF2H3, GYPC, HARBI1, HARS2, HCFC1
+      HCN2, HDAC9, HDGF, HELZ2, HES4, HEXIM1, HIGD1B, HIKESHI, HIPK1, HIRA
+      HMBOX1, HMG20B, HMGB2, HMGN4, HNRNPA1L3, HOMER3, HOOK2, HS6ST1, HSD11B2, HSPA2
+      HSPB2, ICAM5, IDH3G, IFT22, IFT43, IGIP, IL17RC, IMMP2L, IMMT, IMP4
+      IMPDH2, INPPL1, INSR, INTS15, INTS3, INTU, IP6K2, IPO5, IQGAP1, ISYNA1
+      ITGA10, ITGB5, ITPKB, ITPRID2, IVD, IVNS1ABP, JADE2, JAM3, KALRN, KANK2
+      KANSL1, KARS1, KCNA1, KCNJ10, KCNJ16, KCNN1, KDM1A, KDM2A, KEAP1, KHDRBS1
+      KIAA0753, KIAA0930, KIAA1958, KIAA2026, KIF13B, KIF19, KIF1B, KIF1C, KIF21B, KIF5A
+      KIF5B, KIF9, KLHDC9, KLHL17, KLHL35, KLHL5, KMT2D, KRBOX1, KTN1, LAMB1
+      LAMB2, LAMP2, LAPTM4B, LARP1, LARP7, LARS1, LCLAT1, LETM2, LETMD1, LGALS3
+      LIAS, LIMCH1, LMO3, LRCH4, LRFN4, LRP2BP, LRP3, LRRC1, LRRC28, LRRC34
+      LRRC59, LRRC73, LRRN2, LRSAM1, LSM6, LSS, LTBP3, LZTS2, MAF1, MAGOHB
+      MANBAL, MAP3K10, MAP3K13, MAP3K3, MAP4K4, MAP7D1, MAPK1IP1L, MARCHF8, MARK2, MATCAP1
+      MAZ, MBD3, MCCC2, MCM6, MCM7, MDGA1, ME2, ME3, MEA1, MECP2
+      MED12, MED12L, MED13, MED14, MED29, MEGF9, MEIS3, MEPCE, METTL7B, MGAT1
+      MICAL3, MICALL1, MID1IP1, MINDY1, MITF, MLIP, MOB2, MOB3B, MORN1, MPV17L2
+      MR1, MRAS, MRPL13, MRPL3, MRPL57, MRPS18A, MRPS22, MRPS6, MSH3, MSRB3
+      MT1F, MT2A, MTF1, MTG1, MTHFD1, MTMR10, MTR, MTSS2, MVB12B, MVP
+      MXI1, MYLIP, MYO9B, MYOT, N4BP1, NAA20, NACC1, NAGLU, NAT10, NBPF20
+      NCK2, NCOA1, NCOA5, NDC1, NDE1, NDUFA10, NDUFA6, NDUFB5, NECTIN3, NELFA
+      NEUROD2, NF2, NFASC, NFIB, NFIC, NFKB1, NFKBIA, NFS1, NFYB, NHP2
+      NIBAN2, NINJ1, NIPBL, NKX6.2, NPFF, NRP1, NRSN2, NSMCE1, NSMF, NTNG1
+      NUCB1, NUDT2, NUP214, NYNRIN, OBSCN, ODC1, OGA, ORAI2, ORC3, OTUD3
+      OTUD4, OTUD7A, OXA1L, OXNAD1, P2RX6, P2RX7, PA2G4, PACSIN3, PADI2, PAF1
+      PAFAH1B3, PAK4, PALM3, PAOX, PARN, PCBP2, PCCB, PCIF1, PCOLCE, PCSK6
+      PCYOX1L, PDCD2, PDCD6, PDE4DIP, PDHA1, PDHX, PDP2, PDS5B, PDZD11, PELI1
+      PEX13, PFKP, PGM3, PHETA1, PHF19, PHF2, PHLPP1, PHRF1, PIAS4, PIDD1
+      PIEZO2, PIK3C2B, PIK3CD, PIK3R2, PLA2G4C, PLAGL1, PLB1, PLCG1, PLEKHB1, PLEKHM1
+      PLEKHM2, PLGRKT, PLPP2, PLXNB1, PMS1, PMS2, PNCK, PNMA5, PNPLA6, POGK
+      POLD4, POLG, POLL, POLR2F, POLR3F, PORCN, POU3F2, POU3F3, POU6F1, PPIH
+      PPIP5K2, PPM1A, PPM1B, PPM1D, PPM1G, PPP1CC, PPP1R16A, PPP1R16B, PPP1R1A, PPP1R3E
+      PPP4R1, PPP4R2, PPT1, PRCD, PREX1, PRKCG, PRKDC, PRMT2, PRPF4, PRR12
+      PRX, PSMA6, PTBP3, PTCD3, PTP4A1, PTP4A2, PTPN21, PTPN23, PTPRF, PYCR3
+      RAB20, RAB36, RAB9A, RABEP2, RABGGTA, RABL3, RABL6, RAD9A, RAF1, RALBP1
+      RALY, RANBP10, RANBP3, RAP1A, RAPGEF1, RAPGEF5, RASGRP2, RBFA, RBM17, RBM38
+      RBPMS2, RCC2, RELA, RENBP, REPS1, RERE, RESF1, RFX1, RHEB, RHNO1
+      RHOQ, RIIAD1, RIMS1, RINT1, RIPOR3, RND2, RNF130, RNF165, RNF181, RNF216
+      RNF220, RPGRIP1L, RPH3A, RPL15, RPL21, RPL22L1, RPRD1B, RPUSD1, RRAGB, RRP1
+      RRS1, RTL8C, RTN2, RWDD1, S100A4, S100A6, SALL2, SAMD1, SAMD4A, SASH1
+      SAT2, SCARF2, SCFD2, SCG3, SCN3B, SEC31A, SEC61B, SELENOP, SEPHS1, SEPTIN8
+      SERPINB1, SESN3, SETD2, SFRP1, SFSWAP, SGK1, SH3PXD2B, SHC1, SHC2, SHISA5
+      SIRPA, SKI, SKIC8, SLC16A14, SLC16A6, SLC25A18, SLC25A26, SLC25A48, SLC30A1, SLC30A3
+      SLC38A2, SLC39A11, SLC41A1, SLC43A3, SLC44A1, SLC45A3, SLC4A11, SLC4A2, SLC5A3, SLC66A1
+      SLCO3A1, SMARCA2, SMARCD3, SMIM10L2A, SMIM3, SMPD4, SMTN, SMU1, SMYD5, SNN
+      SNPH, SNRPF, SNX27, SOCS4, SOCS6, SOGA1, SORT1, SOX12, SPACA6, SPACA9
+      SPAG8, SPCS1, SPECC1, SPHK2, SPIN2B, SPIRE1, SPOPL, SRCAP, SRD5A3, SRP54
+      SRRM2, SRRT, SRSF4, SSC5D, SSR4, SST, ST3GAL3, ST6GAL2, STAG1, STAP2
+      STARD10, STARD7, STAT4, STAU1, STX10, SUB1, SULT1A1, SUN2, SWAP70, SYDE1
+      SYNCRIP, SYT5, TAF1D, TAF4, TAF9B, TAFA5, TAMM41, TAOK2, TATDN3, TBC1D20
+      TBC1D24, TBCA, TCERG1, TCP11L2, TCTN2, TCTN3, TDRKH, TEAD2, TEPSIN, TEX2
+      TFDP2, TFEB, TGFB3, TGFBR3L, THPO, THUMPD3, TIMELESS, TIMM8B, TLCD1, TLCD3B
+      TLE4, TM7SF2, TM9SF4, TMC6, TMED4, TMEM134, TMEM14B, TMEM19, TMEM209, TMEM234
+      TMEM256, TMEM260, TMEM74B, TMLHE, TMUB2, TNFRSF18, TNFRSF6B, TNK2, TNKS1BP1, TNKS2
+      TNPO1, TNRC18, TNS1, TOMM40, TOMM6, TOP1MT, TOP3B, TPRKB, TPRN, TRABD
+      TRANK1, TRAP1, TRAPPC9, TREX1, TRIM44, TRIM45, TRIM5, TRIM8, TRIP10, TRIR
+      TRMT44, TRPC1, TSPAN7, TTI1, TTLL1, U2AF1, U2AF2, UBAP1, UBE2D1, UBE2V1
+      UBL5, UBTD2, UBXN8, UCK1, UGGT2, UGT8, UNC5B, UNC79, UNC93B1, UQCR10
+      UQCRC2, URI1, USF2, USP11, USP12, USP21, USP31, VAT1, VEZF1, VMA21
+      VMP1, VPS25, VPS33B, VRK3, VTA1, VWA3A, VWA5A, WBP2, WDR54, WDR55
+      WDR75, WDR81, WIPF2, WNT7A, WWC3, XKR8, XPO7, XRCC5, YES1, YJU2
+      YPEL4, YWHAB, ZBTB12, ZBTB14, ZBTB34, ZBTB38, ZBTB44, ZBTB47, ZBTB7A, ZBTB7B
+      ZC3H11A, ZCCHC14, ZCCHC17, ZDHHC23, ZDHHC8, ZEB2, ZFP41, ZFP91, ZFR, ZHX1
+      ZHX3, ZMPSTE24, ZMYND12, ZMYND8, ZNF101, ZNF112, ZNF17, ZNF18, ZNF205, ZNF219
+      ZNF26, ZNF318, ZNF32, ZNF334, ZNF337, ZNF358, ZNF385A, ZNF420, ZNF441, ZNF467
+      ZNF511, ZNF512, ZNF513, ZNF540, ZNF547, ZNF580, ZNF598, ZNF609, ZNF639, ZNF652
+      ZNF664, ZNF704, ZNF71, ZNF768, ZNF787, ZNF789, ZNF875, ZNHIT6, ZSCAN18, ZSCAN26
+  - vs GLOBAL UNION (All Winning Features):
+    * Methodology 100% contained within the Global Union.
+    * MISSING Union Genes [1941] (Truncated):
+      (Too many genes to list)
+----------------------------------------------------------------------------------------------------------------------------------
+Dataset: cogdx      | K: k_75   | Weighted Method: ROS_RF-R2_FR
+  - vs GLOBAL WINNER (k_1000 | ROS_RF-R2_FR):
+    * MISSING Genes (Lost features) [925]:
+      A2ML1, AATK, ABCA2, ABCF3, ABHD11, ABI1, ABITRAM, ABL1, ACBD4, ACIN1
+      ACOT4, ACTG1, ADAM33, ADAM9, ADCYAP1, ADGRL1, ADIPOR2, ADORA2A, ADSS1, AGAP3
+      AGAP6, AGBL4, AGFG2, AGPAT1, AIFM3, ALDH5A1, ALG6, AMD1, AMPD2, ANKRD11
+      ANKRD13D, ANKRD24, ANKRD30B, ANKRD40, ANLN, AP4B1, AP5B1, APBB3, APLN, APOBEC3G
+      APRT, AREL1, ARHGEF10L, ARHGEF40, ARID3B, ARRDC2, ARSG, ATF7IP2, ATG4D, ATRX
+      AXIN1, B9D1, BABAM2, BAD, BAZ1B, BAZ2A, BBOF1, BCKDK, BCL9L, BDH1
+      BEND7, BMI1, BOLA3, BRAP, BRD3, BRD9, BRK1, BRPF1, BRWD1, BTBD6
+      BUB3, C11orf68, C12orf29, C17orf114, C17orf58, C1QTNF5, C1orf159, C1orf50, C1orf54, C20orf96
+      C2orf88, C8orf58, CAB39L, CAMK2G, CAPN15, CAPZA1, CARHSP1, CASC3, CASKIN1, CASP9
+      CATSPERG, CAVIN1, CBS, CCDC24, CCDC32, CCDC59, CCDC69, CCDC85C, CCDC9B, CCP110
+      CCS, CD22, CDC23, CDK18, CDK7, CDR2L, CELF6, CENPO, CEP295, CEP83
+      CEP89, CERS4, CES4A, CFAP298, CFAP91, CGGBP1, CHCHD7, CHN2, CHP1, CHST6
+      CINP, CIPC, CIZ1, CLASRP, CLCN7, CLDN15, CLMN, CLN6, CLTB, CLYBL
+      CMSS1, CMTM3, CNFN, CNKSR3, CNNM3, CNOT9, CNPY2, COA3, COBL, COG1
+      COL26A1, COL27A1, COL5A3, COL6A2, COPZ1, CORO1C, CORT, COX15, COX18, CPM
+      CPQ, CPT2, CRACR2B, CRB2, CREBL2, CREBRF, CRELD2, CRK, CRLS1, CROT
+      CRYZL1, CSK, CSNK1G2, CSRP1, CSTF3, CTDNEP1, CTH, CTXN1, CXXC1, CYB561A3
+      CYBC1, DAXX, DBI, DBT, DCAF1, DCAF16, DCAF4, DDAH2, DDX23, DECR2
+      DENND2A, DENND4B, DENND5A, DET1, DGCR8, DHRS7, DHX16, DIXDC1, DLC1, DLG2
+      DMAC1, DMKN, DNAAF1, DNAAF11, DOCK1, DOK3, DOP1A, DPM1, DPP6, DRD4
+      DSN1, DTX1, DTX3, DTX4, DUS2, DUSP28, DVL1, DVL3, DYNC1LI2, DYNC2LI1
+      DYNLL2, DZIP3, E2F3, E2F4, EBF4, ECE1, ECSCR, EFNB2, EGLN1, EID2B
+      EIF2B1, EIF3F, EIF3H, ELF1, ELP2, EMC3, EMD, EMP3, ENTREP3, EP300
+      ERBB3, ERBIN, ERP44, ETHE1, EXOSC1, EXOSC7, EXT2, FAM107B, FAM13B, FAM153A
+      FAM222A, FAM53B, FANCE, FBL, FBRSL1, FBXO2, FBXO44, FCF1, FCHSD2, FHIP1B
+      FLII, FMNL2, FOXN3, FOXO4, FOXRED1, FRAT2, FRMPD2, FURIN, G3BP1, GAB1
+      GALNT1, GALNT11, GARIN5A, GARNL3, GAS2L1, GCC1, GEM, GFER, GIGYF2, GJC1
+      GLO1, GLT8D1, GLT8D2, GNA11, GNG4, GNLY, GOLM1, GOPC, GOSR2, GPAT4
+      GPCPD1, GPER1, GPHN, GPR137, GPS2, GPSM1, GRIK2, GSS, GSTA4, GTF2H3
+      GYPC, HARBI1, HARS2, HCFC1, HCN2, HDAC9, HDGF, HELZ2, HES4, HIGD1B
+      HIKESHI, HIPK1, HIRA, HMBOX1, HMG20B, HMGB2, HMGN4, HNRNPA1L3, HOMER3, HOOK2
+      HS6ST1, HSPA2, HSPB2, ICAM5, IDH3G, IFT22, IFT43, IGIP, IL17RC, IMMP2L
+      IMMT, IMP4, IMPDH2, INPPL1, INSR, INTS15, INTS3, INTU, IP6K2, IPO5
+      IQGAP1, ITGA10, ITGB5, ITPKB, ITPRID2, IVD, IVNS1ABP, JAM3, KALRN, KANK2
+      KANSL1, KARS1, KCNA1, KCNJ10, KCNJ16, KCNN1, KDM1A, KDM2A, KEAP1, KHDRBS1
+      KIAA0753, KIAA0930, KIAA1958, KIAA2026, KIF13B, KIF19, KIF1B, KIF1C, KIF21B, KIF5A
+      KIF5B, KIF9, KLHDC9, KLHL17, KLHL35, KLHL5, KMT2D, KRBOX1, KTN1, LAMB1
+      LAMB2, LAMP2, LAPTM4B, LARP1, LARP7, LARS1, LCLAT1, LETM2, LETMD1, LGALS3
+      LIAS, LIMCH1, LMO3, LRCH4, LRFN4, LRP2BP, LRP3, LRRC1, LRRC28, LRRC59
+      LRRC73, LRRN2, LRSAM1, LSM6, LSS, LTBP3, LZTS2, MAF1, MAGOHB, MANBAL
+      MAP3K10, MAP3K13, MAP3K3, MAP4K4, MAP7D1, MAPK1IP1L, MARCHF8, MARK2, MATCAP1, MAZ
+      MBD3, MCCC2, MCM6, MCM7, MDGA1, ME2, ME3, MEA1, MECP2, MED12
+      MED12L, MED13, MED14, MED29, MEGF9, MEPCE, METTL7B, MGAT1, MICAL3, MICALL1
+      MID1IP1, MINDY1, MITF, MLIP, MOB2, MOB3B, MORN1, MPV17L2, MR1, MRAS
+      MRPL13, MRPL3, MRPL57, MRPS18A, MRPS22, MRPS6, MSH3, MSRB3, MT1F, MT2A
+      MTF1, MTG1, MTHFD1, MTMR10, MTR, MTSS2, MVB12B, MVP, MXI1, MYLIP
+      MYO9B, MYOT, N4BP1, NAA20, NACC1, NAGLU, NAT10, NBPF20, NCK2, NCOA1
+      NCOA5, NDC1, NDE1, NDUFA10, NDUFA6, NDUFB5, NECTIN3, NELFA, NEUROD2, NF2
+      NFASC, NFIB, NFIC, NFKB1, NFKBIA, NFS1, NFYB, NHP2, NIBAN2, NINJ1
+      NIPBL, NKX6.2, NPFF, NRP1, NRSN2, NSMCE1, NSMF, NTNG1, NUDT2, NUP214
+      NYNRIN, OBSCN, ODC1, OGA, ORAI2, ORC3, OTUD3, OTUD4, OTUD7A, OXA1L
+      OXNAD1, P2RX6, P2RX7, PA2G4, PACSIN3, PADI2, PAF1, PAFAH1B3, PAK4, PAOX
+      PARN, PCBP2, PCCB, PCIF1, PCOLCE, PCSK6, PCYOX1L, PDCD2, PDCD6, PDE4DIP
+      PDHA1, PDHX, PDP2, PDS5B, PDZD11, PELI1, PEX13, PGM3, PHETA1, PHF19
+      PHF2, PHLPP1, PHRF1, PIAS4, PIDD1, PIEZO2, PIK3C2B, PIK3CD, PIK3R2, PLA2G4C
+      PLAGL1, PLB1, PLCG1, PLEKHB1, PLEKHM1, PLEKHM2, PLGRKT, PLPP2, PLXNB1, PMS1
+      PMS2, PNCK, PNMA5, PNPLA6, POLD4, POLG, POLL, POLR2F, POLR3F, PORCN
+      POU3F2, POU3F3, POU6F1, PPIH, PPIP5K2, PPM1A, PPM1B, PPM1D, PPM1G, PPP1R16A
+      PPP1R16B, PPP1R1A, PPP1R3E, PPP4R1, PPP4R2, PPT1, PRCD, PREX1, PRKCG, PRKDC
+      PRMT2, PRR12, PRX, PSMA6, PTBP3, PTCD3, PTP4A1, PTP4A2, PTPN21, PTPN23
+      PTPRF, PYCR3, RAB20, RAB36, RAB9A, RABEP2, RABGGTA, RABL3, RABL6, RAD9A
+      RAF1, RALBP1, RALY, RANBP10, RANBP3, RAP1A, RAPGEF5, RASGRP2, RBFA, RBM17
+      RBM38, RBPMS2, RCC2, RELA, RENBP, REPS1, RERE, RESF1, RFX1, RHEB
+      RHNO1, RHOQ, RIIAD1, RIMS1, RINT1, RIPOR3, RND2, RNF130, RNF165, RNF181
+      RNF216, RNF220, RPGRIP1L, RPH3A, RPL15, RPL21, RPL22L1, RPRD1B, RPUSD1, RRAGB
+      RRP1, RRS1, RTL8C, RTN2, RWDD1, S100A4, S100A6, SALL2, SAMD1, SAMD4A
+      SASH1, SAT2, SCARF2, SCFD2, SCG3, SCN3B, SEC31A, SEC61B, SELENOP, SEPHS1
+      SEPTIN8, SERPINB1, SESN3, SETD2, SFRP1, SFSWAP, SGK1, SH3PXD2B, SHC1, SHC2
+      SHISA5, SIRPA, SKI, SKIC8, SLC16A14, SLC16A6, SLC25A18, SLC25A26, SLC25A48, SLC30A1
+      SLC30A3, SLC39A11, SLC41A1, SLC43A3, SLC44A1, SLC45A3, SLC4A11, SLC4A2, SLC5A3, SLC66A1
+      SLCO3A1, SMARCA2, SMARCD3, SMIM10L2A, SMIM3, SMPD4, SMTN, SMU1, SMYD5, SNN
+      SNPH, SNRPF, SNX27, SOCS4, SOCS6, SOGA1, SORT1, SOX12, SPACA6, SPACA9
+      SPAG8, SPCS1, SPECC1, SPHK2, SPIN2B, SPIRE1, SPOPL, SRCAP, SRD5A3, SRP54
+      SRRM2, SRRT, SRSF4, SSC5D, SSR4, SST, ST3GAL3, ST6GAL2, STAP2, STARD10
+      STARD7, STAT4, STAU1, STX10, SUB1, SULT1A1, SUN2, SWAP70, SYDE1, SYNCRIP
+      SYT5, TAF1D, TAF4, TAF9B, TAFA5, TAMM41, TAOK2, TATDN3, TBC1D20, TBC1D24
+      TBCA, TCERG1, TCP11L2, TCTN2, TDRKH, TEAD2, TEPSIN, TEX2, TFDP2, TFEB
+      TGFB3, TGFBR3L, THPO, THUMPD3, TIMELESS, TIMM8B, TLCD1, TLCD3B, TLE4, TM7SF2
+      TM9SF4, TMC6, TMED4, TMEM134, TMEM14B, TMEM19, TMEM209, TMEM234, TMEM256, TMEM260
+      TMEM74B, TMLHE, TMUB2, TNFRSF18, TNFRSF6B, TNK2, TNKS1BP1, TNKS2, TNPO1, TNRC18
+      TNS1, TOMM40, TOMM6, TOP1MT, TOP3B, TPRKB, TRABD, TRANK1, TRAP1, TRAPPC9
+      TREX1, TRIM44, TRIM45, TRIM5, TRIM8, TRIP10, TRIR, TRMT44, TRPC1, TSPAN7
+      TTI1, TTLL1, U2AF1, U2AF2, UBE2D1, UBE2V1, UBL5, UBTD2, UBXN8, UCK1
+      UGGT2, UGT8, UNC5B, UNC79, UNC93B1, UQCR10, UQCRC2, URI1, USF2, USP11
+      USP12, USP21, USP31, VAT1, VEZF1, VMA21, VMP1, VPS25, VPS33B, VRK3
+      VTA1, VWA3A, VWA5A, WBP2, WDR54, WDR55, WDR75, WDR81, WIPF2, WNT7A
+      WWC3, XKR8, XPO7, XRCC5, YES1, YJU2, YPEL4, YWHAB, ZBTB12, ZBTB14
+      ZBTB34, ZBTB38, ZBTB44, ZBTB47, ZBTB7A, ZBTB7B, ZC3H11A, ZCCHC14, ZCCHC17, ZDHHC23
+      ZDHHC8, ZEB2, ZFP41, ZFP91, ZFR, ZHX1, ZHX3, ZMPSTE24, ZMYND12, ZNF101
+      ZNF112, ZNF17, ZNF18, ZNF205, ZNF219, ZNF26, ZNF318, ZNF32, ZNF334, ZNF337
+      ZNF358, ZNF385A, ZNF420, ZNF441, ZNF467, ZNF511, ZNF512, ZNF513, ZNF540, ZNF547
+      ZNF580, ZNF598, ZNF609, ZNF639, ZNF652, ZNF664, ZNF704, ZNF71, ZNF768, ZNF787
+      ZNF789, ZNF875, ZNHIT6, ZSCAN18, ZSCAN26
+  - vs GLOBAL UNION (All Winning Features):
+    * Methodology 100% contained within the Global Union.
+    * MISSING Union Genes [1916] (Truncated):
+      (Too many genes to list)
+----------------------------------------------------------------------------------------------------------------------------------

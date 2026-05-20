@@ -1,0 +1,90 @@
+====================================================================
+BIOLOGICAL LANDSCAPE REPORT (TRAZABILIDAD DE MACHINE LEARNING Y RUTAS): COGDX
+====================================================================
+Total unified pathways: 60
+Pathways detected by ORA only: 14
+Pathways detected by GSEA only: 42
+Pathways detected by Both (ORA & GSEA): 4
+--------------------------------------------------------------------
+ML Gene Set Overlaps in Pathways:
+- Pathways with Triple Core genes: 26
+- Pathways with Subnucleus genes: 13
+- Pathways with unique genes for Cogdx (Clínica): 32
+- Pathways with Braaksc-Cogdx intersection (Tau-Cogdx): 0
+- Pathways with Ceradsc-Cogdx intersection (Amiloide-Cogdx): 60
+--------------------------------------------------------------------
+ANÁLISIS DE RUTAS GSEA EXCLUSIVAS (SIN GENES SIGNIFICATIVOS EN DEA):
+--------------------------------------------------------------------
+El análisis tradicional de sobre-representación (ORA) requiere que los genes pasen un umbral estricto de significación en DEA. Sin embargo, GSEA funciona ordenando todos los genes del genoma, lo que permite detectar cambios sutiles y coordinados incluso si ningún gen por sí solo es estadísticamente significativo en DEA.
+Para el dataset COGDX , se han identificado un total de 0 rutas enriquecidas por GSEA que contienen exactamente CERO genes significativos en DEA dentro de su 'core enrichment'.
+Este hallazgo metodológico demuestra la tremenda capacidad de GSEA para revelar mecanismos biológicos coordinados (por ejemplo, cascadas metabólicas completas con pequeñas desregulaciones en cada paso) que habrían permanecido completamente invisibles si solo se hubieran estudiado los genes significativos del DEA.
+El desglose de estas rutas se ha guardado en el archivo CSV: gsea_no_dea_sig_pathways_cogdx.csv
+--------------------------------------------------------------------
+RESUMEN DETALLADO RUTA POR RUTA Y DATABASE POR DATABASE (CON GENES DE ML):
+--------------------------------------------------------------------
+
+=== DATABASE: GO_BP (30 rutas unificadas) ===
+  * muscle structure development (GO:0061061) | Genes ML: Triple Core [2]: YY1/OBSCN ; Unique Cerad [27]: SUPT6H/PLEC/SMAD7/BMPR1A/ARID1A/DOCK5/BRD7/CHUK/TCF12/SOX8/COL6A1/RBPJ/SETD3/PDGFRB/MAFF/MAML1/HEY2/NOG/TGFB1/PHF10/PRKG1/DLL4/ITGB1/VANGL2/KAT8/HDGFL2/LAMA2 ; Unique Cogdx [2]: EFNB2/ZMPSTE24
+  * actin filament organization (GO:0007015) | Genes ML: Triple Core [1]: CAPZA1 ; Unique Cerad [18]: LIMD2/EZR/PLEC/RFLNB/PICK1/BCAR1/CDC42EP1/HSP90B1/HIP1/DNM2/KCTD13/AIF1L/VASP/LPAR1/ARRB1/CALD1/ARPC3/DBN1 ; Unique Cogdx [3]: DLC1/ABI1/SWAP70
+  * gliogenesis (GO:0042063) | Genes ML: Triple Core [2]: DAB2IP/DTX1 ; Subnúcleo [1]: DAB2IP ; Unique Cerad [18]: PLEC/PICK1/CNTN2/SOX10/MYRF/ILK/SOX8/COL6A1/IL33/LPAR1/ASCL1/TGFB1/OLIG1/CXCR4/MYCN/NOG/CLU/LAMA2 ; Unique Cogdx [1]: RELA
+  * canonical Wnt signaling pathway (GO:0060070) | Genes ML: Triple Core [1]: DAB2IP ; Subnúcleo [1]: DAB2IP ; Unique Cerad [16]: SMAD7/SOX10/FZD9/WNK1/FRAT1/TCF7L1/ILK/COL6A1/RBPJ/USP34/PTPRU/CTNND2/NOG/TGFB1/STK11/STK4 ; Unique Cogdx [5]: PPM1A/TNKS2/WNT7A/CTDNEP1/RNF220
+  * glial cell differentiation (GO:0010001) | Genes ML: Triple Core [1]: DTX1 ; Unique Cerad [17]: PLEC/PICK1/CNTN2/SOX10/MYRF/ILK/SOX8/COL6A1/LPAR1/ASCL1/TGFB1/OLIG1/CXCR4/MYCN/NOG/CLU/LAMA2 ; Unique Cogdx [1]: RELA
+  * gland development (GO:0048732) | Genes ML: Unique Cerad [13]: NPC1/BMPR1A/CDKN1C/SOX10/HIPK2/RBPJ/ASCL1/NOG/TGFB1/IRS2/STK11/PRKCSH/SOCS2 ; Unique Cogdx [2]: RELA/ZMPSTE24
+  * establishment or maintenance of cell polarity (GO:0007163) | Genes ML: Unique Cerad [13]: EZR/GOLPH3/LLGL1/MAP7/FEZ1/ILK/CYTH1/PLEKHG3/FRMD4B/ITGB1/CORO7/STK11/VANGL2 ; Unique Cogdx [1]: WNT7A
+  * response to transforming growth factor beta (GO:0071559) | Genes ML: Unique Cerad [8]: SMAD7/ING2/BMPR1A/CDKN1C/HIPK2/TGFB1I1/TGFB1/STK11 ; Unique Cogdx [2]: PPM1A/WNT7A
+  * glial cell development (GO:0021782) | Genes ML: Unique Cerad [11]: PLEC/PICK1/CNTN2/SOX10/MYRF/ILK/COL6A1/LPAR1/ASCL1/TGFB1/OLIG1
+  * myelination (GO:0042552) | Genes ML: Unique Cerad [10]: PLEC/CNTN2/SOX10/TMEM163/MYRF/ILK/COL6A1/LPAR1/TGFB1/CXCR4
+  * mitochondrial respiratory chain complex assembly (GO:0033108) | Genes ML: Unique Cerad [11]: UQCC1/SDHAF4/PET117/SCO1/NDUFAF7/TMEM126B/SDHAF1/ATPAF1/COA1/TMEM223/LYRM7 ; Unique Cogdx [1]: OXA1L
+  * cell fate commitment (GO:0045165) | Genes ML: Unique Cerad [11]: BMPR1A/CHD4/SOX8/RBPJ/TGFB1I1/HEY2/ASCL1/OLIG1/DLL4/CDC73/ITGB1 ; Unique Cogdx [1]: WNT7A
+  * mitochondrial translation (GO:0032543) | Genes ML: Triple Core [1]: MPV17L2 ; Unique Cerad [7]: AARS2/MRPS9/MRPL15/LRPPRC/MRPL2/GFM1/EARS2 ; Unique Cogdx [1]: OXA1L
+  * peripheral nervous system development (GO:0007422) | Genes ML: Unique Cerad [6]: PLEC/SOX10/ILK/SOX8/COL6A1/ASCL1 ; Unique Cogdx [1]: RELA
+  * endoderm development (GO:0007492) | Genes ML: Unique Cerad [8]: BMPR1A/KIF16B/BPTF/COL6A1/NOG/TGFB1/CDC73/DUSP1
+  * kidney epithelium development (GO:0072073) | Genes ML: Unique Cerad [5]: SMAD7/ILK/SOX8/NOG/TGFB1 ; Unique Cogdx [1]: EFNB2
+  * epithelial cell migration (GO:0010631) | Genes ML: Triple Core [1]: DAB2IP ; Subnúcleo [1]: DAB2IP ; Unique Cerad [2]: DOCK5/IRS2
+  * Schwann cell differentiation (GO:0014037) | Genes ML: Unique Cerad [3]: PLEC/ILK/COL6A1 ; Unique Cogdx [1]: RELA
+  * cytochrome complex assembly (GO:0017004) | Genes ML: Unique Cerad [7]: UQCC1/PET117/SCO1/COX10/COA1/TMEM223/LYRM7 ; Unique Cogdx [1]: CEP89
+  * Schwann cell development (GO:0014044) | Genes ML: Unique Cerad [3]: PLEC/ILK/COL6A1
+  * positive regulation of transforming growth factor beta receptor signaling pathway (GO:0030511) | Genes ML: Unique Cerad [5]: ING2/CDKN1C/HIPK2/TGFB1I1/STK11
+  * endocrine system development (GO:0035270) | Genes ML: Unique Cerad [6]: BMPR1A/CDKN1C/HIPK2/RBPJ/ASCL1/NOG
+  * membrane raft organization (GO:0031579) | Genes ML: Triple Core [1]: LRCH4 ; Unique Cerad [6]: NPC1/ABCA7/PACSIN2/ILK/COL6A1/RFTN1
+  * cortical cytoskeleton organization (GO:0030865) | Genes ML: Unique Cerad [4]: EZR/PLEC/LLGL1/TLN1
+  * response to epidermal growth factor (GO:0070849) | Genes ML: Triple Core [1]: DAB2IP ; Subnúcleo [1]: DAB2IP ; Unique Cerad [2]: INPP5K/ASCL1
+  * cellular response to epidermal growth factor stimulus (GO:0071364) | Genes ML: Triple Core [1]: DAB2IP ; Subnúcleo [1]: DAB2IP ; Unique Cerad [1]: INPP5K
+  * membrane raft assembly (GO:0001765) | Genes ML: Triple Core [1]: LRCH4 ; Unique Cerad [4]: PACSIN2/ILK/COL6A1/RFTN1
+  * neuron fate commitment (GO:0048663) | Genes ML: Unique Cerad [4]: RBPJ/ASCL1/OLIG1/DLL4
+  * plasma membrane raft organization (GO:0044857) | Genes ML: Unique Cerad [4]: ABCA7/PACSIN2/ILK/COL6A1
+  * response to immobilization stress (GO:0035902) | Genes ML: Unique Cerad [2]: MYRF/TGFB1
+
+=== DATABASE: GO_MF (19 rutas unificadas) ===
+  * transcription factor binding (GO:0008134) | Genes ML: Triple Core [2]: SETD1A/YY1 ; Subnúcleo [1]: SETD1A ; Unique Cerad [28]: JUND/ARID1A/CRTC3/CHD4/SOX10/AKAP8/AIP/TCF12/ZBTB17/HIPK2/SP1/WFS1/SOX8/RBPJ/SETD3/INTS13/TGFB1I1/EHMT1/PTMA/HEY2/ASCL1/ZBTB16/DOT1L/KAT6A/ZNF618/KAT8/PER1/STK4 ; Unique Cogdx [3]: CGGBP1/RELA/ZNHIT6
+  * chromatin binding (GO:0003682) | Genes ML: Triple Core [2]: CIC/YY1 ; Subnúcleo [1]: CIC ; Unique Cerad [25]: SMC1A/SUPT6H/ING2/ARID1A/CHD4/SOX10/ZFX/PHF21A/POLD1/RBPJ/CENPB/RNF168/STAG2/ZNF276/ATXN1L/ASCL1/PHF10/TADA2B/KAT6A/ING5/WAC/MSH6/KAT8/PER1/SIRT7 ; Unique Cogdx [3]: NCOA5/RELA/BMI1
+  * GTPase regulator activity (GO:0030695) | Genes ML: Triple Core [3]: DAB2IP/NUCB1/RASGRP2 ; Subnúcleo [1]: DAB2IP ; Unique Cerad [12]: DOCK5/LLGL1/TBC1D9B/GDI2/TBC1D17/PDGFRB/LAMTOR5/CYTH1/PLEKHG3/PDE6D/RASGRP3/ARRB1 ; Unique Cogdx [3]: DLC1/SWAP70/RAPGEF5
+  * nucleoside-triphosphatase regulator activity (GO:0060589) | Genes ML: Triple Core [3]: DAB2IP/NUCB1/RASGRP2 ; Subnúcleo [1]: DAB2IP ; Unique Cerad [12]: DOCK5/LLGL1/TBC1D9B/GDI2/TBC1D17/PDGFRB/LAMTOR5/CYTH1/PLEKHG3/PDE6D/RASGRP3/ARRB1 ; Unique Cogdx [3]: DLC1/SWAP70/RAPGEF5
+  * actin binding (GO:0003779) | Genes ML: Triple Core [1]: CAPZA1 ; Unique Cerad [21]: LIMD2/EZR/PLEC/PICK1/CROCC/BCL7B/MIB2/TLN1/HIP1/SETD3/AIF1L/PLEKHG3/VASP/SPEF1/CAMK2B/CXCR4/VASH1/CALD1/ARPC3/DBN1/ITGB1
+  * transcription coactivator activity (GO:0003713) | Genes ML: Triple Core [2]: DTX1/KMT2D ; Unique Cerad [16]: JUND/ARID1A/CRTC3/BRD7/AIP/TAF6L/HIPK2/SETD3/MAML1/TGFB1I1/DOT1L/ARRB1/TADA2B/KAT6A/NFKBIB/KAT8 ; Unique Cogdx [2]: NIBAN2/TRIM5
+  * DNA-binding transcription activator activity (GO:0001216) | Genes ML: Triple Core [1]: YY1 ; Unique Cerad [12]: JUND/SOX10/MYCN/ZFX/TCF12/ZBTB17/PBX3/SP1/RBPJ/MAFF/ZBTB16/ZSCAN21 ; Unique Cogdx [2]: ZNF580/RELA
+  * DNA-binding transcription repressor activity (GO:0001217) | Genes ML: Triple Core [2]: MXI1/YY1 ; Unique Cerad [7]: CC2D1A/ZBTB17/HEY2/ASCL1/ERF/E2F6/ZBTB16 ; Unique Cogdx [2]: ZBTB14/RELA
+  * DNA-binding transcription repressor activity, RNA polymerase II-specific (GO:0001227) | Genes ML: Triple Core [2]: MXI1/YY1 ; Unique Cerad [7]: CC2D1A/ZBTB17/HEY2/ASCL1/ERF/E2F6/ZBTB16 ; Unique Cogdx [2]: ZBTB14/RELA
+  * transcription coregulator binding (GO:0001221) | Genes ML: Unique Cerad [8]: JUND/CHD4/ZBTB17/SP1/EHMT1/ZBTB16/ZNF618/PER1 ; Unique Cogdx [1]: RELA
+  * beta-catenin binding (GO:0008013) | Genes ML: Triple Core [1]: SETD1A ; Subnúcleo [1]: SETD1A ; Unique Cerad [5]: SMAD7/TAX1BP3/NHERF2/PTPRU/CTNND2 ; Unique Cogdx [1]: RNF220
+  * cytoskeletal motor activity (GO:0003774) | Genes ML: Triple Core [1]: KIF1A ; Subnúcleo [1]: KIF1A ; Unique Cerad [4]: KIF5C/KIF16B/KIF13A/DNAL4
+  * microtubule motor activity (GO:0003777) | Genes ML: Triple Core [1]: KIF1A ; Subnúcleo [1]: KIF1A ; Unique Cerad [4]: KIF5C/KIF16B/KIF13A/DNAL4
+  * tRNA binding (GO:0000049) | Genes ML: Unique Cerad [6]: DALRD3/AARS2/RARS1/METTL1/EARS2/PTRH1
+  * histone acetyltransferase activity (GO:0004402) | Genes ML: Unique Cerad [4]: PHF10/KAT6A/KAT8/BRPF3
+  * plus-end-directed microtubule motor activity (GO:0008574) | Genes ML: Triple Core [1]: KIF1A ; Subnúcleo [1]: KIF1A ; Unique Cerad [2]: KIF5C/KIF16B
+  * mitogen-activated protein kinase binding (GO:0051019) | Genes ML: Unique Cerad [4]: DUSP16/TNIP1/PRKG1/DUSP1
+  * E-box binding (GO:0070888) | Genes ML: Unique Cerad [4]: TCF12/ASCL1/OLIG1/PER1
+  * GTPase inhibitor activity (GO:0005095) | Genes ML: Unique Cerad [1]: PDE6D
+
+=== DATABASE: KEGG (11 rutas unificadas) ===
+  * Focal adhesion (hsa04510) | Genes ML: Unique Cerad [9]: BCAR1/SOS2/ILK/TLN1/COL6A1/PDGFRB/VASP/ITGB1/LAMA2
+  * Neurotrophin signaling pathway (hsa04722) | Genes ML: Unique Cerad [6]: IRAK2/SOS2/IKBKB/CAMK2B/RPS6KA2/NFKBIB ; Unique Cogdx [1]: RELA
+  * MicroRNAs in cancer (hsa05206) | Genes ML: Unique Cerad [7]: EZR/DDIT4/SOS2/PDGFRB/IKBKB/CDC25B/IRS2 ; Unique Cogdx [1]: BMI1
+  * Chronic myeloid leukemia (hsa05220) | Genes ML: Unique Cerad [5]: CHUK/SOS2/IKBKB/TGFB1/GAB2 ; Unique Cogdx [1]: RELA
+  * Gastric cancer (hsa05226) | Genes ML: Unique Cerad [6]: FZD9/FRAT1/SOS2/TCF7L1/TGFB1/RPS6KB2 ; Unique Cogdx [1]: WNT7A
+  * Hippo signaling pathway (hsa04390) | Genes ML: Unique Cerad [7]: SMAD7/BMPR1A/LLGL1/FZD9/TCF7L1/TGFB1/WTIP ; Unique Cogdx [1]: WNT7A
+  * Integrin signaling (hsa04518) | Genes ML: Unique Cerad [7]: ILK/TLN1/COL6A1/PDGFRB/TGFB1/ITGB1/LAMA2
+  * ATP-dependent chromatin remodeling (hsa03082) | Genes ML: Triple Core [1]: YY1 ; Unique Cerad [7]: ARID1A/CHD4/BRD7/BCL7B/BPTF/MRGBP/PHF10
+  * B cell receptor signaling pathway (hsa04662) | Genes ML: Unique Cerad [5]: CHUK/SOS2/IKBKB/RASGRP3/NFKBIB ; Unique Cogdx [1]: RELA
+  * Notch signaling pathway (hsa04330) | Genes ML: Triple Core [1]: DTX1 ; Unique Cerad [5]: RBPJ/MAML1/HEY2/ATXN1L/DLL4
+  * Valine, leucine and isoleucine degradation (hsa00280) | Genes ML: Unique Cerad [3]: ECHS1/ACADSB/BCKDHB ; Unique Cogdx [1]: DBT
