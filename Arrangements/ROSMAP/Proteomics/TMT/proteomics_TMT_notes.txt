@@ -1,0 +1,16 @@
+Tandem Mass Tag (TMT) Discovery Proteomics (50 batches)
+
+How have the files been preprocessed?
+
+0 . Traits file includes demographics and sample characteristics including age, sex, and postmortem interval (PMI). Ages 90 and over are censored to 90 but can be requested from Rush ADC following Data Use Certificate approval for controlled access.
+1 . Proteome Discoverer output tab-separated text file with normalized TMT reporter abundances of 50 batches of LC-MS/MS and LC-MS3-SPS runs searched and quantified from 1200 raw files
+1b . Normalized TMT reporter abundances prior to batch correction (identical to values in 1.)
+2 . Batch-corrected TMT reporter abundances using TAMPOR (proteins with <50% missing values)
+3 . Age, Sex, and PMI-regressed batch-corrected log2(abundance), median (near-zero) centered; regressed after outlier removal and ambiguous status case exclusion
+
+
+Where can you find these files?
+Files were obtaibed from synapse: https://www.synapse.org/#!Synapse:syn21449447
+
+Has this data been previously used in other publications?
+Yes! The corresponding paper is: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7405761/
